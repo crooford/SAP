@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout
+  title="SAP"
+  HomeState=""
+  ProductosState=""
+  ServiciosState="active"
+  CatalogoState=""
+  NosotrosState=""
+  OficinasState=""
+  ContactoState=""
+  BgBody="yes"
+>
+  <main class="w-full top-0 left-0 flex">
+    <section
+      class="flex flex-col justify-center mx-auto max-w-[1150px] h-full pt-[6rem]"
+    >
+      <div class="mb-12">
+        <h2 class="uppercase text-6xl font-bold text-[#ffce00] text-left">
+          servicios
+        </h2>
+        <h2 class="text_border_convert text-6xl font-bold uppercase">
+          y garantía
+        </h2>
+        <p class="text-white mt-6">
+          Ofrecemos soluciones personalizadas, seguras y automatizadas para tu
+          negocio. Como líderes en puertas automáticas en todo México y el
+          Caribe, nuestros productos están diseñados para brindar seguridad y
+          accesibilidad total. Entendemos que cada negocio es único, por eso
+          personalizamos nuestras soluciones para adaptarse perfectamente a tus
+          necesidades.
+        </p>
+      </div>
+      <div class="max-h-[300px] grid grid-cols-3 gap-8 mb-8">
+        <Card
+          title="GARANTÍA"
+          src="/public/assets/icono-garantia.png"
+          alt="icono de garantia"
+        >
+          <p
+            class="text-white mb-4 font-bold animate-fade animate-duration-300 animate-delay-300"
+          >
+            Instalar nuestro operador de baja energía «Magic Access» para
+            puertas batientes manuales dando como resultado una entrada
+            eficiente sin barreras.
+          </p>
+          <p
+            class="text-white mb-4 font-bold animate-fade animate-duration-300 animate-delay-300"
+          >
+            Reemplazar sistemas de puertas ineficientes u obsoletos por nuevos.
+          </p>
+        </Card>
+        <Card
+          title="PÓLIZA"
+          src="/public/assets/icono-poliza.png"
+          alt="icono de poliza"
+        >
+          <p
+            class="text-white mb-4 font-bold animate-fade animate-duration-300 animate-delay-300"
+          >
+            Póliza de servicio para mantener sus equipos funcionando en
+            perfectas condiciones.
+          </p>
+          <p
+            class="text-white mb-4 font-bold animate-fade animate-duration-300 animate-delay-300"
+          >
+            Incluyen visitas mensuales.
+          </p>
+        </Card>
+        <Card
+          title="REPARACIONES"
+          src="/public/assets/icono-reparaciones.png"
+          alt="icono de reparaciones"
+        >
+          <p
+            class="text-white mb-4 font-bold animate-fade animate-duration-300 animate-delay-300"
+          >
+            Reparaciones de los principales sistemas inteligentes de acceso.
+            tales como Stanley, Dynalock, BEA, SUKEREID, IRIS ID entre otros.
+          </p>
+          <a
+            href="#"
+            class="text-[#ffce00] mb-4 italic font-bold text-xl animate-fade animate-duration-300 animate-delay-300"
+          >
+            Descubre más aquí.
+          </a>
+        </Card>
+      </div>
+      <div class="flex flex-row bg-black/50 justify-between mb-8">
+        <div class="text-white p-6">
+          <p class="font-bold text-lg">
+            Contamos con personal para reparar su sistema.
+          </p>
+          <h1 class="text-[#ffce00] text-5xl font-bold pb-4">RETROFIT</h1>
+          <p class="mb-4">
+            <span class="text-[#ffce00] mr-1">»</span>Automatización de puertas
+            batientes manuales existentes.
+          </p>
+          <p class="mb-4">
+            <span class="text-[#ffce00] mr-1">»</span>Actualizar el
+            funcionamiento de puertas corredizas automáticas con nuestros
+            avanzados controles de microprocesador.
+          </p>
+          <p class="mb-4">
+            <span class="text-[#ffce00] mr-1">»</span>Instalar nuestro operador
+            de baja energía «Magic Access» para puertas batientes dando como
+            resultado una entrada eficiente y sin barrera.
+          </p>
+          <p class="mb-4">
+            <span class="text-[#ffce00] mr-1">»</span>Reemplazar sistemas de
+            puertas ineficientes u obsoletos por nuevos.
+          </p>
+          <a
+            href="/contacto"
+            class="text-[#ffce00] font-semibold italic text-xl">Contáctanos</a
+          >
+        </div>
+        <div class="">
+          <img
+            class="object-cover w-full h-full"
+            src="/public/assets/puerta-servicio.jpg"
+            alt="Maria Isabel Hotel"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+<style></style>

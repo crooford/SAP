@@ -1,0 +1,147 @@
+---
+interface Props {
+  title: string;
+  HomeState: string;
+  ProductosState: string;
+  ServiciosState: string;
+  CatalogoState: string;
+  NosotrosState: string;
+  OficinasState: string;
+  ContactoState: string;
+  BgBody: string;
+}
+
+const {
+  title,
+  HomeState,
+  ProductosState,
+  ServiciosState,
+  CatalogoState,
+  NosotrosState,
+  OficinasState,
+  ContactoState,
+  BgBody,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="public/assets/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
+    <header
+      class="flex fixed items-center top-0 w-full justify-between z-[100]"
+      id="landing-header"
+    >
+      <div class="w-[150px]">
+        <a href="/"><img src="public/assets/logo.svg" alt="logo sap" /></a>
+      </div>
+      <nav>
+        <ul class="flex [&>li>a]:px-5 [&>li>a]:py-4 px-10 uppercase text-white">
+          <li>
+            <a
+              class={HomeState == "active" ? "active-tab" : "no-active-tab"}
+              href="/">Home</a
+            >
+          </li>
+          <li>
+            <a
+              class={ProductosState == "active"
+                ? "active-tab"
+                : "no-active-tab"}
+              href="/productos">Productos</a
+            >
+          </li>
+          <li>
+            <a
+              class={ServiciosState == "active"
+                ? "active-tab"
+                : "no-active-tab"}
+              href="/servicios">Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              class={CatalogoState == "active" ? "active-tab" : "no-active-tab"}
+              href="/catalogo">Catalogo</a
+            >
+          </li>
+          <li>
+            <a
+              class={NosotrosState == "active" ? "active-tab" : "no-active-tab"}
+              href="/nosotros">Nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              class={OficinasState == "active" ? "active-tab" : "no-active-tab"}
+              href="/oficinas">Oficinas</a
+            >
+          </li>
+          <li>
+            <a
+              class={ContactoState == "active" ? "active-tab" : "no-active-tab"}
+              href="/contacto">Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+    ></script>
+  </body>
+</html>
+<style is:global>
+  .active-tab {
+    color: #ffce00;
+    background-color: #00000075;
+    border-radius: 5px;
+  }
+  .no-active-tab {
+    color: #fff;
+  }
+  .no-active-tab:hover {
+    color: #ffce00;
+  }
+  .sap__text__slogan {
+    backdrop-filter: blur(1px);
+  }
+  .text_border_convert {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+  }
+  .sap__text__slogan span {
+    font-size: 4rem;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    letter-spacing: 2px;
+  }
+  .img-transform {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  .img-transform:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+  .bg-body {
+    background-image: url(public/assets/background_home_2.png) !important;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .non-bg-body {
+    background-color: #000000;
+  }
+</style>
