@@ -30,7 +30,7 @@ const {
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="public/assets/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -40,10 +40,12 @@ const {
       id="landing-header"
     >
       <div class="w-[150px]">
-        <a href="/"><img src="public/assets/logo.svg" alt="logo sap" /></a>
+        <a href="/"><img src="/assets/logo.svg" alt="logo sap" /></a>
       </div>
       <nav>
-        <ul class="flex [&>li>a]:px-5 [&>li>a]:py-4 px-10 uppercase text-white">
+        <ul
+          class="flex [&>li>a]:px-5 [&>li>a]:py-4 px-10 [&>li>a]:font-semibold uppercase text-white"
+        >
           <li>
             <a
               class={HomeState == "active" ? "active-tab" : "no-active-tab"}
@@ -135,7 +137,7 @@ const {
     filter: grayscale(0%);
   }
   .bg-body {
-    background-image: url(public/assets/background_home_2.png) !important;
+    background-image: url(/assets/background_home_2.png) !important;
     background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
