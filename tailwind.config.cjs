@@ -5,6 +5,9 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
+    fontFamily: {
+      sans: ["roboto condensed","roboto", "sans-serif"],
+    },
     extend: {},
   },
   plugins: [require("flowbite/plugin"), require("tailwindcss-animated")],
