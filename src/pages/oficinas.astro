@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Place from "../components/Place.astro";
+
+export const meta = {
+  title: "Oficinas regionales",
+  description:
+    "Como líderes en soluciones de acceso, tenemos una presencia nacional con sede en la Ciudad de México y oficinas en todo el país. Aquí es donde puedes encontrarnos:",
+  footer:
+    "Cada ubicación está comprometida con la excelencia en el servicio, la seguridad y la accesibilidad que caracterizan a Sistemas Automáticos Peatonales. Siempre estamos listos para brindarte la mejor atención y asesorarte en la instalación de nuestros productos. Encuentra la oficina más cercana y descubre cómo podemos mejorar tus accesos.",
+};
+
+export let sedes = [
+  {
+    name: "SAP Ciudad de México",
+    address:
+      "Av. Revolución No. 789, Col. Mixcoac, Del. Benito Juárez, México, D.F.",
+    phone: "555 611 2215",
+  },
+  {
+    name: "SAP Baja California Norte",
+    address:
+      "Av. Madero No. 2386, Col. Residencias, C.P. 83448, San Luis Rio Colorado, Son.",
+    phone: "653 534 4103 / 653 849 6335",
+  },
+  {
+    name: "SAP Cancún y Peninsula de yucatán",
+    address:
+      "Av. Holbox SM.11, Mz 5, LT 21, Fracc. Santa María Sike, C.P. 77504, Cancún Quintana Roo.",
+    phone: "998 267 7655 / 998 880 5715",
+  },
+  {
+    name: "SAP Sonora - Sinaloa",
+    address:
+      "Residencial Villa California, Miguel Alemán No. 506-2 Altos, Norte Esq. Yaqui, Obregón, Sonora, 85000.",
+    phone: "664 116 8205 / 653 849 6335",
+  },
+  {
+    name: "SAP Monterrey",
+    address:
+      "Av. Raúl Rangel Frías No. 562, Col Burócratas del Estado, Nvo. León, Monterrey. C.P. 64380",
+    phone: "818 311 4321 / 833 140 9986",
+  },
+  {
+    name: "SAP Yucatán",
+    address:
+      "Calle 14 No. 291-A, Por 13 y 15 Fracc. Monte Bello, Mérida, Yucatán. C.P. 97113",
+    phone: "999 316 4262",
+  },
+];
+---
+
+<Layout
+  title="SAP"
+  HomeState=""
+  ProductosState=""
+  ServiciosState=""
+  CatalogoState=""
+  NosotrosState=""
+  OficinasState="active"
+  ContactoState=""
+  BgBody="yes"
+>
+  <main class="w-full min-h-screen h-full pt-36">
+    <section class="flex flex-col mx-auto max-w-[1400px] bg-black/80 p-8">
+      <header class="[&>p]:text-white [&>p]:mb-4 [&>p]:text-lg mb-6">
+        <h1 class="text-5xl text-[#ffce00] uppercase font-extrabold mb-10">
+          {meta.title}
+        </h1>
+        <p>
+          {meta.description.slice(0, 68)}
+          <br />
+          {meta.description.slice(69, 128)}
+        </p>
+        <p>
+          {meta.description.slice(129, 188)}
+        </p>
+      </header>
+      <div class="grid grid-cols-3 grid-rows-2 gap-6 mb-10">
+        {
+          sedes.map((sede) => (
+            <Place
+              title={sede.name}
+              address={sede.address}
+              phone={sede.phone}
+            />
+          ))
+        }
+      </div>
+      <p class="text-white text-lg">{meta.footer}</p>
+    </section>
+  </main>
+</Layout>
