@@ -13,7 +13,139 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
   ContactoState="active"
   BgBody="yes"
 >
-  <main class="w-full min-h-screen h-full flex pt-36 justify-center bg-black/60">
-    <h1 class="text-white">HOLA</h1>
+  <main class="w-full min-h-screen h-full flex items-center bg-black/20">
+    <section class="mx-auto my-auto max-w-[1400px] bg-black/80 p-8">
+      <div class="grid grid-cols-2">
+        <div class="flex flex-col">
+          <h1 class="text-[#ffce00] text-5xl font-extrabold uppercase mb-6">
+            contacto
+          </h1>
+          <form action="mailto:info@stanley.mx" method="POST">
+            <div class="grid md:grid-rows-2 md:gap-4">
+              <div class="grid grid-cols-2 grid-rows-2 gap-4 w-[600px]">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="floating_fullname"
+                    class="block px-2.5 pb-2.5 pt-5 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="floating_fullname"
+                    class="absolute text-sm pb-5 pt-2 peer-focus:pt-0 text-white dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-2 peer-focus:px-2 peer-focus:text-[#ffce00] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-2 left-1"
+                    >Nombre completo *</label
+                  >
+                </div>
+                <div class="relative">
+                  <input
+                    type="tel"
+                    id="floating_phone"
+                    class="block px-2.5 pb-2.5 pt-5 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="floating_phone"
+                    class="absolute text-sm pb-5 pt-2 peer-focus:pt-0 text-white dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-2 peer-focus:px-2 peer-focus:text-[#ffce00] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-2 left-1"
+                    >Teléfono *</label
+                  >
+                </div>
+                <div class="relative">
+                  <input
+                    type="email"
+                    id="floating_email"
+                    class="block px-2.5 pb-2.5 pt-5 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="floating_email"
+                    class="absolute text-sm pb-5 pt-2 peer-focus:pt-0 text-white dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-2 peer-focus:px-2 peer-focus:text-[#ffce00] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-2 left-1"
+                    >Email *</label
+                  >
+                </div>
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="floating_subject"
+                    class="block px-2.5 pb-2.5 pt-5 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer"
+                    placeholder=" "
+                  />
+                  <label
+                    for="floating_subject"
+                    class="absolute text-sm pb-5 pt-2 peer-focus:pt-0 text-white dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-2 peer-focus:px-2 peer-focus:text-[#ffce00] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-2 left-1"
+                    >Asunto</label
+                  >
+                </div>
+              </div>
+              <div class="relative w-[600px]">
+                <textarea
+                  id="floating_message"
+                  class="block px-2.5 pb-2.5 pt-10 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer resize-none"
+                  placeholder=" "
+                  rows="5"
+                  required></textarea>
+                <label
+                  for="floating_message"
+                  class="absolute text-sm  pb-24 pt-1 peer-focus:py-0 text-white dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-2 peer-focus:px-2 peer-focus:text-[#ffce00] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-2 left-1"
+                  >Mensaje *</label
+                >
+              </div>
+              <button
+                type="submit"
+                class="bg-[#ffce00] mt-4 w-[600px] rounded-lg text-white text-lg font-semibold p-2 flex items-center justify-center [&>span>svg]:invisible [&>span>svg]:hover:visible [&>span>svg]:hover:fill-[#ffce00] hover:bg-transparent hover:border-[#ffce00] hover:text-[#ffce00] border-2 border-[#ffce00] transition duration-300 ease-in-out"
+                >Enviar <span>
+                  <svg
+                    width="22"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                      d="M9 20a1 1 0 0 1-.707-1.707L14.586 12 8.293 5.707a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.414l-7 7A1 1 0 0 1 9 20Z"
+                    ></path></svg
+                  ></span
+                ></button
+              >
+            </div>
+          </form>
+        </div>
+        <div class="grid md:grid-row-2">
+          <div class="opacity-60">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3763.75315882805!2d-99.187359!3d19.379838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff80e324f6c9%3A0x5dd9a2808ec2da3b!2sAv.%20Revoluci%C3%B3n%20789%2C%20Nonoalco%2C%20Benito%20Ju%C3%A1rez%2C%2003700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1692553344382!5m2!1ses-419!2smx"
+              width="650"
+              height="475"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="grid md:grid-cols-3 mt-4">
+            <div>
+              <p class="text-white font-bold text-2xl">Teléfono</p>
+              <p class="text-white text-lg">(55) 56 11 22 15</p>
+            </div>
+            <div>
+              <p class="text-white font-bold text-2xl">Email</p>
+              <p class="text-[#ffce00] text-lg">
+                <a href="mailto:info@stanley.mx">info@stanley.mx</a>
+                <br />
+                <a href="mailto:ventas@stanley.mx">ventas@stanley.mx</a>
+              </p>
+            </div>
+            <div>
+              <p class="text-white font-bold text-2xl">Dirección</p>
+              <p class="text-white text-lg">
+                Av. Revolución No. 789 Col. Mixcoac Del. Benito Juárez México
+                D.F.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </LayoutTwo>
