@@ -1,9 +1,49 @@
 ---
 import LayoutThree from "../layouts/LayoutThree.astro";
+import Door from "../components/Door.astro";
+
+let doors = [
+  {
+    title: " puertas",
+    category: "giratorias",
+    description:
+      "Su principal ventaja es minimizar la fuga de aire en edificios aclimatados, permitiendo a la vez un elevado flujo de personas.",
+    imageUrl: "/assets/puerta-servicio.jpg",
+    imageAlt: " puerta giratoria",
+    url: "/producto/puertas-giratorias",
+  },
+  {
+    title: " puertas",
+    category: "corredizas",
+    description:
+      "Su principal ventaja es minimizar la fuga de aire en edificios aclimatados, permitiendo a la vez un elevado flujo de personas.",
+    imageUrl: "/assets/puertas/puerta-corrediza.jpg",
+    imageAlt: " puerta corrediza",
+    url: "/producto/puertas-corredizas",
+  },
+  {
+    title: " puertas",
+    category: "batientes",
+    description:
+      "Su principal ventaja es minimizar la fuga de aire en edificios aclimatados, permitiendo a la vez un elevado flujo de personas.",
+    imageUrl: "/assets/puertas/puerta-batiente.jpg",
+    imageAlt: " puerta batiente",
+    url: "/producto/puertas-batientes",
+  },
+  {
+    title: " puertas",
+    category: "telescópicas",
+    description:
+      "Su principal ventaja es minimizar la fuga de aire en edificios aclimatados, permitiendo a la vez un elevado flujo de personas.",
+    imageUrl: "/assets/puertas/puerta-telescopica.jpg",
+    imageAlt: "puerta telescopica",
+    url: "/producto/puertas-telescopicas",
+  },
+];
 ---
 
 <LayoutThree
-  title="SAP"
+  title="SAP | Productos"
   HomeState=""
   ProductosState="active"
   ServiciosState=""
@@ -13,7 +53,39 @@ import LayoutThree from "../layouts/LayoutThree.astro";
   ContactoState=""
   BgBody="yes"
 >
-  <main class="w-full min-h-screen h-full flex pt-36 justify-center bg-black/60">
-    <h1 class="text-white">HOLA</h1>
+  <main
+    class="w-full min-h-screen h-full flex pt-32 justify-center bg-black/80"
+  >
+    <section class="flex flex-col mx-auto w-[1350px]">
+      <div class="p-6 mb-6 bg-black/50">
+        <h1 class="text-[#ffce00] text-6xl uppercase font-extrabold mb-4">
+          productos
+        </h1>
+        <p class="text-white text-lg">
+          Ofrecemos soluciones personalizadas, seguras y automatizadas para tu
+          negocio. Como líderes en puertas automáticas en todo México y el
+          Caribe, nuestros productos están diseñados para brindar seguridad y
+          accesibilidad total. Entendemos que cada negocio es único, por eso
+          personalizamos nuestras soluciones para adaptarse perfectamente a tus
+          necesidades.
+        </p>
+      </div>
+      <div class="flex w-[1350px] mx-auto min-h-96 justify-center">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {
+            doors.map((door) => (
+              <Door
+                title={door.title}
+                category={door.category}
+                description={door.description}
+                imageUrl={door.imageUrl}
+                imageAlt={door.imageAlt}
+                url={door.url}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
   </main>
 </LayoutThree>

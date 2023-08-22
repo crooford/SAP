@@ -1,0 +1,204 @@
+---
+import "@fontsource/roboto/";
+
+interface Props {
+  title: string;
+  doorCategory: string;
+  giratoriaState: string;
+  corredizaState: string;
+  batienteState: string;
+  telescopicaState: string;
+  BgBody: string;
+}
+
+const {
+  title,
+  doorCategory,
+  BgBody,
+  giratoriaState,
+  corredizaState,
+  batienteState,
+  telescopicaState,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
+    <header
+      class="flex fixed items-center top-0 w-full justify-between z-[100]"
+      id="landing-header"
+    >
+      <div class="w-[150px]">
+        <a href="/"><img src="/assets/logo.svg" alt="logo sap" /></a>
+      </div>
+      <nav>
+        <ul
+          class="flex [&>li>a]:px-5 [&>li>a]:py-4 px-10 [&>li>a]:font-semibold uppercase text-white"
+        >
+          <li>
+            <a class="no-active-tab" href="/">Home</a>
+          </li>
+          <li>
+            <a class="active-tab" href="/productos">Productos</a>
+          </li>
+          <li>
+            <a class="no-active-tab" href="/servicios">Servicios</a>
+          </li>
+          <li>
+            <a class="no-active-tab" href="/catalogo">CATÁLOGO</a>
+          </li>
+          <li>
+            <a class="no-active-tab" href="/nosotros">Nosotros</a>
+          </li>
+          <li>
+            <a class="no-active-tab" href="/oficinas">Oficinas</a>
+          </li>
+          <li>
+            <a class="no-active-tab" href="/contacto">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex flex-row min-h-screen mx-32 pt-32">
+      <section class="flex flex-row bg-black/50 mx-auto mb-6">
+        <aside class="flex flex-col w-[25%] bg-black/60 pt-2 mb-6">
+          <header class="mb-10">
+            <a href="../productos"><h1
+              class="text-6xl font-extrabold text_border_convert text-center uppercase"
+            >
+              productos
+            </h1></a>
+          </header>
+          <div class="p-4 flex flex-col items-center">
+            <nav
+              class="[&>ul>li>a]:text-xl [&>ul>li>a]:uppercase"
+            >
+              <ul class="[&>li]:py-4 [&>li>a]:px-10 [&>li>a]:py-4">
+                <li>
+                  <a
+                    href="puertas-giratorias"
+                    class={giratoriaState == "active"
+                      ? "active-tab"
+                      : "no-active-tab"}>Puertas giratorias</a>
+                </li>
+                <li>
+                  <a
+                    href="puertas-corredizas"
+                    class={corredizaState == "active"
+                      ? "active-tab"
+                      : "no-active-tab"}>Puertas corredizas</a>
+                </li>
+                <li>
+                  <a
+                    href="puertas-batientes"
+                    class={batienteState == "active"
+                      ? "active-tab"
+                      : "no-active-tab"}>Puertas batientes</a>
+                </li>
+                <li>
+                  <a
+                    href="puertas-telescopicas"
+                    class={telescopicaState == "active"
+                      ? "active-tab"
+                      : "no-active-tab"}>Puertas telescópicas</a>
+                </li>
+                <li><a href="#" class="no-active-tab">Puertas plegadizas</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+        <section class="flex flex-col w-[75%] pl-4 pt-2 mb-6">
+          <div class="flex mb-4 animate-fade-right animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal">
+            <img
+              src="/assets/icono-flecha.png"
+              alt="flecha veloz"
+              class="object-contain mr-6"
+            />
+            <h1 class="text-6xl font-extrabold text-[#ffce00] uppercase">
+              {doorCategory}
+            </h1>
+          </div>
+          <slot />
+        </section>
+      </section>
+
+      <script
+        is:inline
+        src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+      ></script>
+    </main>
+  </body>
+  <style is:global>
+    .active-tab {
+      color: #ffce00;
+      background-color: #00000075;
+      border-radius: 5px;
+    }
+    .no-active-tab {
+      color: #fff;
+    }
+    .no-active-tab:hover {
+      color: #ffce00;
+    }
+    .sap__text__slogan {
+      backdrop-filter: blur(1px);
+    }
+    .text_border_convert {
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+    }
+    .sap__text__slogan span {
+      font-size: 4rem;
+      font-weight: 900;
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+      letter-spacing: 2px;
+    }
+    .img-transform {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    .img-transform:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+    .bg-body {
+      background-image: url(/assets/background_home_2.png) !important;
+      background-color: #000000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .non-bg-body {
+      background-color: #000000;
+    }
+  </style>
+  <script>
+    // Internet Explorer
+    window.onload = function () {
+      document.onselectstart = function () {
+        return false;
+      };
+      // Firefox
+      document.onmousedown = function () {
+        return false;
+      };
+    };
+  </script>
+</html>
