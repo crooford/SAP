@@ -11,45 +11,176 @@ import LayoutDoors from "../../layouts/LayoutDoors.astro";
   batienteState=""
   telescopicaState=""
 >
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-white">
-        <h1 class="text-center">SAP</h1>
-        <p>
-          SAP es una empresa multinacional alemana dedicada al diseño de
-          productos informáticos de gestión empresarial, tanto para empresas
-          pequeñas y medianas como grandes corporaciones. SAP es líder de
-          mercado en software de aplicaciones de negocio, ayudando a
-          organizaciones de todos los tamaños y de todos los sectores a mejorar
-          el funcionamiento de su negocio. SAP es el tercer mayor fabricante
-          independiente de software del mundo.
-        </p>
-        <p>
-          SAP ofrece soluciones de negocio para la gestión de relaciones con
-          clientes, gestión de la cadena de suministro, gestión de relaciones
-          con proveedores, gestión de activos empresariales, gestión de recursos
-          humanos, gestión financiera y contabilidad, gestión de viajes y
-          gastos, gestión de la tecnología de la información y desarrollo de
-          aplicaciones.
-        </p>
-        <p>
-          SAP es el mayor proveedor de software de gestión empresarial del
-          mundo, con más de 95.000 clientes en más de 120 países. La empresa
-          cuenta con más de 51.000 empleados en todo el mundo, de los cuales más
-          de 13.000 son consultores. SAP tiene su sede en Walldorf, Alemania, y
-          oficinas en más de 50 países.
-        </p>
-        <p>
-          SAP es el tercer mayor fabricante independiente de software del mundo.
-          SAP es el mayor proveedor de software de gestión empresarial del
-          mundo, con más de 95.000 clientes en más de 120 países. La empresa
-          cuenta con más de 51.000 empleados en todo el mundo, de los cuales más
-          de 13.000 son consultores. SAP tiene su sede en Walldorf, Alemania, y
-          oficinas en más de 50 países.
-        </p>
-        <p>
-          SAP es el tercer mayor fabricante independiente de software del mundo.
-          SAP es el mayor proveedor de software de gestión empresarial
+  <div class="flex flex-col lg:flex-row">
+    <div
+      class="px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
+    >
+      <p>
+        Son las puertas más usadas en el mundo, prácticas y reconocidas, con un
+        alto ahorro de energía, máximo flujo y seguridad. Pueden ser modelos All
+        Glass (con zócalos superiores e inferiores), All Glass Europe (solo
+        zócalos superiores) y modelo Dura-Glide con aluminio perimetral. Pueden
+        llevar abatimiento en hojas corredizas y fijos laterales, o sistema
+        eléctrico para abrir en emergencia. Son flexibles y adecuadas para una
+        variedad de usos, desde aeropuertos hasta residencias.
+      </p>
+
+      <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-[35rem]">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/puertas-corredizas/all-glass.jpeg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/puertas-corredizas/all-glass-europe.JPG"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/puertas-corredizas/all-glass-two.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/puertas-corredizas/dura-glade.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/puertas-corredizas/all-glass-two.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div
+          class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"></path>
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out"
+    >
+      <div class="w-56">
+        <img
+          src="/assets/puertas-corredizas/all-glass-two.jpg"
+          alt="puerta corrediza all glass"
+        />
+        <p class="text-white mt-2 text-center">Puerta corrediza all glass</p>
+      </div>
+      <div class="w-56">
+        <img
+          src="/assets/puertas-corredizas/dura-glade.jpg"
+          alt="instalacion puerta giratoria"
+        />
+        <p class="text-white mt-2 text-center">Puerta corrediza all glass</p>
+      </div>
+      <div class="w-56">
+        <img
+          src="/assets/puertas-corredizas/all-glass-europe.JPG"
+          alt="instalacion puerta giratoria"
+        />
+        <p class="text-white mt-2 text-center">
+          Puerta corrediza all glass europe
         </p>
       </div>
     </div>
