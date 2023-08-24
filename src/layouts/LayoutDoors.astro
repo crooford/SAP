@@ -11,6 +11,15 @@ interface Props {
   corredizaState: string;
   batienteState: string;
   telescopicaState: string;
+  plegadizaState: string;
+  seguridadState: string;
+  torniqueteState: string;
+  huellaDigitalState: string;
+  magneticaState: string;
+  irisState: string;
+  curvaState: string;
+  tecladoDandLectorTarjetaState: string;
+  
 }
 
 const {
@@ -22,6 +31,14 @@ const {
   corredizaState,
   batienteState,
   telescopicaState,
+  plegadizaState,
+  seguridadState,
+  torniqueteState,
+  huellaDigitalState,
+  magneticaState,
+  irisState,
+  curvaState,
+  tecladoDandLectorTarjetaState,
 } = Astro.props;
 ---
 
@@ -126,15 +143,23 @@ const {
                   >
                 </li>
                 <li>
-                  <a href="#" class="no-active-tab">Puertas plegadizas</a>
+                  <a href="/producto/puertas-plegadizas" class={ plegadizaState == "active" ? "active-tab"
+                  : "no-active-tab" }>Puertas plegadizas</a>
                 </li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href="/producto/puertas-de-seguridad" class={ seguridadState == "active" ? "active-tab"
+                  : "no-active-tab" }>puertas de seguridad</a></li>
+                <li><a href="/producto/torniquetes" class={ torniqueteState == "active" ? "active-tab"
+                  : "no-active-tab" }>torniquetes</a></li>
+                <li><a href="/producto/huella-digital" class={ huellaDigitalState == "active" ? "active-tab"
+                  : "no-active-tab" }>huella digital</a></li>
+                <li><a href="/producto/chapas-magneticas" class={ magneticaState == "active" ? "active-tab"
+                  : "no-active-tab" }>chapas magnéticas</a></li>
+                <li><a href="/producto/iris" class={ irisState == "active" ? "active-tab"
+                  : "no-active-tab" }>iris</a></li>
+                <li><a href="/producto/curvas" class={ curvaState == "active" ? "active-tab"
+                  : "no-active-tab" }>curvas</a></li>
+                <li><a href="/producto/teclado-digital-y-lectores-de-tarjetas" class={ tecladoDandLectorTarjetaState == "active" ? "active-tab"
+                  : "no-active-tab" }>teclado digital y lectores de tarjetas</a></li>
               </ul>
             </nav>
           </div>
