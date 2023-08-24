@@ -4,18 +4,20 @@ import "@fontsource-variable/oswald";
 
 interface Props {
   title: string;
+  BgBody: string;
   doorCategory: string;
+
   giratoriaState: string;
   corredizaState: string;
   batienteState: string;
   telescopicaState: string;
-  BgBody: string;
 }
 
 const {
   title,
-  doorCategory,
   BgBody,
+  doorCategory,
+
   giratoriaState,
   corredizaState,
   batienteState,
@@ -39,7 +41,14 @@ const {
       id="landing-header"
     >
       <div class="w-[150px]">
-        <a href="/"><img src="/assets/logo.svg" alt="logo sap" /></a>
+        <a href="/"
+          ><img
+            src="/assets/logo.svg"
+            alt="logo sap"
+            class="object-contain w-full"
+          /></a
+        >
+        
       </div>
       <nav>
         <ul
@@ -94,7 +103,7 @@ const {
                 </li>
                 <li>
                   <a
-                    href="../puertas-corredizas"
+                    href="/producto/puertas-corredizas"
                     class={corredizaState == "active"
                       ? "active-tab"
                       : "no-active-tab"}>Puertas corredizas</a
@@ -102,7 +111,7 @@ const {
                 </li>
                 <li>
                   <a
-                    href="../puertas-batientes"
+                    href="/producto/puertas-batientes"
                     class={batienteState == "active"
                       ? "active-tab"
                       : "no-active-tab"}>Puertas batientes</a
@@ -110,7 +119,7 @@ const {
                 </li>
                 <li>
                   <a
-                    href="../puertas-telescopicas"
+                    href="/producto/puertas-telescopicas"
                     class={telescopicaState == "active"
                       ? "active-tab"
                       : "no-active-tab"}>Puertas telescópicas</a
@@ -132,15 +141,20 @@ const {
         </aside>
 
         <section class="ml-[320px] pl-1 pt-6 pr-24">
-          <div
-            class="flex mb-12 animate-fade-right animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal"
-          >
+          <div class="flex mb-12">
             <img
               src="/assets/icono-flecha.png"
               alt="flecha veloz"
-              class="object-contain mr-4"
+              class={"object-contain mr-4 " +
+                (doorCategory == "Puertas corredizas"
+                  ? " animate-fade-left animate-once animate-delay-500 animate-duration-300 animate-ease-out"
+                  : doorCategory == "Puertas giratorias"
+                  ? "animate-spin animate-once animate-delay-0 animate-duration-300 animate-ease-out "
+                  : "")}
             />
-            <h1 class="text-5xl font-extrabold text-[#ffce00] uppercase font-[oswald]">
+            <h1
+              class="text-5xl hover:-translate-x-80  font-extrabold text-[#ffce00] uppercase font-[oswald] animate-fade-right animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal"
+            >
               {doorCategory}
             </h1>
           </div>
@@ -203,6 +217,7 @@ const {
     .non-bg-body {
       background-color: #000000;
     }
+
   </style>
   <script>
     addEventListener("scroll", () => {

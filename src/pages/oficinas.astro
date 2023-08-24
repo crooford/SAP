@@ -18,10 +18,10 @@ export let sedes = [
     phone: "555 611 2215",
   },
   {
-    name: "SAP Baja California Norte",
+    name: "SAP Monterrey",
     address:
-      "Av. Madero No. 2386, Col. Residencias, C.P. 83448, San Luis Rio Colorado, Son.",
-    phone: "653 534 4103 / 653 849 6335",
+      "Av. Raúl Rangel Frías No. 562, Col Burócratas del Estado, Nvo. León, Monterrey. C.P. 64380",
+    phone: "818 311 4321 / 833 140 9986",
   },
   {
     name: "SAP Cancún y Peninsula de yucatán",
@@ -30,24 +30,25 @@ export let sedes = [
     phone: "998 267 7655 / 998 880 5715",
   },
   {
+    name: "SAP Baja California Norte",
+    address:
+      "Av. Madero No. 2386, Col. Residencias, C.P. 83448, San Luis Rio Colorado, Son.",
+    phone: "653 534 4103 / 653 849 6335",
+  },
+
+  {
     name: "SAP Sonora - Sinaloa",
     address:
       "Residencial Villa California, Miguel Alemán No. 506-2 Altos, Norte Esq. Yaqui, Obregón, Sonora, 85000.",
     phone: "664 116 8205 / 653 849 6335",
   },
-  {
-    name: "SAP Monterrey",
-    address:
-      "Av. Raúl Rangel Frías No. 562, Col Burócratas del Estado, Nvo. León, Monterrey. C.P. 64380",
-    phone: "818 311 4321 / 833 140 9986",
-  },
+
   {
     name: "SAP Yucatán",
     address:
       "Calle 14 No. 291-A, Por 13 y 15 Fracc. Monte Bello, Mérida, Yucatán. C.P. 97113",
     phone: "999 316 4262",
   },
-
 ];
 ---
 
@@ -64,8 +65,12 @@ export let sedes = [
 >
   <main class="w-full min-h-screen h-full pt-36">
     <section class="flex flex-col mx-auto max-w-[1400px] bg-black/80 p-8">
-      <header class="[&>p]:text-white [&>p]:mb-4 [&>p]:text-lg mb-6">
-        <h1 class="text-5xl text-[#ffce00] uppercase font-extrabold mb-10 font-[oswald]">
+      <header
+        class="[&>p]:text-white [&>p]:mb-4 [&>p]:text-lg [&>p]:font-light mb-6"
+      >
+        <h1
+          class="text-5xl text-[#ffce00] uppercase font-extrabold mb-10 font-[oswald]"
+        >
           {meta.title}
         </h1>
         <p>
@@ -88,7 +93,7 @@ export let sedes = [
           ))
         }
       </div>
-      <p class="text-white text-lg">{meta.footer}</p>
+      <p class="text-white text-lg font-light">{meta.footer}</p>
     </section>
   </main>
 </Layout>
