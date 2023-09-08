@@ -2,6 +2,7 @@
 import "@fontsource/roboto/";
 import "@fontsource-variable/oswald";
 
+
 interface Props {
   title: string;
   BgBody: string;
@@ -49,8 +50,10 @@ const {
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
     <header
@@ -108,8 +111,8 @@ const {
             >
           </header>
           <div class="p-4 flex flex-col items-center">
-            <nav class="[&>ul>li>a]:text-base [&>ul>li>a]:uppercase">
-              <ul class="[&>li]:py-4 [&>li>a]:px-4 [&>li>a]:py-4">
+            <nav class="[&>ul>li>a]:text-sm [&>ul>li>a]:uppercase">
+              <ul class="[&>li]:py-4 [&>li>a]:px-2 [&>li>a]:py-4">
                 <li>
                   <a
                     href="/producto/puertas-giratorias"
@@ -187,13 +190,19 @@ const {
         </section>
       </section>
 
-      <script
+      
+
+    </main>
+
+
+    <script
         is:inline
         src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
       ></script>
-    </main>
+    <slot name="script"/>
   </body>
   <style is:global>
+
     .active-tab {
       color: #ffce00;
       background-color: #ffffff08;
@@ -245,6 +254,7 @@ const {
 
   </style>
   <script>
+
     addEventListener("scroll", () => {
       const header = document.getElementById("landing-header");
       const scroll = window.scrollY;

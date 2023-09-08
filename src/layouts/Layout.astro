@@ -2,6 +2,7 @@
 import "@fontsource/roboto/";
 import "@fontsource-variable/oswald";
 
+
 interface Props {
   title: string;
   HomeState: string;
@@ -36,6 +37,7 @@ const {
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
     <header
@@ -99,6 +101,7 @@ const {
       </nav>
     </header>
     <slot />
+    
     <script
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
@@ -106,6 +109,11 @@ const {
   </body>
 </html>
 <style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   .active-tab {
     color: #ffce00;
     background-color: #00000075;
@@ -149,8 +157,12 @@ const {
   .non-bg-body {
     background-color: #000000;
   }
+
+
+  
 </style>
-<script>
+<!-- <script>
+
   // Internet Explorer
   window.onload = function () {
     document.onselectstart = function () {
@@ -161,4 +173,4 @@ const {
       return false;
     };
   };
-</script>
+</script> -->

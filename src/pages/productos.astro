@@ -25,7 +25,7 @@ let doors = [
     title: " puertas",
     category: "batientes",
     description:
-      "son ideales para espacios reducidos o como laterales de puertas giratorias en hoteles y hospitales. Se utilizan preferentemente con acceso en una sola dirección.",
+      "son ideales para espacios reducidos o como laterales de puertas giratorias en hoteles y hospitales.",
     imageUrl: "/assets/puertas/puerta-batiente.jpg",
     imageAlt: " puerta batiente",
     url: "/producto/puertas-batientes",
@@ -58,8 +58,8 @@ let doors = [
     url: "/producto/puertas-de-seguridad",
   },
   {
-    title: "torniquetes",
-    category: "",
+    title: "",
+    category: "torniquetes",
     description:
       "son útiles para restringir el acceso a personas no autorizadas y permitir el acceso a quienes están registrados.",
     imageUrl: "/assets/puertas/puerta-telescopica.jpg",
@@ -85,8 +85,8 @@ let doors = [
     url: "/producto/chapas-magneticas",
   },
   {
-    title: "iris",
-    category: "",
+    title: "",
+    category: "iris",
     description:
       "Se utilizan para verificar al 100% el acceso de la persona correcta, sin posibilidad de engañar al sistema.",
     imageUrl: "/assets/puertas/puerta-telescopica.jpg",
@@ -94,8 +94,8 @@ let doors = [
     url: "/producto/iris",
   },
   {
-    title: "curvas",
-    category: "",
+    title: "",
+    category: "curvas",
     description:
       "tienen un diseño arquitectónico muy especial, con cristal curvo en las hojas y perfiles curvos.",
     imageUrl: "/assets/puertas/puerta-telescopica.jpg",
@@ -126,10 +126,10 @@ let doors = [
   BgBody="yes"
 >
   <main
-    class="w-full min-h-screen h-full flex pt-32 justify-center bg-black/80"
+    class="w-full min-h-screen h-full flex pt-40 justify-center bg-black/80"
   >
-    <section class="flex flex-col mx-auto w-[1350px]">
-      <div class="p-6 mb-6 bg-black/50">
+    <section class="flex flex-col mx-auto w-[1250px] mb-10">
+      <div class="mb-8 ">
         <h1
           class="text-[#ffce00] text-6xl uppercase font-extrabold mb-4 font-[oswald]"
         >
@@ -144,7 +144,7 @@ let doors = [
           necesidades.
         </p>
       </div>
-      <div class="flex w-[1350px] mx-auto min-h-96 justify-center">
+      <div class="flex w-[1250px] mx-auto min-h-96 justify-center">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {
             doors.map((door) => (

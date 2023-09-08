@@ -37,11 +37,11 @@ const {
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
+  
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
     <header
-      class="flex items-center sticky top-0 w-full justify-between z-[100] bg-black/80 transition ease-in-out duration-300"
+      class="flex items-center sticky top-0 w-full justify-between z-[100]  transition ease-in-out duration-300"
       id="landing-header"
     >
       <div class="w-[150px]">
@@ -108,6 +108,11 @@ const {
   </body>
 </html>
 <style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   .active-tab {
     color: #ffce00;
     background-color: #00000075;
@@ -123,6 +128,9 @@ const {
     background-color: #00000080;
     backdrop-filter: saturate(180%) blur(12px);
     transition: background-color 0.4s ease-in-out;
+  }
+  .scrolled > nav > ul > li > a.active-tab {
+    background-color: #ffffff08;
   }
   .sap__text__slogan {
     backdrop-filter: blur(1px);
@@ -147,17 +155,27 @@ const {
     filter: grayscale(0%);
   }
   .bg-body {
-    background-image: url(/assets/background_home_3.png) !important;
+    background-image: url(/assets/background_home_2.png) !important;
     background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
   }
   .non-bg-body {
     background-color: #000000;
   }
 </style>
 <script>
+    addEventListener("scroll", () => {
+    const header = document.getElementById("landing-header");
+    const scroll = window.scrollY;
+    if (scroll > 0) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
   addEventListener("scroll", () => {
     const header = document.getElementById("landing-header");
     const scroll = window.scrollY;

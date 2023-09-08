@@ -25,16 +25,16 @@ const { title, category, description, imageUrl, imageAlt, url } = Astro.props;
   >
   </div>
   <div
-    class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+    class="absolute inset-0 flex translate-y-[50%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
   >
     <h1 class="text-2xl font-semibold uppercase text-white font-[oswald]">
       {title}
     </h1>
-    <h1 class="text-3xl font-semibold mb-2 uppercase text-white font-[oswald]">
+    <h1 class="text-3xl font-semibold uppercase text-white font-[oswald]">
       {category}
     </h1>
     <p
-      class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      class="py-4 text-sm italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
     >
       {description}
     </p>
