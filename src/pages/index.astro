@@ -20,21 +20,30 @@ import Layout from "../layouts/Layout.astro";
           class="mt-[13rem] mb-20 flex flex-col self-center items-center justify-center"
         >
           <div
-            class="sap__text__slogan inline-flex items-center [&>span]:p-4 [&>span]:tracking-wider [&>img]:p-4"
+            class="inline-flex items-center [&>span]:p-4 [&>span]:tracking-wider [&>img]:p-4"
           >
-            <span class="mr-4 font-[oswald]">SEGURIDAD</span>
+            <span
+              class="mr-4 font-[oswald] text_border_convert text-6xl font-extrabold"
+              >SEGURIDAD</span
+            >
             <img
-              src="/assets/arrow_home.svg"
+              src="/assets/arrow_right.png"
               alt="flecha direccion"
               class="w-[4.5rem]"
             />
-            <span class="mr-4 font-[oswald]">CALIDAD</span>
+            <span
+              class="mr-4 font-[oswald] text-[#ffce00] text-6xl font-extrabold"
+              >CALIDAD</span
+            >
             <img
-              src="/assets/arrow_home.svg"
+              src="/assets/arrow_right.png"
               alt="flecha direccion"
               class="w-[4.5rem]"
             />
-            <span class="font-[oswald]">PRESTIGIO</span>
+            <span
+              class="font-[oswald] text_border_convert text-6xl font-extrabold"
+              >PRESTIGIO</span
+            >
           </div>
           <div class="w-[50rem]">
             <img src="/assets/linea.png" alt="divider line" />
@@ -51,35 +60,42 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </div>
 
-
-        <section class="mr-40 ml-40 grid grid-cols-4 grid-rows-1">
+        <section class="mx-40 mt-40 grid grid-cols-4 grid-rows-1">
           <div>
-            <img
-              src="/assets/puerta-servicio.jpg"
-              alt="Maria Isabel Hotel"
-              class="img-transform"
-            />
+            <a href="/producto/puertas-giratorias">
+              <img
+                src="/assets/puerta-servicio.jpg"
+                alt="Maria Isabel Hotel"
+                class="img-transform"
+              /></a
+            >
           </div>
           <div>
-            <img
-              src="/assets/TorreMayor.jpg"
-              alt="Torre Mayor Entrada"
-              class="img-transform"
-            />
+            <a href="/producto/puertas-corredizas"
+              ><img
+                src="/assets/TorreMayor.jpg"
+                alt="Torre Mayor Entrada"
+                class="img-transform"
+              /></a
+            >
           </div>
           <div>
-            <img
-              src="/assets/puerta-TorreMayor.jpg"
-              alt="Torre Mayor puerta"
-              class="img-transform"
-            />
+            <a href="/producto/puertas-batientes">
+              <img
+                src="/assets/puerta-TorreMayor.jpg"
+                alt="Torre Mayor puerta"
+                class="img-transform"
+              /></a
+            >
           </div>
           <div>
-            <img
-              src="/assets/puerta-two-TorreMayor.jpg"
-              alt="Torre Mayor puerta 2"
-              class="img-transform"
-            />
+            <a href="/producto/puertas-telescopicas"
+              ><img
+                src="/assets/puerta-two-TorreMayor.jpg"
+                alt="Torre Mayor puerta 2"
+                class="img-transform"
+              /></a
+            >
           </div>
         </section>
       </article>
@@ -122,5 +138,4 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
   </main>
-  <script></script>
 </Layout>
