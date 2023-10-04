@@ -1,0 +1,15 @@
+---
+interface Props {
+  imgUrl: string;
+  altData: string;
+}
+const { imgUrl, altData } = Astro.props;
+---
+
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+  <img
+    src={imgUrl}
+    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+    alt={altData}
+  />
+</div>
