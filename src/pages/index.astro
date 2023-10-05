@@ -20,38 +20,38 @@ import Layout from "../layouts/Layout.astro";
           class="mt-[13rem] mb-20 flex flex-col self-center items-center justify-center"
         >
           <div
-            class="inline-flex items-center [&>span]:p-4 [&>span]:tracking-wider [&>img]:p-4"
+            class="lg:inline-flex flex flex-col md:flex-row items-center md:[&>span]:p-4  [&>span]:p-2 [&>span]:tracking-wider [&>img]:p-4 text-center md:text-left"
           >
             <span
-              class="mr-4 font-[oswald] text_border_convert text-6xl font-extrabold"
+              class="md:mr-4 font-[oswald] text_border_convert md:text-6xl text-5xl font-extrabold"
               >SEGURIDAD</span
             >
             <img
               src="/assets/arrow_right.png"
               alt="flecha direccion"
-              class="w-[4.5rem]"
+              class="w-[4.5rem] hidden md:block "
             />
             <span
-              class="mr-4 font-[oswald] text-[#ffce00] text-6xl font-extrabold"
+              class="md:mr-4 font-[oswald] text-[#ffce00] md:text-6xl text-5xl font-extrabold"
               >CALIDAD</span
             >
             <img
               src="/assets/arrow_right.png"
               alt="flecha direccion"
-              class="w-[4.5rem]"
+              class="w-[4.5rem] hidden md:block"
             />
             <span
-              class="font-[oswald] text_border_convert text-6xl font-extrabold"
+              class="font-[oswald] text_border_convert md:text-6xl text-5xl font-extrabold"
               >PRESTIGIO</span
             >
           </div>
-          <div class="w-[50rem]">
+          <div class="lg:w-[50rem] px-2">
             <img src="/assets/linea.png" alt="divider line" />
           </div>
           <h1 class="text-white text-xl font-bold font-[oswald]">
             SOLUCIONES EN ACCESOS
           </h1>
-          <p class="text-white text-xl font-ligth">
+          <p class="text-white text-xl font-ligth text-center lg:text-left">
             Somos <span class="text-[#ffce00]">número uno</span> en puertas automáticas
             en todo México y el Caribe.
           </p>
@@ -60,7 +60,7 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </div>
 
-        <section class="mx-40 mt-40 grid grid-cols-4 grid-rows-1">
+        <section class="md:mx-40 md:mt-40 px-8 grid lg:grid-cols-4 grid-cols-2  lg:grid-rows-1">
           <div>
             <a href="/producto/puertas-giratorias">
               <img
@@ -103,16 +103,16 @@ import Layout from "../layouts/Layout.astro";
 
     <section
       id="animation-carousel"
-      class="relative w-full h-screen"
+      class="relative w-full min-h-screen"
       data-carousel="slide"
     >
       <!-- Carousel wrapper -->
-      <div class="relative h-screen overflow-hidden rounded-lg">
+      <div class="relative min-h-screen overflow-hidden rounded-lg">
         <!-- Item 1 -->
         <div class="hidden duration-300 ease-linear" data-carousel-item>
           <img
             src="/assets/background_home.png"
-            class="absolute block w-full cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full object-cover h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="background"
           />
         </div>
@@ -120,7 +120,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="hidden duration-200 ease-linear" data-carousel-item>
           <img
             src="/assets/background_home_2.png"
-            class="absolute block w-full cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full object-cover h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="background 2.."
           />
         </div>
@@ -131,7 +131,7 @@ import Layout from "../layouts/Layout.astro";
         >
           <img
             src="/assets/background_home_3.png"
-            class="absolute block w-full cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full object-cover h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="background 3.."
           />
         </div>

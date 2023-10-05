@@ -13,7 +13,7 @@ const { title, category, description, imageUrl, imageAlt, url } = Astro.props;
 <div
   class="group img-transform hover:border-[#ffce00] border-2 border-transparent rounded-xl relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 animate-fade-down animate-duration-500 animation-delay-300 animate-ease-in-out"
 >
-  <div class="h-96 w-96 pr-16">
+  <div class="md:h-96 md:w-96 w-[380px] h-[380px] md:pr-16">
     <img
       class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125"
       src={imageUrl}
