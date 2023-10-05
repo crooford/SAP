@@ -2,7 +2,6 @@
 import "@fontsource/roboto/";
 import "@fontsource-variable/oswald";
 
-
 interface Props {
   title: string;
   HomeState: string;
@@ -43,67 +42,103 @@ const {
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
-    <header
-      class="flex items-center sticky top-0 w-full justify-between z-[100] bg-black/80 transition ease-in-out duration-300"
-      id="landing-header"
-    >
-      <div class="lg:w-[150px] w-32">
-        <a href="/"><img src="/assets/logo.svg" alt="logo sap" /></a>
-      </div>
-      <nav>
-        <ul
-          class="lg:flex [&>li>a]:px-5 [&>li>a]:py-4 px-10 [&>li>a]:font-semibold uppercase text-white hidden"
+    <header>
+      <nav class="fixed top-0 w-full z-[100] pr-4 md:pr-0" id="landing-header">
+        <div
+          class="max-w-full flex flex-wrap items-center justify-between mx-auto"
         >
-          <li>
-            <a
-              class={HomeState == "active" ? "active-tab" : "no-active-tab"}
-              href="/">Home</a
+          <a href="/">
+            <img src="/assets/logo.svg" alt="logo sap" class="h-20" />
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#ffce00]"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
             >
-          </li>
-          <li>
-            <a
-              class={ProductosState == "active"
-                ? "active-tab"
-                : "no-active-tab"}
-              href="/productos">Productos</a
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"></path>
+            </svg>
+          </button>
+          <div
+            class="hidden w-full md:block md:w-auto bg-black md:bg-transparent"
+            id="navbar-default"
+          >
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 lg:[&>li>a]:px-5 lg:[&>li>a]:py-4 [&>li>a]:block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase"
             >
-          </li>
-          <li>
-            <a
-              class={ServiciosState == "active"
-                ? "active-tab"
-                : "no-active-tab"}
-              href="/servicios">Servicios</a
-            >
-          </li>
-          <li>
-            <a
-              class={CatalogoState == "active" ? "active-tab" : "no-active-tab"}
-              href="/catalogo">CATÁLOGO</a
-            >
-          </li>
-          <li>
-            <a
-              class={NosotrosState == "active" ? "active-tab" : "no-active-tab"}
-              href="/nosotros">Nosotros</a
-            >
-          </li>
-          <li>
-            <a
-              class={OficinasState == "active" ? "active-tab" : "no-active-tab"}
-              href="/oficinas">Oficinas</a
-            >
-          </li>
-          <li>
-            <a
-              class={ContactoState == "active" ? "active-tab" : "no-active-tab"}
-              href="/contacto">Contacto</a
-            >
-          </li>
-        </ul>
+              <li>
+                <a
+                  class={HomeState == "active" ? "active-tab" : "no-active-tab"}
+                  href="/">Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class={ProductosState == "active"
+                    ? "active-tab"
+                    : "no-active-tab"}
+                  href="/productos">Productos</a
+                >
+              </li>
+              <li>
+                <a
+                  class={ServiciosState == "active"
+                    ? "active-tab"
+                    : "no-active-tab"}
+                  href="/servicios">Servicios</a
+                >
+              </li>
+              <li>
+                <a
+                  class={CatalogoState == "active"
+                    ? "active-tab"
+                    : "no-active-tab"}
+                  href="/catalogo">CATÁLOGO</a
+                >
+              </li>
+              <li>
+                <a
+                  class={NosotrosState == "active"
+                    ? "active-tab"
+                    : "no-active-tab"}
+                  href="/nosotros">Nosotros</a
+                >
+              </li>
+              <li>
+                <a
+                  class={OficinasState == "active"
+                    ? "active-tab"
+                    : "no-active-tab"}
+                  href="/oficinas">Oficinas</a
+                >
+              </li>
+              <li>
+                <a
+                  class={ContactoState == "active"
+                    ? "active-tab"
+                    : "no-active-tab"}
+                  href="/contacto">Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <slot />
@@ -114,7 +149,7 @@ const {
   </body>
 </html>
 <style is:global>
-    * {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
