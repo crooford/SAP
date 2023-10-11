@@ -19,6 +19,7 @@ interface Props {
   irisState: string;
   curvaState: string;
   tecladoDandLectorTarjetaState: string;
+  icuState: string;
 }
 
 const {
@@ -38,6 +39,7 @@ const {
   irisState,
   curvaState,
   tecladoDandLectorTarjetaState,
+  icuState,
 } = Astro.props;
 ---
 
@@ -63,7 +65,7 @@ const {
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
     <header>
-      <nav class="top-0 fixed w-full z-[100] " id="landing-header">
+      <nav class="top-0 fixed w-full z-20" id="landing-header">
         <div
           class="max-w-full flex flex-wrap items-center justify-between mx-auto"
         >
@@ -94,7 +96,7 @@ const {
             </svg>
           </button>
           <div
-            class="hidden w-full md:block md:w-auto bg-black md:bg-transparent"
+            class="hidden w-full md:block md:w-auto bg-black md:bg-transparent md:pr-4"
             id="navbar-default"
           >
             <ul
@@ -126,10 +128,10 @@ const {
         </div>
       </nav>
     </header>
-    <main class="flex flex-row min-h-screen justify-center bg-black/70">
-      <section class="flex flex-row items-start pb-12">
+    <main class="flex flex-row min-h-screen  justify-center bg-black/70 overflow-hidden">
+      <section class="flex flex-row items-start pb-12 pt-24 min-w-full w-screen">
         <aside class="fixed mt-0 w-[320px] p-4">
-          <header class="mb-4 pt-2">
+          <header class=" pt-2">
             <a href="/productos"
               ><h1
                 class="text-5xl font-extrabold text_border_convert text-center uppercase font-[oswald]"
@@ -179,6 +181,14 @@ const {
                     class={plegadizaState == "active"
                       ? "active-tab"
                       : "no-active-tab"}>Puertas plegadizas</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/producto/puertas-icu"
+                    class={icuState == "active"
+                      ? "active-tab"
+                      : "no-active-tab"}>Puertas ICU</a
                   >
                 </li>
                 <li>

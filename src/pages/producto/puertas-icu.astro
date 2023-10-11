@@ -1,0 +1,85 @@
+---
+import CarouselProducts from "../../components/CarouselProducts.astro";
+import ItemCarousel from "../../components/ItemCarousel.astro";
+import LayoutDoors from "../../layouts/LayoutDoors.astro";
+
+const items = [
+  {
+    imgUrl: "/assets/icu/i-1.jpeg",
+    altData: "puerta icu",
+  },
+  {
+    imgUrl: "/assets/icu/i-2.jpeg",
+    altData: "puerta icu",
+  },
+  {
+    imgUrl: "/assets/icu/i-3.jpeg",
+    altData: "puerta icu",
+  },
+  {
+    imgUrl: "/assets/icu/i-4.jpeg",
+    altData: "puerta icu",
+  },
+];
+---
+
+<LayoutDoors
+  title="SAP | Puertas ICU"
+  doorCategory="Puertas icu"
+  BgBody="yes"
+  giratoriaState=""
+  corredizaState=""
+  batienteState=""
+  telescopicaState=""
+  plegadizaState=""
+  icuState="active"
+  seguridadState=""
+  torniqueteState=""
+  huellaDigitalState=""
+  magneticaState=""
+  irisState=""
+  curvaState=""
+  tecladoDandLectorTarjetaState=""
+>
+  <div class="flex flex-col lg:flex-row">
+    <div
+      class="px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
+    >
+      <p>
+        Las puertas Label ICU/CCU para cuidados intensivos y triaje son puertas
+        correderas, automáticas o manuales, con apertura “antipánico” hacia el
+        interior (o hacia el exterior a petición).
+      </p>
+      <CarouselProducts>
+        {
+          items.map((item) => (
+            <ItemCarousel
+              imgUrl={item.imgUrl}
+              altData={item.altData}
+              slot="items"
+            />
+          ))
+        }
+      </CarouselProducts>
+    </div>
+    <div
+      class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out"
+    >
+      <div class="w-56">
+        <img src="/assets/icu/i-4.jpeg" alt="puerta icu" />
+        <p class="text-white mt-2 text-center">Puerta ICU</p>
+      </div>
+      <!-- <div class="w-56">
+        <img
+          src="/assets/plegadizas/p-2.JPG"
+          alt="AICM"
+        />
+        <p class="text-white mt-2 text-center">AICM PLEGADIZA</p>
+      </div> -->
+      <div class="w-56">
+        <img src="/assets/icu/i-2.jpeg" alt="puerta icu" />
+        <p class="text-white mt-2 text-center">Puerta ICU</p>
+      </div>
+    </div>
+  </div>
+</LayoutDoors>

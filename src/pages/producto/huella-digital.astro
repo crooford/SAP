@@ -8,32 +8,27 @@ import ItemModel from "../../components/ItemModel.astro";
 const items = [
 
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-2.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/huella-digital/h-1.png",
+    altData: "huella digital",
   },
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-3.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/huella-digital/h-1.png",
+    altData: "huella digital",
   },
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-4.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/huella-digital/h-1.png",
+    altData: "huella digital",
   },
+  {
+    imgUrl: "/assets/huella-digital/h-1.png",
+    altData: "huella digital",
+  },
+  {
+    imgUrl: "/assets/huella-digital/h-1.png",
+    altData: "huella digital",
+  },
+  
 
-];
-const modeloAllglass = [
-  {
-    imagen: "/assets/puertas-corredizas/all-glass-europe.JPG",
-    alternative: "puerta corrediza modelo all glass europe",
-  },
-  {
-    imagen: "/assets/puertas-corredizas/all-glass.jpeg",
-    alternative: "puerta corrediza modelo all glass",
-  },
-  {
-    imagen: "/assets/puertas-corredizas/all-glass-two.jpg",
-    alternative: "puerta corrediza modelo all glass europe",
-  },
 ];
 ---
 
@@ -53,6 +48,7 @@ const modeloAllglass = [
   irisState=""
   curvaState=""
   tecladoDandLectorTarjetaState=""
+  icuState=""
 >
   <div class="flex flex-col lg:flex-row">
     <div
@@ -82,157 +78,20 @@ const modeloAllglass = [
     >
       <div class="w-56">
         <img
-          src="/assets/puertas-corredizas/all-glass-two.jpg"
-          alt="puerta corrediza all glass"
+          src="/assets/huella-digital/h-2.png"
+          alt="lector huella digital"
         />
-        <p class="text-white mt-2 text-center">Puerta corrediza all glass</p>
+        <p class="text-white mt-2 text-center">Lector de huella digital</p>
       </div>
       <div class="w-56">
         <img
-          src="/assets/puertas-corredizas/dura-glade.jpg"
-          alt="instalacion puerta giratoria"
+          src="/assets/huella-digital/h-2.png"
+          alt="lector huella digital"
         />
-        <p class="text-white mt-2 text-center">Puerta corrediza all glass</p>
+        <p class="text-white mt-2 text-center">Lector de huella digital</p>
       </div>
-      <div class="w-56">
-        <img
-          src="/assets/puertas-corredizas/all-glass-europe.JPG"
-          alt="instalacion puerta giratoria"
-        />
-        <p class="text-white mt-2 text-center">
-          Puerta corrediza all glass europe
-        </p>
-      </div>
+      
     </div>
   </div>
-  <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
-    <div
-      class="[&>h1]:text-[#ffce00] py-20 flex flex-col items-center justify-center"
-    >
-      <h1
-        class="text-6xl font-[oswald] font-extrabold uppercase text-center tracking-wide"
-      >
-        modelos
-      </h1>
-      <img src="/assets/linea.png" alt="" class="w-68 h-4" />
-    </div>
 
-    <div class="grid gap-4 pt-10 items-center">
-      <section class="flex flex-col mx-auto">
-        <CarouselModel>
-          {
-            modeloAllglass.map((item) => (
-              <ItemModel imgUrl={item.imagen} altData={item.alternative} />
-            ))
-          }
-        </CarouselModel>
-        <div class="mt-2">
-          <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2"
-          >
-            all glass
-          </h3>
-          <p class="text-white text-lg">
-            El modelo all glass trae zócalos en la parte superior e inferior
-          </p>
-        </div>
-      </section>
-      <section class="mt-10 flex flex-col mx-auto">
-        <CarouselModel>
-          {
-            modeloAllglass.map((item) => (
-              <ItemModel imgUrl={item.imagen} altData={item.alternative} />
-            ))
-          }
-        </CarouselModel>
-        <div class="mt-2">
-          <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2 "
-          >
-          Dura-Glide
-          </h3>
-          <p class="text-white text-lg ">
-            El modelo Dura-Glide trae aluminio perimetral.
-          </p>
-        </div>
-      </section>
-      <section class="mt-10 flex flex-col mx-auto">
-        <CarouselModel>
-          {
-            modeloAllglass.map((item) => (
-              <ItemModel imgUrl={item.imagen} altData={item.alternative} />
-            ))
-          }
-        </CarouselModel>
-        <div class="mt-2">
-          <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2 "
-          >
-          all glass europe
-          </h3>
-          <p class="text-white text-lg ">
-            El modelo all glass Europe trae solo zócalos superiores.
-          </p>
-        </div>
-      </section>
-    </div>
-  </div>
-  <script
-  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
-  slot="script"></script>
 </LayoutDoors>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
-    loop: true,
-
-    speed: 700,
-  });
-</script>
-
-<style>
-  .swiper {
-    width: 550px;
-  }
-
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 350px;
-    border-radius: 8px;
-  }
-  /* .swiper-slide-img {
-    display: block;
-    width: 100%;
-  } */
-  .text_border_convert-models {
-    -webkit-text-stroke: 0.7px #ffce00;
-    color: transparent;
-  }
-  .border-left-bottom {
-    -webkit-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-left-top {
-    -webkit-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-top-right {
-    -webkit-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-</style>

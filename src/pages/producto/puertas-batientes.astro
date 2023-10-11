@@ -7,33 +7,46 @@ import ItemModel from "../../components/ItemModel.astro";
 
 const items = [
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-2.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/batientes/b-1.jpg",
+    altData: "puerta batiente",
   },
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-3.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/batientes/b-2.jpg",
+    altData: "puerta batiente",
   },
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-4.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/batientes/b-1.jpg",
+    altData: "puerta batiente",
   },
+  {
+    imgUrl: "/assets/batientes/b-2.jpg",
+    altData: "puerta batiente",
+  },
+  {
+    imgUrl: "/assets/batientes/b-1.jpg",
+    altData: "puerta batiente",
+  },
+  {
+    imgUrl: "/assets/batientes/b-2.jpg",
+    altData: "puerta batiente",
+  },
+
 ];
 
-const modeloAllglass = [
-  {
-    imagen: "/assets/puertas-corredizas/all-glass-europe.JPG",
-    alternative: "puerta corrediza modelo all glass europe",
-  },
-  {
-    imagen: "/assets/puertas-corredizas/all-glass.jpeg",
-    alternative: "puerta corrediza modelo all glass",
-  },
-  {
-    imagen: "/assets/puertas-corredizas/all-glass-two.jpg",
-    alternative: "puerta corrediza modelo all glass europe",
-  },
-];
+// const modeloAllglass = [
+//   {
+//     imagen: "/assets/puertas-corredizas/all-glass-europe.JPG",
+//     alternative: "puerta corrediza modelo all glass europe",
+//   },
+//   {
+//     imagen: "/assets/puertas-corredizas/all-glass.jpeg",
+//     alternative: "puerta corrediza modelo all glass",
+//   },
+//   {
+//     imagen: "/assets/puertas-corredizas/all-glass-two.jpg",
+//     alternative: "puerta corrediza modelo all glass europe",
+//   },
+// ];
 ---
 
 <LayoutDoors
@@ -52,6 +65,7 @@ const modeloAllglass = [
   irisState=""
   curvaState=""
   tecladoDandLectorTarjetaState=""
+  icuState=""
 >
   <div class="flex flex-col lg:flex-row">
     <div
@@ -80,35 +94,35 @@ const modeloAllglass = [
       </CarouselProducts>
     </div>
     <div
-      class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out"
+      class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out justify-evenly"
     >
       <div class="w-56">
         <img
-          src="/assets/puertas-corredizas/all-glass-two.jpg"
-          alt="puerta corrediza all glass"
+          src="/assets/batientes/b-1.jpg"
+          alt="puerta batiente"
         />
-        <p class="text-white mt-2 text-center">Puerta corrediza all glass</p>
+        <p class="text-white mt-2 text-center">Puerta batiente</p>
       </div>
       <div class="w-56">
         <img
-          src="/assets/puertas-corredizas/dura-glade.jpg"
-          alt="instalacion puerta giratoria"
+          src="/assets/batientes/b-2.jpg"
+          alt="puerta batiente"
         />
-        <p class="text-white mt-2 text-center">Puerta corrediza all glass</p>
+        <p class="text-white mt-2 text-center">Puerta batiente</p>
       </div>
       <div class="w-56">
         <img
-          src="/assets/puertas-corredizas/all-glass-europe.JPG"
-          alt="instalacion puerta giratoria"
+          src="/assets/batientes/b-1.jpg"
+          alt="puerta batiente"
         />
         <p class="text-white mt-2 text-center">
-          Puerta corrediza all glass europe
+          Puerta batiente
         </p>
       </div>
     </div>
   </div>
   <!-- aqui inicia modelos -->
-  <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
+  <!-- <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
     <div
       class="[&>h1]:text-[#ffce00] py-20 flex flex-col items-center justify-center"
     >
@@ -179,7 +193,7 @@ const modeloAllglass = [
         </div>
       </section>
     </div>
-  </div>
+  </div> -->
   <script
     src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     slot="script"></script>

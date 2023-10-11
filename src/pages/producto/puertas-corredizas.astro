@@ -6,34 +6,88 @@ import ItemCarousel from "../../components/ItemCarousel.astro";
 import ItemModel from "../../components/ItemModel.astro";
 
 const items = [
-
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-2.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/corredizas/allg-1.JPG",
+    altData: "puerta corrediza",
   },
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-3.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/corredizas/allg-2.jpeg",
+    altData: "puerta corrediza",
   },
   {
-    imgUrl: "/assets/puertas-giratorias/giratoria-4.jpg",
-    altData: "puerta giratoria",
+    imgUrl: "/assets/corredizas/allg-3.jpg",
+    altData: "puerta corrediza",
   },
-
+  {
+    imgUrl: "/assets/corredizas/allg-4.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/allge-1.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/allge-2.JPG",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/dg-1.jpeg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/dg-2.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/nn-1.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/nn-2.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/nn-3.jpg",
+    altData: "puerta corrediza",
+  },
 ];
 
 const modeloAllglass = [
   {
-    imagen: "/assets/puertas-corredizas/all-glass-europe.JPG",
-    alternative: "puerta corrediza modelo all glass europe",
-  },
-  {
-    imagen: "/assets/puertas-corredizas/all-glass.jpeg",
+    imagen: "/assets/corredizas/allg-1.JPG",
     alternative: "puerta corrediza modelo all glass",
   },
   {
-    imagen: "/assets/puertas-corredizas/all-glass-two.jpg",
-    alternative: "puerta corrediza modelo all glass europe",
+    imagen: "/assets/corredizas/allg-2.jpeg",
+    alternative: "puerta corrediza modelo all glass",
+  },
+  {
+    imagen: "/assets/corredizas/allg-3.jpg",
+    alternative: "puerta corrediza modelo all glass",
+  },
+  {
+    imagen: "/assets/corredizas/allg-4.jpg",
+    alternative: "puerta corrediza modelo all glass",
+  },
+];
+const modeloDuraglide = [
+  {
+    imagen: "/assets/corredizas/dg-1.jpeg",
+    alternative: "puerta corrediza modelo dura glide",
+  },
+  {
+    imagen: "/assets/corredizas/dg-2.jpg",
+    alternative: "puerta corrediza modelo dura glide",
+  },
+];
+const modeloAllglassEurope = [
+  {
+    imagen: "/assets/corredizas/allge-1.jpg",
+    alternative: "puerta corrediza modelo all glass Europe",
+  },
+  {
+    imagen: "/assets/corredizas/allge-2.JPG",
+    alternative: "puerta corrediza modelo all glass Europe",
   },
 ];
 ---
@@ -54,6 +108,7 @@ const modeloAllglass = [
   irisState=""
   curvaState=""
   tecladoDandLectorTarjetaState=""
+  icuState=""
 >
   <div class="flex flex-col lg:flex-row">
     <div
@@ -71,23 +126,23 @@ const modeloAllglass = [
       <CarouselProducts>
         {
           items.map((item) => (
-              <ItemCarousel 
-                imgUrl={item.imgUrl}
-                altData={item.altData}
-                slot="items"/>
-              
-            ))
+            <ItemCarousel
+              imgUrl={item.imgUrl}
+              altData={item.altData}
+              slot="items"
+            />
+          ))
         }
       </CarouselProducts>
     </div>
 
     <div
-      class="flex flex-col mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out"
+      class="flex flex-col mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out justify-evenly"
     >
       <div class="w-56">
         <a href="#all-glass"
           ><img
-            src="/assets/puertas-corredizas/all-glass-two.jpg"
+            src="/assets/corredizas/allg-3.jpg"
             alt="puerta corrediza all glass"
           /></a
         >
@@ -95,14 +150,14 @@ const modeloAllglass = [
       </div>
       <div class="w-56">
         <img
-          src="/assets/puertas-corredizas/dura-glade.jpg"
+          src="/assets/corredizas/dg-2.jpg"
           alt="instalacion puerta giratoria"
         />
         <p class="text-white mt-2 text-center">Puerta corrediza Dura-Glade</p>
       </div>
       <div class="w-56">
         <img
-          src="/assets/puertas-corredizas/all-glass-europe.JPG"
+          src="/assets/corredizas/allge-2.JPG"
           alt="instalacion puerta giratoria"
         />
         <p class="text-white mt-2 text-center">
@@ -113,7 +168,7 @@ const modeloAllglass = [
   </div>
 
   <!-- aqui inicia modelos -->
-  <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
+  <div class="pt-10 max-w-6xl flex flex-col justify-center mx-auto">
     <div
       class="[&>h1]:text-[#ffce00] py-20 flex flex-col items-center justify-center"
     >
@@ -125,7 +180,7 @@ const modeloAllglass = [
       <img src="/assets/linea.png" alt="" class="w-68 h-4" />
     </div>
 
-    <div class="grid gap-4 pt-10 items-center">
+    <div class="grid gap-4 pt-10 items-center" id="all-glass">
       <section class="flex flex-col mx-auto">
         <CarouselModel>
           {
@@ -148,18 +203,18 @@ const modeloAllglass = [
       <section class="mt-10 flex flex-col mx-auto">
         <CarouselModel>
           {
-            modeloAllglass.map((item) => (
+            modeloDuraglide.map((item) => (
               <ItemModel imgUrl={item.imagen} altData={item.alternative} />
             ))
           }
         </CarouselModel>
         <div class="mt-2">
           <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2 "
+            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2"
           >
-          Dura-Glide
+            Dura-Glide
           </h3>
-          <p class="text-white text-lg ">
+          <p class="text-white text-lg">
             El modelo Dura-Glide trae aluminio perimetral.
           </p>
         </div>
@@ -167,25 +222,22 @@ const modeloAllglass = [
       <section class="mt-10 flex flex-col mx-auto">
         <CarouselModel>
           {
-            modeloAllglass.map((item) => (
+            modeloAllglassEurope.map((item) => (
               <ItemModel imgUrl={item.imagen} altData={item.alternative} />
             ))
           }
         </CarouselModel>
         <div class="mt-2">
           <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2 "
+            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2"
           >
-          all glass europe
+            all glass europe
           </h3>
-          <p class="text-white text-lg ">
+          <p class="text-white text-lg">
             El modelo all glass Europe trae solo zócalos superiores.
           </p>
         </div>
       </section>
-      
-      
-      
     </div>
   </div>
   <script
