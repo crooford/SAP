@@ -48,10 +48,10 @@ const {
     <header>
       <nav class="fixed top-0 w-full z-[100] " id="landing-header">
         <div
-          class="max-w-full flex flex-wrap items-center justify-between mx-auto"
+          class="max-w-full flex flex-wrap items-center justify-between mx-auto "
         >
           <a href="/">
-            <img src="/assets/logo.svg" alt="logo sap" class="h-20" />
+            <img src="/assets/logo.svg" alt="logo sap" class="h-16 2xl:h-20" />
           </a>
           <button
             data-collapse-toggle="navbar-default"
@@ -76,12 +76,9 @@ const {
                 d="M1 1h15M1 7h15M1 13h15"></path>
             </svg>
           </button>
-          <div
-            class="hidden w-full md:block md:w-auto bg-black md:bg-transparent md:pr-4"
-            id="navbar-default"
-          >
+          <div class="hidden  w-full md:block md:w-auto bg-black md:bg-transparent lg:pr-4 sm:pr-2" id="navbar-default">
             <ul
-              class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 lg:[&>li>a]:px-5 lg:[&>li>a]:py-4 [&>li>a]:block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase"
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row 2xl:space-x-4 md:mt-0 lg:[&>li>a]:px-5 sm:[&>li>a]:px-3  md:[&>li>a]:py-4 [&>li>a]:block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase  md:[&>li>a]:text-sm 2xl:[&>li>a]:text-base"
             >
               <li>
                 <a

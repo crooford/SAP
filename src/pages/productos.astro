@@ -137,14 +137,14 @@ let doors = [
   <main
     class="lg:w-full min-h-screen h-full flex lg:pt-40 pt-32 justify-center bg-black/80 overflow-hidden"
   >
-    <section class="flex flex-col mx-auto lg:w-[1250px] mb-10 items-center lg:items-start">
-      <div class="mb-8 flex flex-col w-96 px-6 lg:w-full">
+    <section class="flex flex-col mx-auto lg:max-w-[980px] 2xl:w-[1250px] mb-10 items-center lg:items-start">
+      <div class="mb-8 flex flex-col w-96 md:px-6 lg:w-full">
         <h1
-          class="text-[#ffce00] md:text-6xl text-5xl uppercase font-extrabold mb-4 font-[oswald]"
+          class="text-[#ffce00] text-5xl lg:text-6xl  uppercase font-extrabold mb-4 lg:mb-6 font-[oswald]"
         >
           productos
         </h1>
-        <p class="text-white md:text-lg">
+        <p class="text-white 2xl:text-lg">
           Ofrecemos soluciones personalizadas, seguras y automatizadas para tu
           negocio. Como líderes en puertas automáticas en todo México y el
           Caribe, nuestros productos están diseñados para brindar seguridad y
@@ -153,8 +153,8 @@ let doors = [
           necesidades.
         </p>
       </div>
-      <div class="flex lg:w-[1250px] mx-auto min-h-96 justify-center">
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 px-6">
+      <div class="flex lg:w-[980px] 2xl:w-[1250px] mx-auto min-h-96 justify-center">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 px-6">
           {
             doors.map((door) => (
               <Door
