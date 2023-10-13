@@ -18,7 +18,7 @@ import Card from "../components/Card.astro";
     <section
       class="w-full md:flex md:flex-col justify-center md:pt-28 pt-24 pb-32 px-8"
     >
-      <div class="lg:max-w-[980px] 2xl:max-w-[1150px] py-8 mx-auto">
+      <div class="md:max-w-[700px] lg:max-w-[980px] 2xl:max-w-[1150px] py-8 mx-auto ">
         <article class="mb-12">
           <h2
             class="uppercase mb-2 md:text-6xl text-5xl font-bold text-[#ffce00] text-left font-[oswald]"
@@ -42,14 +42,14 @@ import Card from "../components/Card.astro";
           </p>
         </article>
         <div
-          class="md:max-h-[300px] lg:grid lg:grid-cols-3 lg:gap-8 2xl:gap-10 flex flex-col justify-between items-center md:items-start "
+          class="lg:max-h-[300px] lg:grid lg:grid-cols-3 lg:gap-8 2xl:gap-10 flex flex-col justify-between items-center lg:items-start "
         >
           <Card
             title="GARANTÍA"
             src="/assets/icono-garantia.png"
             alt="icono de garantia"
           >
-            <div>
+            <div class="md:w-[600px] lg:w-auto">
               <p
                 class="text-white mb-4 leading-6 md:font-semibold animate-fade animate-duration-300 animate-delay-300"
               >
@@ -71,7 +71,7 @@ import Card from "../components/Card.astro";
             src="/assets/icono-poliza.png"
             alt="icono de poliza"
           >
-            <div>
+            <div class="md:w-[600px] lg:w-auto">
               <p
                 class="text-white mb-4 leading-6 md:font-semibold animate-fade animate-duration-300 animate-delay-300"
               >
@@ -90,7 +90,7 @@ import Card from "../components/Card.astro";
             src="/assets/icono-reparaciones.png"
             alt="icono de reparaciones"
           >
-            <div>
+            <div class="md:w-[600px] lg:w-auto">
               <p
                 class="text-white mb-4 leading-6 md:font-semibold animate-fade animate-duration-300 animate-delay-300"
               >
@@ -112,9 +112,9 @@ import Card from "../components/Card.astro";
     <section
       class="bg-black/90 w-full bg-center flex flex-col justify-center mb-8 px-8 md:px-0"
     >
-      <div class="lg:max-w-[980px] 2xl:max-w-[1150px] mx-auto">
-        <div class="flex md:flex-row flex-col justify-between mb-8">
-          <div class="text-white pt-6 md:w-4/6 md:pr-36 [&>p>span]:text-2xl">
+      <div class=" lg:max-w-[980px] 2xl:max-w-[1150px] mx-auto">
+        <div class="flex lg:flex-row flex-col justify-between md:items-center lg:items-start mb-8 gap-8 lg:gap-0">
+          <div class="text-white pt-6 lg:w-4/6 lg:pr-36 [&>p>span]:text-2xl md:px-8">
             <p class="font-bold text-lg text-center md:text-left">
               Contamos con personal para reparar su sistema.
             </p>
@@ -146,9 +146,9 @@ import Card from "../components/Card.astro";
               class="text-[#ffce00] font-semibold italic text-xl">Contáctanos</a
             >
           </div>
-          <div class="md:w-3/6 p-4">
+          <div class="md:w-2/3 lg:w-3/6 p-4">
             <img
-              class="object-cover w-full h-full md:scale-125"
+              class="object-cover w-full h-full lg:scale-150"
               src="/assets/puerta-servicio.webp"
               alt="Maria Isabel Hotel"
             />
