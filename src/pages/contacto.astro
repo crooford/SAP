@@ -14,15 +14,15 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
   BgBody="yes"
 >
   <main class="w-full min-h-screen h-full flex items-center bg-black/20">
-    <section class="mx-auto my-auto max-w-[1400px] bg-black/80 p-8">
-      <div class="grid grid-cols-2">
+    <section class="flex justify-center w-full 2xl:max-w-[1400px] bg-black/80 p-8 pt-28 lg:pt-8">
+      <div class="grid gap-8 lg:grid-cols-2 max-w-[350px]">
         <div class="flex flex-col">
-          <h1 class="text-[#ffce00] text-6xl font-extrabold uppercase mb-6 font-[oswald]">
+          <h1 class="text-[#ffce00] text-5xl lg:text-6xl font-extrabold uppercase mb-6 font-[oswald]">
             contacto
           </h1>
           <form action="mailto:info@stanley.mx" method="POST">
-            <div class="grid md:grid-rows-2 md:gap-4">
-              <div class="grid grid-cols-2 grid-rows-2 gap-4 w-[600px]">
+            <div class="grid lg:grid-rows-2 gap-4 lg:gap-4">
+              <div class="grid lg:grid-cols-2 grid-rows-2 gap-4 max-w-[380px] lg:max-w-[600px]">
                 <div class="relative">
                   <input
                     type="text"
@@ -79,7 +79,7 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
                   >
                 </div>
               </div>
-              <div class="relative w-[600px]">
+              <div class="relative max-w-[380px] lg:max-w-[600px]">
                 <textarea
                   id="floating_message"
                   class="block px-2.5 pb-2.5 pt-10 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer resize-none"
@@ -94,7 +94,7 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
               </div>
               <button
                 type="submit"
-                class="bg-[#ffce00] mt-4 w-[600px] rounded-lg text-white text-lg font-semibold p-2 flex items-center justify-center [&>span>svg]:invisible [&>span>svg]:hover:visible [&>span>svg]:hover:fill-[#ffce00] hover:bg-transparent hover:border-[#ffce00] hover:text-[#ffce00] border-2 border-[#ffce00] transition duration-300 ease-in-out"
+                class="bg-[#ffce00] lg:mt-4 max-w-[380px] lg:max-w-[600px] rounded-lg text-white text-lg font-semibold p-2 flex items-center justify-center [&>span>svg]:invisible [&>span>svg]:hover:visible [&>span>svg]:hover:fill-[#ffce00] hover:bg-transparent hover:border-[#ffce00] hover:text-[#ffce00] border-2 border-[#ffce00] transition duration-300 ease-in-out"
                 >Enviar <span>
                   <svg
                     width="22"
@@ -112,7 +112,7 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
           </form>
         </div>
         <div class="grid md:grid-row-2 bg-[url(/assets/bg-map.png)]">
-          <div class="opacity-80">
+          <div class="opacity-80 hidden lg:block">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3763.75315882805!2d-99.187359!3d19.379838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff80e324f6c9%3A0x5dd9a2808ec2da3b!2sAv.%20Revoluci%C3%B3n%20789%2C%20Nonoalco%2C%20Benito%20Ju%C3%A1rez%2C%2003700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1692553344382!5m2!1ses-419!2smx"
               width="668"
@@ -122,8 +122,18 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+          <div class="opacity-80 lg:hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3763.75315882805!2d-99.187359!3d19.379838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff80e324f6c9%3A0x5dd9a2808ec2da3b!2sAv.%20Revoluci%C3%B3n%20789%2C%20Nonoalco%2C%20Benito%20Ju%C3%A1rez%2C%2003700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1692553344382!5m2!1ses-419!2smx"
+              width="380"
+              height="350"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
 
-          <div class="grid md:grid-cols-3 mt-4 ">
+          <div class="grid gap-4 md:grid-cols-3 mt-4 ">
             <div>
               <p class="text-white font-bold text-2xl">Teléfono</p>
               <p class="text-white text-lg">(55) 56 11 22 15</p>
