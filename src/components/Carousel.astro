@@ -1,0 +1,43 @@
+
+<div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+        <slot name="item-swiper"/>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+
+<style>
+    .swiper {
+        width: 980px;
+      }
+
+    .swiper-button-next{
+        color: #ffffff;
+    } 
+    .swiper-button-prev{
+        color: #ffffff;
+    } 
+
+    .swiper-pagination{
+        --swiper-pagination-color: #ffce00;
+    } 
+</style>
+<script>
+    var swiper = new Swiper(".mySwiper2", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      loop: true,
+      
+    });
+  </script>

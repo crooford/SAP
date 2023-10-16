@@ -1,0 +1,195 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Itemgallery from "../components/Itemgallery.astro";
+
+const items = [
+  {
+    imgUrl: "/assets/corredizas/allg-1.JPG",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/allg-2.jpeg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/allg-3.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/allg-4.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/allge-1.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/allge-2.JPG",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/dg-1.jpeg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/dg-2.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/nn-1.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/nn-2.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/corredizas/nn-3.jpg",
+    altData: "puerta corrediza",
+  },
+  {
+    imgUrl: "/assets/giratorias/g-1.JPG",
+    altData: "puerta giratoria",
+  },
+  {
+    imgUrl: "/assets/giratorias/g-3.jpg",
+    altData: "puerta giratoria",
+  },
+  {
+    imgUrl: "/assets/giratorias/g-5.jpeg",
+    altData: "puerta giratoria",
+  },
+  {
+    imgUrl: "/assets/giratorias/gl-1.webp",
+    altData: "puerta giratoria",
+  },
+  {
+    imgUrl: "/assets/batientes/b-1.jpg",
+    altData: "puerta batiente",
+  },
+  {
+    imgUrl: "/assets/batientes/b-2.jpg",
+    altData: "puerta batiente",
+  },
+  {
+    imgUrl: "/assets/giratorias/g-7.jpg",
+    altData: "puerta giratoria",
+  },
+  {
+    imgUrl: "/assets/giratorias/gc-1.jpg",
+    altData: "puerta giratoria",
+  },
+
+  {
+    imgUrl: "/assets/giratorias/nn-1.jpg",
+    altData: "puerta giratoria",
+  },
+  {
+    imgUrl: "/assets/giratorias/nn-2.jpg",
+    altData: "puerta giratoria",
+  },
+  {
+    imgUrl: "/assets/curvas/c-1.jpg",
+    altData: "puerta curva",
+  },
+  {
+    imgUrl: "/assets/curvas/ca-1.jpeg",
+    altData: "puerta curva",
+  },
+  {
+    imgUrl: "/assets/curvas/ca-2.jpg",
+    altData: "puerta curva",
+  },
+  {
+    imgUrl: "/assets/telescopicas/dg-1.png",
+    altData: "puerta telescopica",
+  },
+  {
+    imgUrl: "/assets/telescopicas/dg-2.png",
+    altData: "puerta telescopica",
+  },
+  {
+    imgUrl: "/assets/telescopicas/dg-3.png",
+    altData: "puerta telescopica",
+  },
+  {
+    imgUrl: "/assets/telescopicas/dg-4.png",
+    altData: "puerta telescopica",
+  },
+  {
+    imgUrl: "/assets/telescopicas/tm-1.JPG",
+    altData: "puerta telescopica",
+  },
+  {
+    imgUrl: "/assets/telescopicas/tox-1.jpeg",
+    altData: "puerta telescopica",
+  },
+  {
+    imgUrl: "/assets/curvas/ca-3.jpg",
+    altData: "puerta curva",
+  },
+  {
+    imgUrl: "/assets/plegadizas/p-1.JPG",
+    altData: "puerta plegadiza",
+  },
+  {
+    imgUrl: "/assets/plegadizas/p-2.JPG",
+    altData: "puerta plegadiza",
+  },
+  {
+    imgUrl: "/assets/plegadizas/p-3.JPG",
+    altData: "puerta plegadiza",
+  },
+  {
+    imgUrl: "/assets/icu/i-1.jpeg",
+    altData: "puerta icu",
+  },
+
+  {
+    imgUrl: "/assets/icu/i-3.jpeg",
+    altData: "puerta icu",
+  },
+];
+---
+
+<Layout
+  title="SAP | Servicos"
+  HomeState=""
+  ProductosState=""
+  GaleriaState="active"
+  ServiciosState=""
+  CatalogoState=""
+  NosotrosState=""
+  OficinasState=""
+  ContactoState=""
+  BgBody="yes"
+>
+  <main class="min-h-screen h-full w-screen bg-black/75 py-28 md:py-36">
+    <section class="px-10 lg:w-3/4 grid mx-auto mb-10">
+      <div class="flex flex-row mb-12">
+        <img
+          src="/assets/icono-flecha.png"
+          alt="flecha veloz"
+          class="mr-4 w-10 h-16 pt-2 animate-spin animate-duration-300 animate-ease-in animate-once"
+        />
+        <h2
+          class="text-[#ffce00] text-5xl lg:text-6xl align-text-bottom  uppercase font-extrabold mb-4 lg:mb-6 font-[oswald] animate-fade-right animate-delay-300 animate-duration-500 animate-fill-both"
+        >
+          Galeria de nuestros productos
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 2xl:grid-cols-4 gap-4 ">
+        {
+          items.map((item) => (
+            <Itemgallery
+              src={item.imgUrl}
+              alt={item.altData}
+              slot="item-swiper"
+            />
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>

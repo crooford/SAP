@@ -4,6 +4,8 @@ import CarouselModel from "../../components/CarouselModel.astro";
 import CarouselProducts from "../../components/CarouselProducts.astro";
 import ItemCarousel from "../../components/ItemCarousel.astro";
 import ItemModel from "../../components/ItemModel.astro";
+import Carousel from "../../components/Carousel.astro";
+import Item from "../../components/Item.astro";
 
 const items = [
   {
@@ -123,17 +125,17 @@ const modeloAllglassEurope = [
         eléctrico para abrir en emergencia. Son flexibles y adecuadas para una
         variedad de usos, desde aeropuertos hasta residencias.
       </p>
-      <CarouselProducts>
+      <Carousel>
         {
           items.map((item) => (
-            <ItemCarousel
-              imgUrl={item.imgUrl}
-              altData={item.altData}
-              slot="items"
+            <Item
+              src={item.imgUrl}
+              alt={item.altData}
+              slot="item-swiper"
             />
           ))
         }
-      </CarouselProducts>
+      </Carousel>
     </div>
 
     <div
@@ -264,17 +266,7 @@ const modeloAllglassEurope = [
 </script>
 
 <style>
-  .swiper {
-    width: 550px;
-  }
 
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 350px;
-    border-radius: 8px;
-  }
   /* .swiper-slide-img {
     display: block;
     width: 100%;

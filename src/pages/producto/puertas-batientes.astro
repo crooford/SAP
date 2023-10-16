@@ -4,6 +4,8 @@ import CarouselModel from "../../components/CarouselModel.astro";
 import CarouselProducts from "../../components/CarouselProducts.astro";
 import ItemCarousel from "../../components/ItemCarousel.astro";
 import ItemModel from "../../components/ItemModel.astro";
+import Carousel from "../../components/Carousel.astro";
+import Item from "../../components/Item.astro";
 
 const items = [
   {
@@ -81,17 +83,17 @@ const items = [
         sensores y botones. Pueden tener acabados anodizados, pinturas
         electrostáticas y recub.
       </p>
-      <CarouselProducts>
+      <Carousel>
         {
           items.map((item) => (
-            <ItemCarousel
-              imgUrl={item.imgUrl}
-              altData={item.altData}
-              slot="items"
+            <Item
+              src={item.imgUrl}
+              alt={item.altData}
+              slot="item-swiper"
             />
           ))
         }
-      </CarouselProducts>
+      </Carousel>
     </div>
     <div
       class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out justify-evenly"
@@ -198,7 +200,7 @@ const items = [
     src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     slot="script"></script>
 </LayoutDoors>
-<script>
+<!-- <script>
   var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
     effect: "creative",
@@ -215,7 +217,7 @@ const items = [
 
     speed: 700,
   });
-</script>
+</script> -->
 
 <style>
   .swiper {

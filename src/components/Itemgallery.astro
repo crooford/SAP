@@ -1,0 +1,13 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+const { src, alt } = Astro.props;
+---
+
+<div class="grid gap-4 animate-fade animate-duration-300 animate-delay-100 animate-fill-both ease-in">
+  <div>
+    <img class="h-60 lg:h-72 max-w-full rounded-lg aspect-video object-cover" src={src} alt={alt}  />
+  </div>
+</div>

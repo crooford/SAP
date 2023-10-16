@@ -1,5 +1,7 @@
 ---
+import Carousel from "../../components/Carousel.astro";
 import CarouselProducts from "../../components/CarouselProducts.astro";
+import Item from "../../components/Item.astro";
 import ItemCarousel from "../../components/ItemCarousel.astro";
 import LayoutDoors from "../../layouts/LayoutDoors.astro";
 
@@ -88,17 +90,17 @@ const items = [
         para considerar a personas con necesidades especiales o sillas de
         ruedas.
       </p>
-      <CarouselProducts>
+      <Carousel>
         {
           items.map((item) => (
-            <ItemCarousel
-              imgUrl={item.imgUrl}
-              altData={item.altData}
-              slot="items"
+            <Item
+              src={item.imgUrl}
+              alt={item.altData}
+              slot="item-swiper"
             />
           ))
         }
-      </CarouselProducts>
+      </Carousel>
     </div>
     <div
       class="flex flex-col mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out justify-evenly"
@@ -196,6 +198,9 @@ const items = [
       </section>
     </div>
   </div> -->
+  <script
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+  slot="script"></script>
 </LayoutDoors>
 
 <!-- <script>

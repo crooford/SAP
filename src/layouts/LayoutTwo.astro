@@ -6,6 +6,7 @@ interface Props {
   title: string;
   HomeState: string;
   ProductosState: string;
+  GaleriaState: string;
   ServiciosState: string;
   CatalogoState: string;
   NosotrosState: string;
@@ -23,6 +24,7 @@ const {
   NosotrosState,
   OficinasState,
   ContactoState,
+  GaleriaState,
   BgBody,
 } = Astro.props;
 ---
@@ -92,6 +94,14 @@ const {
                     ? "active-tab"
                     : "no-active-tab"}
                   href="/productos">Productos</a
+                >
+              </li>
+              <li>
+                <a
+                  class={GaleriaState == "active"
+                    ? "active-tab"
+                    : "no-active-tab"}
+                  href="/galeria">galería</a
                 >
               </li>
               <li>

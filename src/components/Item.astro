@@ -1,0 +1,23 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+const { src, alt } = Astro.props;
+---
+
+<div class="swiper-slide">
+    <img src={src} alt={alt} class="swiper-slide-img" />
+</div>
+<style>
+     .swiper-slide {
+        width: 850px;
+        height: 600px;
+      }
+
+      .swiper-slide-img {
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+</style>
