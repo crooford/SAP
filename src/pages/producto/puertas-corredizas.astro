@@ -114,7 +114,7 @@ const modeloAllglassEurope = [
 >
   <div class="flex flex-col lg:flex-row">
     <div
-      class="px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
+      class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
     >
       <p>
         Son las puertas más usadas en el mundo, prácticas y reconocidas, con un
@@ -139,25 +139,24 @@ const modeloAllglassEurope = [
     </div>
 
     <div
-      class="flex flex-col mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out justify-evenly"
+      class="flex flex-col gap-10 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out justify-evenly"
     >
-      <div class="w-56">
-        <a href="#all-glass"
-          ><img
+      <div class="lg:w-56">
+       <img
             src="/assets/corredizas/allg-3.jpg"
             alt="puerta corrediza all glass"
-          /></a
-        >
+          />
+        
         <p class="text-white mt-2 text-center">Puerta corrediza All Glass</p>
       </div>
-      <div class="w-56">
+      <div class="lg:w-56">
         <img
           src="/assets/corredizas/dg-2.jpg"
           alt="instalacion puerta giratoria"
         />
         <p class="text-white mt-2 text-center">Puerta corrediza Dura-Glade</p>
       </div>
-      <div class="w-56">
+      <div class="lg:w-56">
         <img
           src="/assets/corredizas/allge-2.JPG"
           alt="instalacion puerta giratoria"
@@ -170,12 +169,12 @@ const modeloAllglassEurope = [
   </div>
 
   <!-- aqui inicia modelos -->
-  <div class="pt-10 max-w-6xl flex flex-col justify-center mx-auto">
+  <div class="pt-10 lg:max-w-6xl flex flex-col justify-center mx-auto">
     <div
       class="[&>h1]:text-[#ffce00] py-20 flex flex-col items-center justify-center"
     >
       <h1
-        class="text-6xl font-[oswald] font-extrabold uppercase text-center tracking-wide"
+        class=" text-5xl 2xl:text-6xl font-[oswald] font-extrabold uppercase text-center tracking-wide"
       >
         modelos
       </h1>
@@ -246,24 +245,7 @@ const modeloAllglassEurope = [
     src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     slot="script"></script>
 </LayoutDoors>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
-    loop: true,
 
-    speed: 700,
-  });
-</script>
 
 <style>
 

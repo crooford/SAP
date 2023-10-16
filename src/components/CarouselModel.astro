@@ -1,10 +1,31 @@
-<div class="swiper mySwiper">
+
+
+<div class="swiper mySwiper w-[calc(100vw-4rem)] h-[380px] lg:w-[550px]">
   <div class="swiper-wrapper">
     <slot />
   </div>
 </div>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+    loop: true,
+
+    speed: 700,
+  });
+</script>
 <style>
-  .swiper {
-    width: 550px;
+  body{
+    
   }
 </style>

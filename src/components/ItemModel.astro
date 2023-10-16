@@ -6,18 +6,17 @@ interface Props {
 const { imgUrl, altData } = Astro.props;
 ---
 
-<div class="swiper-slide w-20">
+<div class="swiper-slide">
   <img src={imgUrl} alt={altData} class="swiper-slide-img" />
 </div>
 
 <style>
-  .swiper-slide {
-    width: 300px;
-    height: 350px;
-  }
+
   .swiper-slide-img {
     display: block;
     object-fit: cover;
     object-position: center;
+    width: 100%;
+    height: 100%;
   }
 </style>
