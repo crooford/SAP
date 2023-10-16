@@ -78,7 +78,7 @@ const modeloDuraglade = [
 >
   <div class="flex flex-col lg:flex-row">
     <div
-      class="px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
+      class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
     >
       <p>
         Estas puertas son ideales para dar mayor apertura en el espacio que se
@@ -100,23 +100,23 @@ const modeloDuraglade = [
       </Carousel>
     </div>
     <div
-      class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out "
+      class="grid md:grid-rows-3 gap-10 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out "
     >
-      <div class="w-56">
+      <div class="lg:w-56">
         <img
           src="/assets/telescopicas/dg-4.png"
           alt="puerta telescopica duraglide"
         />
         <p class="text-white mt-2 text-center">Puerta telescopica Duraglide</p>
       </div>
-      <div class="w-56">
+      <div class="lg:w-56">
         <img
           src="/assets/telescopicas/tm-1.JPG"
           alt="puerta telescopica manual"
         />
         <p class="text-white mt-2 text-center">Puerta telescopica manual</p>
       </div>
-      <div class="w-56">
+      <div class="lg:w-56">
         <img
           src="/assets/telescopicas/tox-1.jpeg"
           alt="puerta telescopica oxxo"
@@ -130,17 +130,17 @@ const modeloDuraglade = [
 <!-- aqui inicia modelos -->
 <div class="pt-8 max-w-6xl flex flex-col justify-center mx-auto">
   <div
-    class="[&>h1]:text-[#ffce00] py-20 flex flex-col items-center justify-center"
+    class="[&>h1]:text-[#ffce00] py-5 lg:py-20 flex flex-col items-center justify-center"
   >
     <h1
-      class="text-6xl font-[oswald] font-extrabold uppercase text-center tracking-wide"
+      class="text-5xl 2xl:text-6xl font-[oswald] font-extrabold uppercase text-center tracking-wide"
     >
       modelos
     </h1>
     <img src="/assets/linea.png" alt="" class="w-68 h-4" />
   </div>
 
-  <div class="grid gap-4 pt-10 items-center">
+  <div class="grid gap-4 lg:pt-10 items-center">
     <!-- <section class="flex flex-col mx-auto">
       <CarouselModel>
         {
@@ -160,7 +160,7 @@ const modeloDuraglade = [
         </p>
       </div>
     </section> -->
-    <section class="mt-10 flex flex-col mx-auto">
+    <section class=" flex flex-col mx-auto">
       <CarouselModel>
         {
           modeloDuraglade.map((item) => (
@@ -207,59 +207,15 @@ const modeloDuraglade = [
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
   slot="script"></script>
 </LayoutDoors>
-<script>
-var swiper = new Swiper(".mySwiper", {
-  grabCursor: true,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      translate: [0, 0, -400],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
-  loop: true,
 
-  speed: 700,
-});
-</script>
+
 
 <style>
-.swiper {
-  width: 550px;
-}
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 350px;
-  border-radius: 8px;
-}
-/* .swiper-slide-img {
-  display: block;
-  width: 100%;
-} */
 .text_border_convert-models {
   -webkit-text-stroke: 0.7px #ffce00;
   color: transparent;
 }
-.border-left-bottom {
-  -webkit-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-  -moz-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-  box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-}
-.border-left-top {
-  -webkit-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-  -moz-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-  box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-}
-.border-top-right {
-  -webkit-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-  -moz-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-  box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-}
+
 </style>
 
