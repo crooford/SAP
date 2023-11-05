@@ -1,0 +1,154 @@
+---
+interface Props {
+  HomeState: string;
+  ProductosState: string;
+  ServiciosState: string;
+  CatalogoState: string;
+  NosotrosState: string;
+  OficinasState: string;
+  ContactoState: string;
+  GaleriaState: string;
+}
+
+const {HomeState,
+  ProductosState,
+  ServiciosState,
+  CatalogoState,
+  NosotrosState,
+  OficinasState,
+  ContactoState,
+  GaleriaState,} = Astro.props;
+---
+
+<header>
+
+  <nav class="fixed top-0 lg:top-12 w-full z-[100] py-2" id="landing-header" >
+    <div class="max-w-full flex flex-wrap lg:flex-nowrap justify-between mx-auto">
+      <a href="/" >
+        <img
+          src="/assets/home/new-logo.png"
+          alt="logo sap"
+          class="h-16 2xl:h-20 w-full"
+        />
+      </a>
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#ffce00] mr-4"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-8 h-8"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div
+        class="hidden w-full md:flex justify-center items-center md:w-auto bg-black md:bg-transparent lg:mr-10 sm:mr-2 [&>ul]:border-b-[1px] [&>ul]:border-white/20 [&>ul>li>ul]:hidden  [&>ul>li:hover>ul]:block"
+        id="navbar-default"
+      >
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row 2xl:space-x-0 md:mt-0 lg:[&>li>a]:px-5 sm:[&>li>a]:px-3 md:[&>li>a]:py-4 [&>li>a]:block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase md:[&>li>a]:text-sm 2xl:[&>li>a]:text-base"
+        >
+          <li class={HomeState == "active" ? "active-tab" : "no-active-tab"}>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a
+              class={ProductosState == "active"
+                ? "active-tab"
+                : "no-active-tab"}
+              href="/productos">Productos</a
+            >
+            <!-- <ul>
+              <li><a href="/producto/puertas-giratorias">puertas giratorias</a></li>
+              <li><a href="/producto/puertas-corredizas">puertas corredizas</a></li>
+              <li><a href="/producto/puertas-batientes">puertas batientes</a></li>
+              <li><a href="/producto/puertas-"></a></li>
+              <li><a href="/producto/puertas-giratorias"></a></li>
+            </ul> -->
+          </li>
+          <li>
+            <a
+              class={GaleriaState == "active" ? "active-tab" : "no-active-tab"}
+              href="/galeria">galería</a
+            >
+          </li>
+          <li>
+            <a
+              class={ServiciosState == "active"
+                ? "active-tab"
+                : "no-active-tab"}
+              href="/servicios">Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              class={CatalogoState == "active" ? "active-tab" : "no-active-tab"}
+              href="/catalogo">CATÁLOGO</a
+            >
+          </li>
+          <li>
+            <a
+              class={NosotrosState == "active" ? "active-tab" : "no-active-tab"}
+              href="/nosotros">Nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              class={OficinasState == "active" ? "active-tab" : "no-active-tab"}
+              href="/oficinas">Oficinas</a
+            >
+          </li>
+          <li>
+            <a
+              class={ContactoState == "active" ? "active-tab" : "no-active-tab"}
+              href="/contacto">Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+      <img src="/assets/home/stanley.png" alt="" class="h-16 2xl:h-16 mr-20 hidden lg:block self-center">
+    </div>
+  </nav>
+</header>
+<style>
+      .scrolled {
+    background-color: #00000080;
+    backdrop-filter: saturate(180%) blur(12px);
+    transition: background-color 0.4s ease-in-out;
+  }
+</style>
+
+<script is:inline>
+    addEventListener("scroll", () => {
+      const header = document.getElementById("landing-header");
+      const scroll = window.scrollY;
+      if (scroll > 0) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+    // Internet Explorer
+    // window.onload = function () {
+    //   document.onselectstart = function () {
+    //     return false;
+    //   };
+    //   // Firefox
+    //   document.onmousedown = function () {
+    //     return false;
+    //   };
+    // };
+  </script>

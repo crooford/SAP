@@ -1,0 +1,33 @@
+---
+
+---
+<div
+  class="counter text-5xl lg:text-7xl font-bold font-[oswald] text-[#ffce00] w-[260px]"
+>
+  10000
+</div>
+<script>
+
+import { gsap } from "gsap";
+function count() {
+    var counter = { var: 10000 };
+    gsap.to(counter, 3, {
+      var: 20000,
+      onUpdate: function () {
+        var number = Math.ceil(counter.var);
+        $(".counter").html(`+ ${number}`);
+  
+        
+        if (number === counter.var) {
+          count.kill();
+        }
+      },
+      onComplete: function () {
+        count();
+      },
+      ease: Circ.easeOut,
+    });
+  }
+  count();
+ 
+</script>
