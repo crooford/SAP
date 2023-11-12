@@ -2,6 +2,9 @@
 import LayoutDoors from "../../layouts/LayoutDoors.astro";
 import CarouselProducts from "../../components/CarouselProducts.astro";
 import ItemCarousel from "../../components/ItemCarousel.astro";
+import Carousel from "../../components/Carousel.astro";
+import Item from "../../components/Item.astro";
+import ModelDoor from "../../components/products/ModelDoor.astro";
 
 
 const items = [
@@ -31,7 +34,6 @@ const items = [
 <LayoutDoors
   title="SAP | Chapas magnéticas"
   doorCategory="Chapas magnéticas"
-  BgBody="yes"
   giratoriaState=""
   corredizaState=""
   batienteState=""
@@ -46,29 +48,52 @@ const items = [
   tecladoDandLectorTarjetaState=""
   icuState=""
 >
-  <div class="flex flex-col lg:flex-row">
+  <div class="flex flex-col">
     <div
-      class="px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
+      class="mb-20 px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
     >
+      
+      <Carousel>
+        {
+          items.map((item) => (
+              <Item
+                src={item.imgUrl}
+                alt={item.altData}
+                slot="item-swiper"/>
+              
+            ))
+        }
+      </Carousel>
+      
       <p>
         Las chapas magnéticas son la solución perfecta para garantizar un cierre
         efectivo sin piezas mecánicas. Pueden resistir hasta 850 kg de fuerza de
         impacto y al soltar son silenciosas. Son resistentes y efectivas, con
         una garantía de 25 años.
       </p>
-      <CarouselProducts>
-        {
-          items.map((item) => (
-              <ItemCarousel 
-                imgUrl={item.imgUrl}
-                altData={item.altData}
-                slot="items"/>
-              
-            ))
-        }
-      </CarouselProducts>
     </div>
-    <div
+    
+    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Manual"
+        description="1,500 M Puerta Giratoria Manual"
+        url={items[0].imgUrl}
+      />
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Automatica"
+        description="1,500 AA Puerta Giratoria Automatica"
+        url={items[1].imgUrl}
+      />
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Manual"
+        description="1,500 Crystal Puerta Giratoria Manual"
+        url= {items[2].imgUrl}
+      />
+    </section>
+    <!-- <div
       class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out"
     >
       <div class="w-56">
@@ -84,8 +109,12 @@ const items = [
           alt="chapa magnetica"
         />
         <p class="text-white mt-2 text-center">Chapa magnetica</p>
-      </div>
-    </div>
+      </div>-->
+    <!-- </div>  -->
   </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+    slot="script"></script>
 </LayoutDoors>
 
