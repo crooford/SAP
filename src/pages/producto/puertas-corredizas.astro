@@ -6,6 +6,7 @@ import ItemCarousel from "../../components/ItemCarousel.astro";
 import ItemModel from "../../components/ItemModel.astro";
 import Carousel from "../../components/Carousel.astro";
 import Item from "../../components/Item.astro";
+import ModelDoor from "../../components/products/ModelDoor.astro";
 
 const items = [
   {
@@ -96,8 +97,7 @@ const modeloAllglassEurope = [
 
 <LayoutDoors
   title="SAP | Puertas corredizas"
-  doorCategory="Puertas corredizas"
-  BgBody="yes"
+  doorCategory="Puertas corredizas" 
   giratoriaState=""
   corredizaState="active"
   batienteState=""
@@ -116,15 +116,6 @@ const modeloAllglassEurope = [
     <div
       class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
     >
-      <p>
-        Son las puertas más usadas en el mundo, prácticas y reconocidas, con un
-        alto ahorro de energía, máximo flujo y seguridad. Pueden ser modelos All
-        Glass (con zócalos superiores e inferiores), All Glass Europe (solo
-        zócalos superiores) y modelo Dura-Glide con aluminio perimetral. Pueden
-        llevar abatimiento en hojas corredizas y fijos laterales, o sistema
-        eléctrico para abrir en emergencia. Son flexibles y adecuadas para una
-        variedad de usos, desde aeropuertos hasta residencias.
-      </p>
       <Carousel>
         {
           items.map((item) => (
@@ -136,6 +127,17 @@ const modeloAllglassEurope = [
           ))
         }
       </Carousel>
+      
+      <p>
+        Son las puertas más usadas en el mundo, prácticas y reconocidas, con un
+        alto ahorro de energía, máximo flujo y seguridad. Pueden ser modelos All
+        Glass (con zócalos superiores e inferiores), All Glass Europe (solo
+        zócalos superiores) y modelo Dura-Glide con aluminio perimetral. Pueden
+        llevar abatimiento en hojas corredizas y fijos laterales, o sistema
+        eléctrico para abrir en emergencia. Son flexibles y adecuadas para una
+        variedad de usos, desde aeropuertos hasta residencias.
+      </p>
+
     </div>
 
     <div
@@ -167,9 +169,30 @@ const modeloAllglassEurope = [
       </div>
     </div>
   </div>
-
+  
+  <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
+    <ModelDoor 
+      type="Puerta giratoria"
+      model="Manual"
+      description="1,500 M Puerta Giratoria Manual"
+      url={items[0].imgUrl}
+    />
+    <ModelDoor 
+      type="Puerta giratoria"
+      model="Automatica"
+      description="1,500 AA Puerta Giratoria Automatica"
+      url={items[1].imgUrl}
+    />
+    <ModelDoor 
+      type="Puerta giratoria"
+      model="Manual"
+      description="1,500 Crystal Puerta Giratoria Manual"
+      url= {items[2].imgUrl}
+    />
+  </section>
+  
   <!-- aqui inicia modelos -->
-  <div class="pt-8 lg:max-w-6xl flex flex-col justify-center mx-auto">
+  <!-- <div class="pt-8 lg:max-w-6xl flex flex-col justify-center mx-auto">
     <div
       class="[&>h1]:text-[#ffce00] py-5 lg:py-20 flex flex-col items-center justify-center"
     >
@@ -240,7 +263,7 @@ const modeloAllglassEurope = [
         </div>
       </section>
     </div>
-  </div>
+  </div> -->
   <script
     src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     slot="script"></script>

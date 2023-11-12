@@ -6,6 +6,7 @@ import ItemCarousel from "../../components/ItemCarousel.astro";
 import ItemModel from "../../components/ItemModel.astro";
 import Carousel from "../../components/Carousel.astro";
 import Item from "../../components/Item.astro";
+import ModelDoor from "../../components/products/ModelDoor.astro";
 
 const items = [
 
@@ -61,7 +62,6 @@ const modeloDuraglade = [
 <LayoutDoors
   title="SAP | Puertas telescópicas"
   doorCategory="Puertas telescópicas"
-  BgBody="yes"
   giratoriaState=""
   corredizaState=""
   batienteState=""
@@ -76,17 +76,11 @@ const modeloDuraglade = [
   tecladoDandLectorTarjetaState=""
   icuState=""
 >
-  <div class="flex flex-col lg:flex-row">
+  <div class="flex flex-col">
     <div
       class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
     >
-      <p>
-        Estas puertas son ideales para dar mayor apertura en el espacio que se
-        requiere de una puerta automática, ya que abrirán el 60% del claro
-        total, en comparación con una puerta corrediza normal, que abre el 47%.
-        Pueden ser modelos Duraglide, así como en All Glass.
-      </p>
-
+     
       <Carousel>
         {
           items.map((item) => (
@@ -98,8 +92,38 @@ const modeloDuraglade = [
           ))
         }
       </Carousel>
+
+      <p>
+        Estas puertas son ideales para dar mayor apertura en el espacio que se
+        requiere de una puerta automática, ya que abrirán el 60% del claro
+        total, en comparación con una puerta corrediza normal, que abre el 47%.
+        Pueden ser modelos Duraglide, así como en All Glass.
+      </p>
+      
     </div>
-    <div
+
+    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Manual"
+        description="1,500 M Puerta Giratoria Manual"
+        url={items[0].imgUrl}
+      />
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Automatica"
+        description="1,500 AA Puerta Giratoria Automatica"
+        url={items[1].imgUrl}
+      />
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Manual"
+        description="1,500 Crystal Puerta Giratoria Manual"
+        url= {items[2].imgUrl}
+      />
+    </section>
+
+    <!-- <div
       class="grid md:grid-rows-3 gap-10 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out "
     >
       <div class="lg:w-56">
@@ -126,9 +150,9 @@ const modeloDuraglade = [
         </p>
       </div>
     </div>
-  </div>
+  </div> -->
 <!-- aqui inicia modelos -->
-<div class="pt-8 max-w-6xl flex flex-col justify-center mx-auto">
+<!-- <div class="pt-8 max-w-6xl flex flex-col justify-center mx-auto">
   <div
     class="[&>h1]:text-[#ffce00] py-5 lg:py-20 flex flex-col items-center justify-center"
   >
@@ -140,7 +164,7 @@ const modeloDuraglade = [
     <img src="/assets/linea.png" alt="" class="w-68 h-4" />
   </div>
 
-  <div class="grid gap-4 lg:pt-10 items-center">
+  <div class="grid gap-4 lg:pt-10 items-center"> -->
     <!-- <section class="flex flex-col mx-auto">
       <CarouselModel>
         {
@@ -160,7 +184,7 @@ const modeloDuraglade = [
         </p>
       </div>
     </section> -->
-    <section class=" flex flex-col mx-auto">
+    <!-- <section class=" flex flex-col mx-auto">
       <CarouselModel>
         {
           modeloDuraglade.map((item) => (
@@ -178,7 +202,7 @@ const modeloDuraglade = [
           El modelo Dura-Glide trae aluminio perimetral.
         </p>
       </div>
-    </section>
+    </section> -->
     <!-- <section class="mt-10 flex flex-col mx-auto">
       <CarouselModel>
         {
@@ -198,8 +222,6 @@ const modeloDuraglade = [
         </p>
       </div>
     </section> -->
-    
-    
     
   </div>
 </div>
