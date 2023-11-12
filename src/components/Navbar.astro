@@ -42,7 +42,6 @@ const {HomeState,
         <svg
           class="w-8 h-8"
           aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 17 14"
         >
@@ -55,7 +54,7 @@ const {HomeState,
         </svg>
       </button>
       <div
-        class="hidden w-full md:flex justify-center items-center md:w-auto bg-black md:bg-transparent lg:mr-10 sm:mr-2 [&>ul]:border-b-[1px] [&>ul]:border-white/20 [&>ul>li>ul]:hidden  [&>ul>li:hover>ul]:block"
+        class="hidden w-full md:block justify-center items-center md:w-auto bg-black md:bg-transparent lg:mr-10 sm:mr-2 [&>ul]:border-t-[1px] [&>ul]:border-white/20 [&>ul>li>ul]:hidden  [&>ul>li:hover>ul]:block"
         id="navbar-default"
       >
         <ul
@@ -71,13 +70,15 @@ const {HomeState,
                 : "no-active-tab"}
               href="/productos">Productos</a
             >
-            <!-- <ul>
+            <ul class="bg-black/70 p-4 [&>li>a]:text-white [&>li>a]:uppercase [&>li]:py-1 hover:[&>li>a]:text-[#ffce00]">
               <li><a href="/producto/puertas-giratorias">puertas giratorias</a></li>
               <li><a href="/producto/puertas-corredizas">puertas corredizas</a></li>
               <li><a href="/producto/puertas-batientes">puertas batientes</a></li>
-              <li><a href="/producto/puertas-"></a></li>
-              <li><a href="/producto/puertas-giratorias"></a></li>
-            </ul> -->
+              <li><a href="/producto/puertas-">puertas telescópicas</a></li>
+              <li><a href="/producto/puertas-giratorias">puertas plegadizas</a></li>
+              <li><a href="/producto/puertas-giratorias">puertas icu</a></li>
+              <li><a href="/producto/puertas-giratorias">todos los productos</a></li>
+            </ul>
           </li>
           <li>
             <a
@@ -119,7 +120,7 @@ const {HomeState,
           </li>
         </ul>
       </div>
-      <img src="/assets/home/stanley.png" alt="" class="h-16 2xl:h-16 mr-20 hidden lg:block self-center">
+      <img src="/assets/home/stanley.png" alt="" class="h-10 mr-20 hidden lg:block mt-5">
     </div>
   </nav>
 </header>

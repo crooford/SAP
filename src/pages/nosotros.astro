@@ -1,25 +1,27 @@
 ---
+import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout
-  title="SAP | Nosotros"
-  HomeState=""
-  ProductosState=""
-  GaleriaState=""
-  ServiciosState=""
-  CatalogoState=""
-  NosotrosState="active"
-  OficinasState=""
-  ContactoState=""
-  BgBody="yes"
->
-  <main class="lg:w-full min-h-screen max-h-full  top-0 left-0 flex">
+<Layout title="SAP | Nosotros" BgBody="no" url="/assets/background_home.png">
+  <Navbar
+    HomeState=""
+    ProductosState=""
+    GaleriaState=""
+    ServiciosState=""
+    CatalogoState=""
+    NosotrosState="active"
+    OficinasState=""
+    ContactoState=""
+  />
+  <main class="lg:w-full min-h-screen max-h-full top-0 left-0 flex">
     <section
       class="flex flex-col items-center mx-auto h-full 2xl:pt-[219.63px] pt-28 md:pt-40 lg:pt-28"
     >
       <article class="mb-12 w-96 md:w-[700px] lg:w-[980px] 2xl:w-[1150px] px-6">
-        <h2 class="uppercase text-5xl 2xl:text-6xl font-extrabold text-[#ffce00] text-left font-[oswald]">
+        <h2
+          class="uppercase text-5xl 2xl:text-6xl font-extrabold text-[#ffce00] text-left font-[oswald]"
+        >
           nosotros
         </h2>
         <p class="text-white lg:text-lg mt-6">
@@ -39,7 +41,11 @@ import Layout from "../layouts/Layout.astro";
         <div class="lg:w-[55rem] mx-auto my-8">
           <img src="/assets/linea.png" alt="linea divisora" />
         </div>
-        <img src="/assets/stanley-logo.png" alt="stanley logo" class=" w-64 lg:w-80" />
+        <img
+          src="/assets/stanley-logo.png"
+          alt="stanley logo"
+          class="w-64 lg:w-80"
+        />
         <h2
           class="text_border_convert text-5xl 2xl:text-6xl font-bold uppercase text-left mt-6 font-[oswald]"
         >

@@ -9,12 +9,12 @@ const { title, imageUrl, imageAlt, url } = Astro.props;
 ---
 
 <div
-  class="lg:w-96 lg:h-96 group  relative cursor-pointer items-center justify-center transition-all ease-out animate-fade"
+  class="h-[420px] w-[580px] group relative cursor-pointer items-center justify-center transition-all ease-out animate-fade"
 >
   <a href={url}>
-    <div class="lg:h-96 lg:w-96 w-[300px] h-[300px]">
+    <div class="h-[420px] w-[580px]">
       <img
-        class="h-full w-full object-cover  duration-[20ms] ease-in transition-all group-hover:scale-[1.01] rounded-sm"
+        class="h-full w-full object-cover  duration-[20ms] ease-in transition-all group-hover:scale-[1.01] rounded-sm aspect-video"
         src={imageUrl}
         alt={imageAlt}
       />

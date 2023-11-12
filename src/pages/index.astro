@@ -17,12 +17,12 @@ import Layout from "../layouts/Layout.astro";
     slot="header"
   />
   <main
-    class="w-screen h-screen bg-[url(/assets/home/background.png)] bg-cover bg-no-repeat bg-center"
+    class="w-screen h-screen bg-[url(/assets/home/background.png)] bg-cover bg-no-repeat bg-center bg-fixed"
   >
     <section class="w-screen h-screen pt-28 px-10 md:pt-60 md:pl-16 grid pb-6">
       <article>
         <h1
-          class="text_border_convert uppercase text-6xl lg:text-[6.5rem] font-bold font-[oswald] mb-10 tracking-wider"
+          class="text-white uppercase text-6xl lg:text-[6.5rem] font-bold font-[oswald] mb-10 tracking-wider"
         >
           sistemas automáticos peatonales
         </h1>
@@ -50,8 +50,8 @@ import Layout from "../layouts/Layout.astro";
         <div class="pt-8">
           <a
             href="/productosv2"
-            class="py-2 px-6 bg-black rounded-full text-[#ffce00] flex items-center gap-2 w-fit hover:scale-110 hover:underline transition-all uppercase [&:hover>img]:animate-spin [&:hover>img]:animate-once [&:hover>img]:animate-duration-500 [&:hover>img]:ease-in-out "
-            >
+            class="py-2 px-6 bg-black rounded-full text-[#ffce00] flex items-center gap-2 w-fit hover:scale-110 hover:underline transition-all uppercase [&:hover>img]:animate-spin [&:hover>img]:animate-once [&:hover>img]:animate-duration-500 [&:hover>img]:ease-in-out"
+          >
             <!-- <svg
               class="icon icon-tabler icon-tabler-chevron-right"
               width="24"
@@ -66,8 +66,8 @@ import Layout from "../layouts/Layout.astro";
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M9 6l6 6l-6 6"></path>
             </svg> -->
-            <img src="/assets/icono-flecha.png" class="w-3" alt="">
-            conoce nuestros productos aquí</a
+            <img src="/assets/icono-flecha.png" class="w-3" alt="" />
+             conoce nuestros productos aquí</a
           >
         </div>
       </article>
@@ -77,20 +77,65 @@ import Layout from "../layouts/Layout.astro";
         <p class="text-white text-lg text-center uppercase opacity-70">
           Marcas que han confiado en nosotros:
         </p>
-        <div
+        <!-- <div
           class="flex flex-col lg:flex-row items-center justify-center gap-10 [&>img]:h-16 md:[&>img]:h-12 py-8 [&>img]:opacity-40"
         >
-          <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" />
-          <img src="/assets/logos/maserati.png" alt="logo maserati" />
-          <img src="/assets/logos/homedepot.png" alt="logo home depot" />
-          <img src="/assets/logos/seat.png" alt="logo seat" />
-          <img src="/assets/logos/soriana.png" alt="logo soriana" />
-          <img
-            src="/assets/logos/palacio-de-hierro.png"
-            alt="logo palacio de hierro"
-          />
-          <img src="/assets/logos/liverpool.png" alt="logo liverpool" />
-          <!-- <img src="/assets/logos/walmart.png" alt="logo walmart" /> -->
+          
+          <img src="/assets/logos/walmart.png" alt="logo walmart" />
+        </div> -->
+        <div class="swiper mySwiper">
+          <div
+            class="swiper-wrapper [&>div>img]:opacity-40"
+          >
+            <div class="swiper-slide">
+              <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/maserati.png" alt="logo maserati" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/homedepot.png" alt="logo home depot" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/seat.png" alt="logo seat" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/soriana.png" alt="logo soriana" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/palacio-de-hierro.png"
+                alt="logo palacio de hierro"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/liverpool.png" alt="logo liverpool" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/maserati.png" alt="logo maserati" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/homedepot.png" alt="logo home depot" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/seat.png" alt="logo seat" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/soriana.png" alt="logo soriana" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/palacio-de-hierro.png"
+                alt="logo palacio de hierro"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/liverpool.png" alt="logo liverpool" />
+            </div>
+          </div>
         </div>
       </article>
     </section>
@@ -104,10 +149,20 @@ import Layout from "../layouts/Layout.astro";
     slot="tween"></script>
 </Layout>
 <style>
+  .swiper {
+    width: 1300px;
+  }
+
+  .swiper-slide {
+    height: 90px;
+    width: auto;
+  }
   .swiper-slide img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
+    height: 90px;
+    object-fit: contain;
+    display: flex;
+    margin: 0 auto;
+    justify-items: center;
   }
   .counter-bg {
     position: relative;
@@ -125,3 +180,15 @@ import Layout from "../layouts/Layout.astro";
     opacity: 0.8;
   }
 </style>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+      watchSlidesProgress: true,
+      slidesPerView: 7,
+      loop: true,
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+         
+        }
+    });
+</script>

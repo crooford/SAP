@@ -76,7 +76,7 @@ let doors = [
     imageAlt: "sistema de entrada con iris",
     url: "/producto/iris",
   },
- 
+
   {
     title: "teclado digital",
     imageUrl: "/assets/portadas/teclado-digital.png",
@@ -86,7 +86,11 @@ let doors = [
 ];
 ---
 
-<Layout title="Productos v2" BgBody="yes" url="/assets/home/background.png">
+<Layout
+  title="Productos v2"
+  BgBody="no"
+  url=""
+>
   <Navbar
     HomeState=""
     ProductosState="active"
@@ -98,9 +102,13 @@ let doors = [
     ContactoState=""
     slot="header"
   />
-  <main class=" pt-28 px-10 md:pt-60 md:pl-28">
-    <article class=" max-w-[70rem]" >
-      <h1 class=" text-[#ffce00] text-5xl md:text-6xl uppercase mb-9 font-[oswald] font-semibold ">productos</h1>
+  <main class="pt-28 px-10 md:py-60 md:px-[4.5rem] bg-[url(/assets/home/background_products.jpg)] bg-no-repeat bg-cover bg-[70%] bg-opacity-90 min-h-screen bg-fixed">
+    <article class="max-w-[70rem]">
+      <h1
+        class="text-[#ffce00] text-5xl md:text-6xl uppercase mb-9 font-[oswald] font-semibold"
+      >
+        productos
+      </h1>
       <p class="text-white text-lg md:text-2xl leading-snug">
         Ofrecemos soluciones personalizadas, seguras y automatizadas para tu
         negocio. Como líderes en puertas automáticas de cristal en todo México y
@@ -110,9 +118,8 @@ let doors = [
         necesidades.
       </p>
     </article>
-  </main>
-  <section class="mx-24 mt-10 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 mb-28 ">
-    {
+    <section class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 mb-28 gap-10">
+      {
         doors.map((door) => (
           <DoorCard
             title={door.title}
@@ -122,5 +129,7 @@ let doors = [
           />
         ))
       }
-  </section>
+    </section>
+  </main>
+
 </Layout>

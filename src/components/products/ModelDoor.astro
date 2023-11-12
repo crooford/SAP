@@ -1,0 +1,25 @@
+---
+interface Props {
+    type: string;
+    model: string;
+    description: string;
+    url: string;
+}
+const { type, model, description, url } = Astro.props;
+---
+<article class="w-[1450px] h-[600px] flex flex-row mb-10">
+    <div class="w-[1050px]">
+      <img
+        src={ url }
+        alt="imagen"
+        class="object-cover object-[top 20%] w-full h-full"
+      />
+    </div>
+    <div class="h-[600px] w-[400px] bg-black ">
+      <div class="flex flex-row h-[215px]">
+        <div class="w-[250px] flex items-center border-r-2 border-b-2 px-5"><p class="text-white">{type}</p></div>
+        <div class="w-[200px] flex items-center border-b-2 px-5"><p class="text-white">{model}</p></div>
+      </div>
+      <div class="flex items-center h-[385px] px-5"><p class="text-white">{description}</p></div>
+    </div>
+  </article>

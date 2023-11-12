@@ -3,6 +3,7 @@ import Carousel from "../../components/Carousel.astro";
 import CarouselProducts from "../../components/CarouselProducts.astro";
 import Item from "../../components/Item.astro";
 import ItemCarousel from "../../components/ItemCarousel.astro";
+import ModelDoor from "../../components/products/ModelDoor.astro";
 import LayoutDoors from "../../layouts/LayoutDoors.astro";
 
 const items = [
@@ -42,7 +43,6 @@ const items = [
 <LayoutDoors
   title="SAP | Puertas giratorias"
   doorCategory="Puertas giratorias"
-  BgBody="yes"
   giratoriaState="active"
   corredizaState=""
   batienteState=""
@@ -57,199 +57,68 @@ const items = [
   tecladoDandLectorTarjetaState=""
   icuState=""
 >
-  <div class="flex flex-col lg:flex-row">
-    <div
-      class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
+  <div class="flex flex-col">
+    <section
+      class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-xl"
     >
-      <p>
+      <Carousel>
+        {
+          items.map((item) => (
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
+          ))
+        }
+      </Carousel>
+      <p class="text-white mb-5">
         Estas puertas son la solución perfecta para separar ambientes y ahorrar
         energía, sin ser un obstáculo para el usuario. Las puertas giratorias se
         dividen en manuales y automáticas, pueden tener 3 o 4 hojas, y los
-        diseños son en perímetro de aluminio y en solo cristal. El acabado puede
-        ser incluso en materiales especiales como acero inoxidable, latón o
-        bronce. Estas puertas cuentan con sistema de Break-out para abatir en
-        caso de emergencia. Una vez terminado el uso de este sistema, es tan
-        fácil como acercar las hojas a su posición original, y la puerta volverá
-        a su lugar casi automáticamente.
+        diseños son en perímetro de aluminio y en solo cristal.
+      </p>
+      <p class="text-white mb-5">
+        El acabado puede ser incluso en materiales especiales como acero
+        inoxidable, latón o bronce. Estas puertas cuentan con sistema de
+        Break-out para abatir en caso de emergencia. Una vez terminado el uso de
+        este sistema, es tan fácil como acercar las hojas a su posición
+        original, y la puerta volverá a su lugar casi automáticamente.
       </p>
 
-      <p>
-        <span class="text-[#ffce00] mr-1">»</span>Las puertas manuales llevan un
-        sistema de freno dinámico para evitar el giro a alta velocidad.
+      <p class="text-[#ffce00] mb-5">
+        Las puertas manuales llevan un sistema de freno dinámico para evitar el
+        giro a alta velocidad.
       </p>
-      <p>
-        <span class="text-[#ffce00] mr-1">»</span>Las puertas automáticas
-        girarán al acercarse al usuario y se detendrán al terminar el uso.
+      <p class="text-[#ffce00] mb-5">
+        Las puertas automáticas girarán al acercarse al usuario y se detendrán
+        al terminar el uso.
       </p>
 
-      <p>
+      <p class="text-white">
         Pueden ser de hasta 5.50 m de diámetro y llevarán botones de proximidad
         para considerar a personas con necesidades especiales o sillas de
         ruedas.
       </p>
-    
-        <Carousel>
-          {
-            items.map((item) => (
-              <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
-            ))
-          }
-        </Carousel>
-    
-    </div>
-    <div
-      class="flex flex-col gap-16 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out"
-    >
-      <div class="lg:w-56">
-        <img
-          src="/assets/giratorias/gc-1.jpg"
-          alt="puerta giratoria de crystal"
-          class="object-cover w-full h-full"
-        />
-        <p class="text-white mt-2 text-center">Puerta Giratoria Crystal</p>
-      </div>
-      <!-- <div class="lg:w-56">
-        <img src="/assets/giratorias/gl-1.webp" alt="puerta giratoria laton" />
-        <p class="text-white mt-2 text-center">Puerta Giratoria Laton</p>
-      </div> -->
-      <div class="lg:w-56">
-        <img
-          src="/assets/giratorias/g-2.JPG"
-          alt="instalacion puerta giratoria"
-        />
-        <p class="text-white mt-2 text-center">Puerta Giratoria</p>
-      </div>
-    </div>
+    </section>
+    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Manual"
+        description="1,500 M Puerta Giratoria Manual"
+        url="/assets/giratorias/nn-2.jpg"
+      />
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Automatica"
+        description="1,500 AA Puerta Giratoria Automatica"
+        url="/assets/giratorias/nn-1.jpg"
+      />
+      <ModelDoor 
+        type="Puerta giratoria"
+        model="Manual"
+        description="1,500 Crystal Puerta Giratoria Manual"
+        url="/assets/giratorias/gc-1.jpg"
+      />
+    </section>
   </div>
-  <!-- <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
-    <div
-      class="[&>h1]:text-[#ffce00] py-20 flex flex-col items-center justify-center"
-    >
-      <h1
-        class="text-6xl font-[oswald] font-extrabold uppercase text-center tracking-wide"
-      >
-        modelos
-      </h1>
-      <img src="/assets/linea.png" alt="" class="w-68 h-4" />
-    </div>
-
-    <div class="grid gap-4 pt-10 items-center">
-      <section class="flex flex-col mx-auto">
-        <CarouselModel>
-          {
-            modeloAllglass.map((item) => (
-              <ItemModel imgUrl={item.imagen} altData={item.alternative} />
-            ))
-          }
-        </CarouselModel>
-        <div class="mt-2">
-          <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2"
-          >
-            all glass
-          </h3>
-          <p class="text-white text-lg">
-            El modelo all glass trae zócalos en la parte superior e inferior
-          </p>
-        </div>
-      </section>
-      <section class="mt-10 flex flex-col mx-auto">
-        <CarouselModel>
-          {
-            modeloAllglass.map((item) => (
-              <ItemModel imgUrl={item.imagen} altData={item.alternative} />
-            ))
-          }
-        </CarouselModel>
-        <div class="mt-2">
-          <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2 "
-          >
-          Dura-Glide
-          </h3>
-          <p class="text-white text-lg ">
-            El modelo Dura-Glide trae aluminio perimetral.
-          </p>
-        </div>
-      </section>
-      <section class="mt-10 flex flex-col mx-auto">
-        <CarouselModel>
-          {
-            modeloAllglass.map((item) => (
-              <ItemModel imgUrl={item.imagen} altData={item.alternative} />
-            ))
-          }
-        </CarouselModel>
-        <div class="mt-2">
-          <h3
-            class="text-5xl font-extrabold uppercase text_border_convert-models font-[oswald] mb-2 "
-          >
-          all glass europe
-          </h3>
-          <p class="text-white text-lg ">
-            El modelo all glass Europe trae solo zócalos superiores.
-          </p>
-        </div>
-      </section>
-    </div>
-  </div> -->
   <script
     src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     slot="script"></script>
 </LayoutDoors>
-
-<!-- <script>
-  var swiper = new Swiper(".mySwiper", {
-    grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
-    loop: true,
-
-    speed: 700,
-  });
-</script> -->
-
-<!-- <style>
-  .swiper {
-    width: 550px;
-  }
-
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 350px;
-    border-radius: 8px;
-  }
-  /* .swiper-slide-img {
-    display: block;
-    width: 100%;
-  } */
-  .text_border_convert-models {
-    -webkit-text-stroke: 0.7px #ffce00;
-    color: transparent;
-  }
-  .border-left-bottom {
-    -webkit-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-left-top {
-    -webkit-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-top-right {
-    -webkit-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-</style> -->

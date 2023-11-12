@@ -6,6 +6,7 @@ interface Props {
   title: string;
   BgBody: string;
   url: string;
+  
 }
 
 const {
@@ -40,7 +41,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class={BgBody === "yes" ? `bg-[url(${url})] bg-repeat bg-cover bg-center overflow-x-hidden min-h-screen` : "non-bg-body"} >
+  <body class={BgBody === "yes" ? `bg-[url(${url})] bg-no-repeat bg-cover bg-center overflow-x-hidden min-h-screen` : "non-bg-body"} >
     <slot name="header"/>
     <slot />
     <footer class="flex flex-col p-16 bg-[url(/assets/home/footer.png)] bg-cover">
@@ -136,16 +137,16 @@ const {
   }
   .active-tab {
     color: #ffce00;
-    border-bottom: #ffce00 solid 2px;
+    border-top: #ffce00 solid 2px;
   }
   .no-active-tab {
     color: #fff;
-    border-bottom: transparent;
+    border-top: transparent solid 2px;
     transition: all 0.15s linear;
   }
   .no-active-tab:hover {
     color: #ffce00;
-    border-bottom: #ffce00 solid 2px;
+    border-top: #ffce00 solid 2px;
   }
   .sap__text__slogan {
     backdrop-filter: blur(1px);
@@ -169,7 +170,7 @@ const {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
   }
-
+  
   .non-bg-body {
     background-color: #000000;
     overflow-x: hidden;
