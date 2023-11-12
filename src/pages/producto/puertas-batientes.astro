@@ -17,8 +17,6 @@ const items = [
     imgUrl: "/assets/batientes/b-2.jpg",
     altData: "puerta batiente",
   },
-  
-
 ];
 
 // const modeloAllglass = [
@@ -54,77 +52,44 @@ const items = [
   tecladoDandLectorTarjetaState=""
   icuState=""
 >
-  <div class="flex flex-col lg:flex-row">
+  <div class="flex flex-col">
     <div
       class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
     >
-    <Carousel>
-      {
-        items.map((item) => (
-          <Item
-            src={item.imgUrl}
-            alt={item.altData}
-            slot="item-swiper"
-          />
-        ))
-      }
-    </Carousel>
-    <p>
-      Las puertas batientes son ideales para espacios reducidos o como
-      laterales de puertas giratorias en hoteles y hospitales. Se utilizan
-      preferentemente con acceso en una sola dirección y se usan mucho en
-      pasillos de hospitales y entradas de corporativos, así como en la
-      industria farmacéutica. Pueden ser con marco perimetral de aluminio o
-      modelo All Glass. Pueden llevar accesorios como chapas magnéticas,
-      sensores y botones. Pueden tener acabados anodizados, pinturas
-      electrostáticas y recub.
-    </p>
-      
+      <Carousel>
+        {
+          items.map((item) => (
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
+          ))
+        }
+      </Carousel>
+      <p>
+        Las puertas batientes son ideales para espacios reducidos o como
+        laterales de puertas giratorias en hoteles y hospitales. Se utilizan
+        preferentemente con acceso en una sola dirección y se usan mucho en
+        pasillos de hospitales y entradas de corporativos, así como en la
+        industria farmacéutica. Pueden ser con marco perimetral de aluminio o
+        modelo All Glass. Pueden llevar accesorios como chapas magnéticas,
+        sensores y botones. Pueden tener acabados anodizados, pinturas
+        electrostáticas y recub.
+      </p>
     </div>
-    <div
-      class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out justify-evenly"
-    >
-      <div class="lg:w-56">
-        <img
-          src="/assets/batientes/b-1.jpg"
-          alt="puerta batiente"
-        />
-        <p class="text-white mt-2 text-center">Puerta batiente</p>
-      </div>
-      <div class="lg:w-56">
-        <img
-          src="/assets/batientes/b-2.jpg"
-          alt="puerta batiente"
-        />
-        <p class="text-white mt-2 text-center">Puerta batiente</p>
-      </div>
-      <div class="w-56" hidden>
-        <img
-          src="/assets/batientes/b-1.jpg"
-          alt="puerta batiente"
-        />
-        <p class="text-white mt-2 text-center">
-          Puerta batiente
-        </p>
-      </div>
-    </div>
+    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
+      <ModelDoor
+        type="Puerta giratoria"
+        model="Manual"
+        description="1,500 M Puerta Giratoria Manual"
+        url={items[0].imgUrl}
+      />
+      <ModelDoor
+        type="Puerta giratoria"
+        model="Automatica"
+        description="1,500 AA Puerta Giratoria Automatica"
+        url={items[1].imgUrl}
+      />
+    </section>
   </div>
-  
-  <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
-    <ModelDoor 
-      type="Puerta giratoria"
-      model="Manual"
-      description="1,500 M Puerta Giratoria Manual"
-      url= {items[0].imgUrl}
-    />
-    <ModelDoor 
-      type="Puerta giratoria"
-      model="Automatica"
-      description="1,500 AA Puerta Giratoria Automatica"
-      url={items[1].imgUrl}
-    />
-    
-  </section>
+
   <!-- aqui inicia modelos -->
   <!-- <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
     <div
@@ -202,58 +167,3 @@ const items = [
     src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     slot="script"></script>
 </LayoutDoors>
-<!-- <script>
-  var swiper = new Swiper(".mySwiper", {
-    grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
-    loop: true,
-
-    speed: 700,
-  });
-</script> -->
-
-<style>
-  .swiper {
-    width: 550px;
-  }
-
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 350px;
-    border-radius: 8px;
-  }
-  /* .swiper-slide-img {
-  display: block;
-  width: 100%;
-} */
-  .text_border_convert-models {
-    -webkit-text-stroke: 0.7px #ffce00;
-    color: transparent;
-  }
-  .border-left-bottom {
-    -webkit-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-left-top {
-    -webkit-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-top-right {
-    -webkit-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-</style>
