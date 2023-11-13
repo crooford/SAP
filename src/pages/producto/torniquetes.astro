@@ -24,7 +24,6 @@ const items = [
     imgUrl: "/assets/torniquetes/t-1.png",
     altData: "torniquete",
   },
- 
 ];
 ---
 
@@ -52,11 +51,7 @@ const items = [
       <Carousel>
         {
           items.map((item) => (
-            <Item
-              src={item.imgUrl}
-              alt={item.altData}
-              slot="item-swiper"
-            />
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
           ))
         }
       </Carousel>
@@ -75,27 +70,26 @@ const items = [
         dando un aspecto muy moderno, con funcionalidad y conexiones muy
         extensas.
       </p>
-
     </div>
 
     <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
-      <ModelDoor 
+      <ModelDoor
         type="Puerta giratoria"
         model="Manual"
         description="1,500 M Puerta Giratoria Manual"
         url={items[0].imgUrl}
       />
-      <ModelDoor 
+      <ModelDoor
         type="Puerta giratoria"
         model="Automatica"
         description="1,500 AA Puerta Giratoria Automatica"
         url={items[1].imgUrl}
       />
-      <ModelDoor 
+      <ModelDoor
         type="Puerta giratoria"
         model="Manual"
         description="1,500 Crystal Puerta Giratoria Manual"
-        url= {items[2].imgUrl}
+        url={items[2].imgUrl}
       />
     </section>
     <!-- <div
@@ -124,9 +118,9 @@ const items = [
           Torniquete optico
         </p>
       </div> -->
-    </div>
   </div>
-  <script
-    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
-    slot="script"></script>
 </LayoutDoors>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+  slot="script"></script>

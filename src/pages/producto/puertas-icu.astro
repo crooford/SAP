@@ -47,15 +47,10 @@ const items = [
     <div
       class="mb-20 px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-lg [&>p]:mb-4"
     >
-      
       <Carousel>
         {
           items.map((item) => (
-            <Item
-              src={item.imgUrl}
-              alt={item.altData}
-              slot="item-swiper"
-            />
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
           ))
         }
       </Carousel>
@@ -65,33 +60,32 @@ const items = [
         correderas, automáticas o manuales, con apertura “antipánico” hacia el
         interior (o hacia el exterior a petición).
       </p>
-
     </div>
 
     <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
-      <ModelDoor 
+      <ModelDoor
         type="Puerta giratoria"
         model="Manual"
         description="1,500 M Puerta Giratoria Manual"
         url={items[0].imgUrl}
       />
-      <ModelDoor 
+      <ModelDoor
         type="Puerta giratoria"
         model="Automatica"
         description="1,500 AA Puerta Giratoria Automatica"
         url={items[1].imgUrl}
       />
-      <ModelDoor 
+      <ModelDoor
         type="Puerta giratoria"
         model="Manual"
         description="1,500 Crystal Puerta Giratoria Manual"
-        url= {items[2].imgUrl}
+        url={items[2].imgUrl}
       />
-      <ModelDoor 
+      <ModelDoor
         type="Puerta giratoria"
         model="Manual"
         description="1,500 Crystal Puerta Giratoria Manual"
-        url= {items[3].imgUrl}
+        url={items[3].imgUrl}
       />
     </section>
 
@@ -102,21 +96,23 @@ const items = [
         <img src="/assets/icu/i-4.jpeg" alt="puerta icu" />
         <p class="text-white mt-2 text-center">Puerta ICU</p>
       </div> -->
-      <!-- <div class="w-56">
+    <!-- <div class="w-56">
         <img
           src="/assets/plegadizas/p-2.JPG"
           alt="AICM"
         />
         <p class="text-white mt-2 text-center">AICM PLEGADIZA</p>
       </div> -->
-      <!-- <div class="w-56">
+    <!-- <div class="w-56">
         <img src="/assets/icu/i-2.jpeg" alt="puerta icu" />
         <p class="text-white mt-2 text-center">Puerta ICU</p>
       </div>
     </div>
   </div> -->
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
-    slot="script"></script>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+      slot="script"></script>
+  </div>
 </LayoutDoors>
