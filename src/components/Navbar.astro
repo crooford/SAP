@@ -131,11 +131,11 @@ const {
           </li>
         </ul>
       </div>
-      <div class="w-48 h-20 flex items-center mr-20">
+      <div class="w-48 h-20  lg:items-center mr-20 hidden lg:flex">
         <img
           src="/assets/home/stanley-2.png"
           alt=""
-          class="hidden lg:block"
+          class=""
         />
       </div>
     </div>
@@ -149,7 +149,7 @@ const {
   }
 </style>
 
-<script is:inline>
+<script>
   addEventListener("scroll", () => {
     const header = document.getElementById("landing-header");
     const scroll = window.scrollY;

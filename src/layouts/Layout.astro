@@ -7,19 +7,13 @@ interface Props {
   title: string;
   BgBody: string;
   url: string;
-  
 }
 
-const {
-  title,
-  BgBody,
-  url,
-
-} = Astro.props;
+const { title, BgBody, url } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -41,18 +35,28 @@ const {
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions/>
+    <ViewTransitions />
   </head>
-  <body class={BgBody === "yes" ? `bg-[url(${url})] bg-no-repeat bg-cover bg-center` : "non-bg-body"} >
-    <slot name="header"/>
+  <body
+    class={BgBody === "yes"
+      ? `bg-[url(${url})] bg-no-repeat bg-cover bg-center`
+      : "non-bg-body"}
+  >
+    <slot name="header" />
     <slot />
-    <footer class="flex flex-col p-16 bg-[url(/assets/home/footer.png)] bg-cover">
+    <footer
+      class="flex flex-col p-16 bg-[url(/assets/home/footer.png)] bg-cover"
+    >
       <section
         class="flex flex-col md:flex-row justify-center items-center gap-4 md:justify-evenly"
       >
         <div class="flex items-center">
-          <img src="/assets/sap-icon.svg" alt="logo sap" class="h-16 2xl:h-16" />
-  
+          <img
+            src="/assets/sap-icon.svg"
+            alt="logo sap"
+            class="h-16 2xl:h-16"
+          />
+
           <h1 class="text-[#ffce00] font-[oswald] text-4xl font-extrabold">
             SAP
           </h1>
@@ -126,77 +130,76 @@ const {
       is:inline
       src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     ></script>
-    <slot name="tween"/>
-    <slot name="ajax"/>
-  </body>
-</html>
-<style is:global>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "roboto","oswald","Helvetica";
-  }
-  .active-tab {
-    color: #ffce00;
-    border-top: #ffce00 solid 2px;
-  }
-  .no-active-tab {
-    color: #fff;
-    border-top: transparent solid 2px;
-    transition: all 0.15s linear;
-  }
-  .no-active-tab:hover {
-    color: #ffce00;
-    border-top: #ffce00 solid 2px;
-  }
-  .sap__text__slogan {
-    backdrop-filter: blur(1px);
-  }
-  .text_border_convert {
-    -webkit-text-stroke: 1px #fff;
-    color: transparent;
-  }
-  .sap__text__slogan span {
-    font-size: 4rem;
-    font-weight: 900;
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
-    letter-spacing: 2px;
-  }
-  .img-transform {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-  .img-transform:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-  }
-  
-  .non-bg-body {
-    background-color: #000000;
-    overflow-x: hidden;
-  }
+    <slot name="tween" />
+    <slot name="ajax" />
+  </body><style is:global>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "roboto", "oswald", "Helvetica";
+    }
+    .active-tab {
+      color: #ffce00;
+      border-top: #ffce00 solid 2px;
+    }
+    .no-active-tab {
+      color: #fff;
+      border-top: transparent solid 2px;
+      transition: all 0.15s linear;
+    }
+    .no-active-tab:hover {
+      color: #ffce00;
+      border-top: #ffce00 solid 2px;
+    }
+    .sap__text__slogan {
+      backdrop-filter: blur(1px);
+    }
+    .text_border_convert {
+      -webkit-text-stroke: 1px #fff;
+      color: transparent;
+    }
+    .sap__text__slogan span {
+      font-size: 4rem;
+      font-weight: 900;
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+      letter-spacing: 2px;
+    }
+    .img-transform {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    .img-transform:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
 
-</style>
-<script>
-  // addEventListener("scroll", () => {
-  //   const header = document.getElementById("landing-header");
-  //   const scroll = window.scrollY;
-  //   if (scroll > 10) {
-  //     header.classList.add("scrolled");
-  //   } else {
-  //     header.classList.remove("scrolled");
-  //   }
-  // });
-  // Internet Explorer
-  // window.onload = function () {
-  //   document.onselectstart = function () {
-  //     return false;
-  //   };
-  //   // Firefox
-  //   document.onmousedown = function () {
-  //     return false;
-  //   };
-  // };
-</script>
+    .non-bg-body {
+      background-color: #000000;
+      overflow-x: hidden;
+    }
+  </style>
+  <script >
+    // addEventListener("scroll", () => {
+    //   const header = document.getElementById("landing-header");
+    //   const scroll = window.scrollY;
+    //   if (scroll > 10) {
+    //     header.classList.add("scrolled");
+    //   } else {
+    //     header.classList.remove("scrolled");
+    //   }
+    // });
+    // Internet Explorer
+    // window.onload = function () {
+    //   document.onselectstart = function () {
+    //     return false;
+    //   };
+    //   // Firefox
+    //   document.onmousedown = function () {
+    //     return false;
+    //   };
+    // };
+ 
+  </script>
+</html>

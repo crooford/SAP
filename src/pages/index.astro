@@ -17,21 +17,21 @@ import Layout from "../layouts/Layout.astro";
     slot="header"
   />
   <main
-    class="w-screen h-screen bg-[url(/assets/home/background.png)] bg-cover bg-no-repeat bg-center bg-fixed"
+    class="bg-[url(/assets/home/background.png)] bg-cover bg-no-repeat bg-center bg-fixed"
   >
-    <section class="w-screen h-screen pt-28 px-10 md:pt-60 md:pl-16 grid pb-6">
-      <article>
+    <section class="w-screen h-screen pt-28 px-8  md:pt-60 lg:px-16 grid pb-6">
+      <article class="">
         <h1
-          class="text-white uppercase text-6xl lg:text-[5rem] font-bold font-[oswald] mb-10 tracking-wider"
+          class="text-white uppercase text-5xl lg:text-[6.5rem] font-bold font-[oswald] mb-10 tracking-wider"
         >
           sistemas automáticos peatonales
         </h1>
         <p
-          class="text-xl md:text-2xl text-white font-medium uppercase tracking-wide"
+          class="text-lg lg:text-2xl text-white font-medium uppercase tracking-wide"
         >
           soluciones en accesos
         </p>
-        <p class="text-white text-xl md:text-2xl font-medium">
+        <p class="text-white text-lg lg:text-xl font-medium">
           Somos <span class="text-[#ffce00] italic font-bold">número uno</span>
            en puertas automáticas en todo México.
         </p>
@@ -72,7 +72,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </article>
       <article
-        class="flex flex-row self-end justify-between items-center mr-10"
+        class="flex flex-col lg:flex-row self-end lg:justify-between lg:items-center lg:mr-10"
       >
         <p class="text-white text-lg text-center uppercase opacity-70">
           Marcas que han confiado en nosotros:
@@ -83,55 +83,58 @@ import Layout from "../layouts/Layout.astro";
           
           <img src="/assets/logos/walmart.png" alt="logo walmart" />
         </div> -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper [&>div>img]:opacity-40">
+        <div class="swiper mySwiper w-[300px] lg:w-[1200px] h-20 hidden lg:block">
+          <div class="swiper-wrapper [&>div>img]:opacity-50 [&>div>img]:object-contain [&>div]:h-20">
             <div class="swiper-slide">
-              <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" />
+              <img src="/assets/logos/christus-muguerza.png" alt="logo hospital christus muguerza" title="CHRISTUS MUGUERZA" class="w-full h-full"/>
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/maserati.png" alt="logo maserati" />
+              <img src="/assets/logos/aeropuerto-benito.png" alt="logo aeropuerto benito" title="AEROPUERTO BENITO" class="w-full h-full"/>
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/homedepot.png" alt="logo home depot" />
+              <img src="/assets/logos/felipe-angeles.png" alt="logo felipe angeles" title="HOPITAL FELIPE ANGELES" class="w-full h-full"/>
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/seat.png" alt="logo seat" />
+              <img src="/assets/logos/hospital-angeles.png" alt="logo hospital angeles" title="HOSPITAL ANGELES" class="w-full h-full"/>
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/soriana.png" alt="logo soriana" />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/assets/logos/palacio-de-hierro.png"
-                alt="logo palacio de hierro"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/liverpool.png" alt="logo liverpool" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/maserati.png" alt="logo maserati" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/homedepot.png" alt="logo home depot" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/seat.png" alt="logo seat" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/soriana.png" alt="logo soriana" />
+              <img src="/assets/logos/soriana.png" alt="logo soriana" class="w-full h-full"/>
             </div>
             <div class="swiper-slide">
               <img
                 src="/assets/logos/palacio-de-hierro.png"
                 alt="logo palacio de hierro"
+                class="w-full h-full"
               />
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/liverpool.png" alt="logo liverpool" />
+              <img src="/assets/logos/liverpool.png" alt="logo liverpool" class="w-full h-full"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" class="w-full h-full"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/maserati.png" alt="logo maserati" class="w-full h-full"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/homedepot.png" alt="logo home depot" class="w-full h-full"/>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/palacio-de-hierro.png"
+                alt="logo palacio de hierro"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/seat.png" alt="logo seat" class="w-full h-full"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/logos/soriana.png" alt="logo soriana" class="w-full h-full"/>
+            </div>
+            
+            <div class="swiper-slide">
+              <img src="/assets/logos/liverpool.png" alt="logo liverpool" class="w-full h-full"/>
             </div>
           </div>
         </div>
@@ -149,21 +152,6 @@ import Layout from "../layouts/Layout.astro";
     slot="tween"></script>
 </Layout>
 <style>
-  .swiper {
-    width: 1300px;
-  }
-
-  .swiper-slide {
-    height: 90px;
-    width: auto;
-  }
-  .swiper-slide img {
-    height: 90px;
-    object-fit: contain;
-    display: flex;
-    margin: 0 auto;
-    justify-items: center;
-  }
   .counter-bg {
     position: relative;
   }
@@ -180,8 +168,8 @@ import Layout from "../layouts/Layout.astro";
     opacity: 0.8;
   }
 </style>
-<script>
-  var swiper = new Swiper(".mySwiper", {
+<script is:inline>
+   var swiper = new Swiper(".mySwiper", {
     watchSlidesProgress: true,
     slidesPerView: 7,
     loop: true,

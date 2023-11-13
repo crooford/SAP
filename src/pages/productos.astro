@@ -6,21 +6,21 @@ import DoorCard from "../components/products/DoorCard.astro";
 let doors = [
   {
     title: "giratorias",
-    imageUrl: "/assets/portadas/giratoria.webp",
+    imageUrl: "/assets/portadas/giratoria.png",
     imageAlt: " puerta giratoria",
     url: "/producto/puertas-giratorias",
   },
   {
     title: "corredizas",
-    imageUrl: "/assets/portadas/corrediza.jpg",
+    imageUrl: "/assets/portadas/corrediza.png",
     imageAlt: " puerta corrediza",
     url: "/producto/puertas-corredizas",
   },
   {
-    title: "batientes",
-    imageUrl: "/assets/puertas/puerta-batiente.jpg",
-    imageAlt: " puerta batiente",
-    url: "/producto/puertas-batientes",
+    title: "curvas",
+    imageUrl: "/assets/portadas/curva.png",
+    imageAlt: "puertas estilo curvo",
+    url: "/producto/curvas",
   },
   {
     title: "telescopicas",
@@ -29,35 +29,38 @@ let doors = [
     url: "/producto/puertas-telescopicas",
   },
   {
-    title: "plegadizas",
-    imageUrl: "/assets/portadas/plegadiza.jpg",
-    imageAlt: "puerta plegadiza",
-    url: "/producto/puertas-plegadizas",
+    title: "batientes",
+    imageUrl: "/assets/portadas/batiente.png",
+    imageAlt: " puerta batiente",
+    url: "/producto/puertas-batientes",
   },
   {
     title: "icu",
-    imageUrl: "/assets/portadas/icu.jpeg",
+    imageUrl: "/assets/portadas/icu.png",
     imageAlt: "puerta icu",
     url: "/producto/puertas-icu",
   },
+  {
+    title: "torniquetes",
+    imageUrl: "/assets/portadas/torniquete.png",
+    imageAlt: "torniquete",
+    url: "/producto/torniquetes",
+  },
+  {
+    title: "plegadizas",
+    imageUrl: "/assets/portadas/plegadiza.png",
+    imageAlt: "puerta plegadiza",
+    url: "/producto/puertas-plegadizas",
+  },
+
   {
     title: "seguridad",
     imageUrl: "/assets/portadas/seguridad.png",
     imageAlt: "puerta plegadiza",
     url: "/producto/puertas-de-seguridad",
   },
-  {
-    title: "curvas",
-    imageUrl: "/assets/portadas/curva.jpg",
-    imageAlt: "puertas estilo curvo",
-    url: "/producto/curvas",
-  },
-  {
-    title: "torniquetes",
-    imageUrl: "/assets/puertas/puerta-telescopica.jpg",
-    imageAlt: "torniquete",
-    url: "/producto/torniquetes",
-  },
+
+
   {
     title: "huella digital",
     imageUrl: "/assets/portadas/huella.png",
@@ -102,14 +105,14 @@ let doors = [
     ContactoState=""
     slot="header"
   />
-  <main class="pt-28 px-10 md:py-60 md:px-[4.5rem] bg-[url(/assets/home/background_products.jpg)] bg-no-repeat bg-cover bg-[70%] bg-opacity-90 min-h-screen bg-fixed">
-    <article class="max-w-[70rem]">
+  <main class="pt-36 pb-4 px-8 lg:py-40 2xl:py-60 md:px-[4.5rem] bg-[url(/assets/home/background_products.jpg)] bg-no-repeat bg-cover bg-[70%] bg-opacity-90 min-h-screen bg-fixed">
+    <article class="lg:w-[52rem] 2xl:w-[70rem]">
       <h1
-        class="text-[#ffce00] text-5xl md:text-6xl uppercase mb-9 font-[oswald] font-semibold"
+        class="text-[#ffce00] text-4xl lg:text-5xl 2xl:text-[56px] uppercase mb-4 2xl:mb-9 font-[oswald] font-semibold"
       >
         productos
       </h1>
-      <p class="text-white text-lg md:text-2xl leading-snug">
+      <p class="text-white text-base lg:text-lg leading-snug">
         Ofrecemos soluciones personalizadas, seguras y automatizadas para tu
         negocio. Como líderes en puertas automáticas de cristal en todo México y
         el Caribe, nuestros productos están diseñados para brindar seguridad y
@@ -118,7 +121,7 @@ let doors = [
         necesidades.
       </p>
     </article>
-    <section class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 mb-28 gap-10">
+    <section class="mt-5 2xl:mt-10 grid md:grid-cols-2 lg:grid-cols-3 mb-28 gap-x-4 gap-y-12 2xl:gap-y-12">
       {
         doors.map((door) => (
           <DoorCard
