@@ -1,21 +1,22 @@
 ---
 import "@fontsource/roboto/";
 import "@fontsource-variable/oswald";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
-  
+
   BgBody: string;
 }
 
 const {
   title,
-  
+
   BgBody,
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -30,77 +31,152 @@ const {
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
+    <ViewTransitions />
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
-    
     <slot />
+    <footer
+      class="flex flex-col p-16 bg-[url(/assets/home/footer.png)] bg-cover"
+    >
+      <section
+        class="flex flex-col md:flex-row justify-center items-center gap-4 md:justify-evenly"
+      >
+        <div class="flex items-center">
+          <img
+            src="/assets/sap-icon.svg"
+            alt="logo sap"
+            class="h-16 2xl:h-16"
+          />
+
+          <h1 class="text-[#ffce00] font-[oswald] text-4xl font-extrabold">
+            SAP
+          </h1>
+        </div>
+        <ul
+          class="text-white [&>li]:mx-3 items-center uppercase [&>li]:text-[#ffce00]"
+        >
+          <li>
+            <a href="/producto/puertas-giratorias">puertas giratorias</a>
+          </li>
+          <li>
+            <a href="/producto/puertas-corredizas">puertas corredizas</a>
+          </li>
+          <li>
+            <a href="/producto/puertas-batientes">puertas batientes</a>
+          </li>
+        </ul>
+        <ul
+          class="text-white [&>li]:mx-3 items-center uppercase [&>li]:text-[#ffce00]"
+        >
+          <li>
+            <a href="/producto/puertas-telescopicas">puertas telescopicas</a>
+          </li>
+          <li>
+            <a href="/producto/puertas-plegadizas">puertas plegadizas</a>
+          </li>
+          <li>
+            <a href="/producto/torniquetes">torniquetes</a>
+          </li>
+        </ul>
+        <div class="grid gap-2">
+          <p class="text-white">Distribuidor autorizado de:</p>
+          <div class="flex mx-auto">
+            <img
+              src="/assets/stanley-logo.png"
+              alt="stanley logo"
+              class="w-32 lg:w-48"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="flex items-center justify-center pt-10">
+        <p class="text-white flex font-light text-base uppercase">
+          Copyright<span>
+            <svg
+              class="icon icon-tabler icon-tabler-copyright ml-1 mr-2"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+              <path
+                d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"
+              ></path>
+            </svg></span
+          > 2023 sistemas automáticos peatonales | derechos reservados
+        </p>
+      </section>
+    </footer>
     <script
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
     ></script>
-  </body>
-</html>
-<style is:global>
+  </body><style is:global>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "roboto", "Helvetica";
-  }
-  .active-tab {
-    color: #ffce00;
-    border-top: #ffce00 solid 2px;
-  }
-  .no-active-tab {
-    color: #fff;
-    border-top: transparent solid 2px;
-    transition: all 0.15s linear;
-  }
-  .no-active-tab:hover {
-    color: #ffce00;
-    border-top: #ffce00 solid 2px;
-  }
-  .sap__text__slogan {
-    backdrop-filter: blur(1px);
-  }
-  .text_border_convert {
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
-  }
-  .sap__text__slogan span {
-    font-size: 4rem;
-    font-weight: 900;
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
-    letter-spacing: 2px;
-  }
-  .img-transform {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-  .img-transform:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-  }
-  .bg-body {
-    background-image: url(/assets/background_home.png) !important;
-    background-color: #000000;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .non-bg-body {
-    background-color: #000000;
-  }
-  .scrolled {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "roboto", "Helvetica";
+    }
+    .active-tab {
+      color: #ffce00;
+      border-top: #ffce00 solid 2px;
+    }
+    .no-active-tab {
+      color: #fff;
+      border-top: transparent solid 2px;
+      transition: all 0.15s linear;
+    }
+    .no-active-tab:hover {
+      color: #ffce00;
+      border-top: #ffce00 solid 2px;
+    }
+    .sap__text__slogan {
+      backdrop-filter: blur(1px);
+    }
+    .text_border_convert {
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+    }
+    .sap__text__slogan span {
+      font-size: 4rem;
+      font-weight: 900;
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+      letter-spacing: 2px;
+    }
+    .img-transform {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    .img-transform:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+    .bg-body {
+      background-image: url(/assets/background_home.png) !important;
+      background-color: #000000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .non-bg-body {
+      background-color: #000000;
+    }
+    .scrolled {
       background-color: #00000080;
       backdrop-filter: saturate(180%) blur(12px);
       transition: background-color 0.4s ease-in-out;
     }
-</style>
-<script>
-     addEventListener("scroll", () => {
+  </style>
+  <script>
+    addEventListener("scroll", () => {
       const header = document.getElementById("landing-header");
       const scroll = window.scrollY;
       if (scroll > 0) {
@@ -109,14 +185,15 @@ const {
         header.classList.remove("scrolled");
       }
     });
-  // // Internet Explorer
-  // window.onload = function () {
-  //   document.onselectstart = function () {
-  //     return false;
-  //   };
-  //   // Firefox
-  //   document.onmousedown = function () {
-  //     return false;
-  //   };
-  // };
-</script>
+    // // Internet Explorer
+    // window.onload = function () {
+    //   document.onselectstart = function () {
+    //     return false;
+    //   };
+    //   // Firefox
+    //   document.onmousedown = function () {
+    //     return false;
+    //   };
+    // };
+  </script>
+</html>

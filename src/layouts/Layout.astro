@@ -1,6 +1,7 @@
 ---
 import "@fontsource/roboto/";
 import "@fontsource-variable/oswald";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -40,6 +41,7 @@ const {
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions/>
   </head>
   <body class={BgBody === "yes" ? `bg-[url(${url})] bg-no-repeat bg-cover bg-center` : "non-bg-body"} >
     <slot name="header"/>
