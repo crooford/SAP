@@ -35,6 +35,7 @@ const {
         />
       </a>
       <button
+        
         data-collapse-toggle="navbar-default"
         type="button"
         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#ffce00] mr-4"
@@ -52,42 +53,40 @@ const {
         </svg>
       </button>
       <div
-        class="hidden w-full md:block  justify-center items-center md:w-auto bg-black md:bg-transparent lg:mr-10 sm:mr-2 [&>ul]:border-t-[1px] [&>ul]:border-white/20 [&>ul>li>ul]:hidden [&>ul>li:hover>ul]:block"
+        class="hidden w-full  md:block  justify-center items-center md:w-auto bg-black md:bg-transparent lg:mr-10 sm:mr-2 [&>ul]:border-b-[1px] [&>ul]:border-white/20 [&>ul>li>ul]:hidden [&>ul>li>ul]:absolute [&>ul>li:hover>ul]:[display:inherit]"
         id="navbar-default"
       >
         <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row 2xl:space-x-0 md:mt-0 lg:[&>li>a]:px-5 sm:[&>li>a]:px-3 md:[&>li>a]:py-4 [&>li>a]:block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase md:[&>li>a]:text-sm 2xl:[&>li>a]:text-base"
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row  2xl:space-x-0 md:mt-0 lg:[&>li>a]:px-5 sm:[&>li>a]:px-3 md:[&>li>a]:py-4 [&>li>a]:block md:[&>li>a]:justify-stretch [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase md:[&>li>a]:text-sm 2xl:[&>li>a]:text-base"
         >
           <li class={HomeState == "active" ? "active-tab" : "no-active-tab"}>
             <a href="/">Inicio</a>
           </li>
           <li>
             <a
-              class={ProductosState == "active"
-                ? "active-tab"
-                : "no-active-tab"}
+              class={ProductosState == "active" ? "active-tab" : "no-active-tab "}
               href="/productos">Productos</a
             >
             <ul
               class="bg-black/70 p-4 [&>li>a]:text-white [&>li>a]:uppercase [&>li]:py-1 hover:[&>li>a]:text-[#ffce00]"
             >
               <li>
-                <a href="/producto/puertas-giratorias">puertas giratorias</a>
+                <a href="/producto/puertas-giratorias">giratorias</a>
               </li>
               <li>
-                <a href="/producto/puertas-corredizas">puertas corredizas</a>
+                <a href="/producto/puertas-corredizas">corredizas</a>
               </li>
               <li>
-                <a href="/producto/puertas-batientes">puertas batientes</a>
+                <a href="/producto/puertas-batientes">batientes</a>
               </li>
               <li>
                 <a href="/producto/puertas-telescopicas"
-                  >puertas telescópicas</a>
+                  >telescópicas</a>
               </li>
               <li>
-                <a href="/producto/puertas-plegadizas">puertas plegadizas</a>
+                <a href="/producto/puertas-plegadizas">plegadizas</a>
               </li>
-              <li><a href="/producto/puertas-icu">puertas icu</a></li>
+              <li><a href="/producto/puertas-icu">icu</a></li>
               <li><a href="/productos">todos los productos</a></li>
             </ul>
           </li>
