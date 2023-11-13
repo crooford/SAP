@@ -1,39 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Place from "../components/Place.astro";
+import Navbar from "../components/Navbar.astro";
 
-export const meta = {
-  title: "Oficinas regionales",
+const meta = {
+  title: "Oficinas",
   description:
     "Como líderes en soluciones de acceso, tenemos una presencia nacional con sede en la Ciudad de México y oficinas en todo el país. Aquí es donde puedes encontrarnos:",
   footer:
     "Cada ubicación está comprometida con la excelencia en el servicio, la seguridad y la accesibilidad que caracterizan a Sistemas Automáticos Peatonales. Siempre estamos listos para brindarte la mejor atención y asesorarte en la instalación de nuestros productos. Encuentra la oficina más cercana y descubre cómo podemos mejorar tus accesos.",
 };
 
-export let sedes = [
+const sedes = [
   {
-    urlMaps:"https://goo.gl/maps/hxiTGoR3P4GHPXTG6",
+    urlMaps: "https://goo.gl/maps/hxiTGoR3P4GHPXTG6",
     name: "SAP Ciudad de México",
     address:
       "Av. Revolución No. 789, Col. Mixcoac, Del. Benito Juárez, México, D.F.",
     phone: "555 611 2215",
   },
   {
-    urlMaps:"https://goo.gl/maps/7Ab2g1y1r9CdwuPG9",
+    urlMaps: "https://goo.gl/maps/7Ab2g1y1r9CdwuPG9",
     name: "SAP Monterrey",
     address:
       "Av. Raúl Rangel Frías No. 562, Col Burócratas del Estado, Nvo. León, Monterrey. C.P. 64380",
     phone: "818 311 4321 / 833 140 9986",
   },
   {
-    urlMaps:"https://goo.gl/maps/hxiTGoR3P4GHPXTG6",
+    urlMaps: "https://goo.gl/maps/hxiTGoR3P4GHPXTG6",
     name: "SAP Cancún y Peninsula de yucatán",
     address:
       "Av. Holbox SM.11, Mz 5, LT 21, Fracc. Santa María Sike, C.P. 77504, Cancún Quintana Roo.",
     phone: "998 267 7655 / 998 880 5715",
   },
   {
-    urlMaps:"https://goo.gl/maps/2qg3GdswS2nSJ8w9A",
+    urlMaps: "https://goo.gl/maps/2qg3GdswS2nSJ8w9A",
     name: "SAP Baja California Norte",
     address:
       "Av. Madero No. 2386, Col. Residencias, C.P. 83448, San Luis Rio Colorado, Son.",
@@ -41,7 +42,7 @@ export let sedes = [
   },
 
   {
-    urlMaps:"https://goo.gl/maps/hxiTGoR3P4GHPXTG6",
+    urlMaps: "https://goo.gl/maps/hxiTGoR3P4GHPXTG6",
     name: "SAP Sonora - Sinaloa",
     address:
       "Residencial Villa California, Miguel Alemán No. 506-2 Altos, Norte Esq. Yaqui, Obregón, Sonora, 85000.",
@@ -49,7 +50,7 @@ export let sedes = [
   },
 
   {
-    urlMaps:"https://goo.gl/maps/ZtquK5naoPyigAWF8",
+    urlMaps: "https://goo.gl/maps/ZtquK5naoPyigAWF8",
     name: "SAP Yucatán",
     address:
       "Calle 14 No. 291-A, Por 13 y 15 Fracc. Monte Bello, Mérida, Yucatán. C.P. 97113",
@@ -58,42 +59,42 @@ export let sedes = [
 ];
 ---
 
-<Layout
-  title="SAP | Oficinas"
-  HomeState=""
-  ProductosState=""
-  GaleriaState=""
-  ServiciosState=""
-  CatalogoState=""
-  NosotrosState=""
-  OficinasState="active"
-  ContactoState=""
-  BgBody="yes"
->
-  <main class="w-full min-h-screen h-full lg:pt-40 2xl:pt-44">
-    <section class="flex flex-col mx-auto  lg:max-w-[980px] 2xl:max-w-[1400px] bg-black/80 py-8 px-10 lg:px-8 lg:mb-10 pt-28 lg:pt-8">
+<Layout title="SAP | Oficinas" BgBody="no" url="">
+  <Navbar
+    HomeState=""
+    ProductosState=""
+    GaleriaState=""
+    ServiciosState=""
+    CatalogoState=""
+    NosotrosState=""
+    OficinasState="active"
+    ContactoState=""
+  />
+  <main
+    class="w-full min-h-screen h-full bg-[url(/assets/home/oficina-background.png)] bg-right-bottom bg-cover bg-fixed"
+  >
+    <section
+      class="w-screen min-h-screen bg-black/20 pt-28 px-10 md:pt-60 md:pl-20 pb-6"
+    >
       <header
-        class="[&>p]:text-white [&>p]:mb-4 [&>p]:text-lg [&>p]:font-light mb-6"
+        class=" mb-6"
       >
         <h1
-          class="2xl::text-6xl text-5xl text-[#ffce00] uppercase font-extrabold mb-10 font-[oswald]"
+          class="2xl:text-6xl text-5xl text-[#ffce00] uppercase font-extrabold mb-10 font-[oswald]"
         >
           {meta.title}
         </h1>
-        <p>
-          {meta.description.slice(0, 68)}
-          <br class="hidden 2xl:block" />
-          {meta.description.slice(69, 128)}
-        </p>
-        <p>
-          {meta.description.slice(129, 188)}
-        </p>
+        <div class="w-[860px]">
+          <p class="text-white font-medium text-xl">
+            {meta.description}
+          </p>
+        </div>
       </header>
-      <div class="grid md:grid-cols-2 2xl:grid-cols-3 lg:gap-6 gap-2 mb-10">
+      <div class="grid md:grid-cols-2 2xl:grid-cols-3 gap-6  mb-10 w-[1360px]">
         {
           sedes.map((sede) => (
             <Place
-              urlMaps = {sede.urlMaps}
+              urlMaps={sede.urlMaps}
               title={sede.name}
               address={sede.address}
               phone={sede.phone}
@@ -101,7 +102,7 @@ export let sedes = [
           ))
         }
       </div>
-      <p class="text-white text-lg font-light">{meta.footer}</p>
+      <p class="text-white text-lg font-medium w-[900px]">{meta.footer}</p>
     </section>
   </main>
 </Layout>

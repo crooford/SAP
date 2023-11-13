@@ -1,9 +1,14 @@
 ---
+import Navbar from "../components/Navbar.astro";
 import LayoutTwo from "../layouts/LayoutTwo.astro";
 ---
 
 <LayoutTwo
   title="SAP | Contacto"
+  
+  BgBody="yes"
+>
+  <Navbar 
   HomeState=""
   ProductosState=""
   GaleriaState=""
@@ -12,10 +17,9 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
   NosotrosState=""
   OficinasState=""
   ContactoState="active"
-  BgBody="yes"
->
-  <main class="w-full min-h-screen h-full flex items-center bg-black/20">
-    <section class="flex flex-col lg:flex-row lg:justify-between lg:mx-auto w-screen lg:max-w-[980px] 2xl:max-w-[1400px] bg-black/80 pt-28 lg:pt-8 lg:mt-28 mb-8">
+  />
+  <main class="w-full min-h-screen h-full flex items-center bg-black/5">
+    <section class="flex flex-col lg:flex-row lg:justify-between lg:mx-auto w-screen lg:max-w-[980px] 2xl:max-w-[1400px] bg-black/70 pt-28 lg:pt-8 lg:mt-28 mb-8">
       <div class="grid gap-8 md:gap-0 lg:grid-cols-2   lg:w-full px-4 md:px-8 mb-8">
         <div class="flex flex-col lg:max-w-[600px] px-6">
           <h1 class="text-[#ffce00] text-5xl 2xl:text-6xl font-extrabold uppercase mb-6 font-[oswald]">
@@ -26,6 +30,7 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
               <div class="grid lg:grid-cols-2 grid-rows-2 gap-4 lg:max-w-[600px]">
                 <div class="relative">
                   <input
+                    
                     type="text"
                     id="floating_fullname"
                     class="block px-2.5 pb-2.5 pt-5 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer"
@@ -54,6 +59,7 @@ import LayoutTwo from "../layouts/LayoutTwo.astro";
                 </div>
                 <div class="relative">
                   <input
+                    
                     type="email"
                     id="floating_email"
                     class="block px-2.5 pb-2.5 pt-5 w-full text-sm text-white bg-white/10 rounded-lg border-1 border-black/5 appearance-none focus:outline-none focus:ring-0 focus:border-[#ffce00] peer"

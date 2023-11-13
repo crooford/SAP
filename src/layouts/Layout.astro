@@ -41,7 +41,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class={BgBody === "yes" ? `bg-[url(${url})] bg-no-repeat bg-cover bg-center overflow-x-hidden min-h-screen` : "non-bg-body"} >
+  <body class={BgBody === "yes" ? `bg-[url(${url})] bg-no-repeat bg-cover bg-center` : "non-bg-body"} >
     <slot name="header"/>
     <slot />
     <footer class="flex flex-col p-16 bg-[url(/assets/home/footer.png)] bg-cover">

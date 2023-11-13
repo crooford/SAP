@@ -10,21 +10,24 @@ interface Props {
   GaleriaState: string;
 }
 
-const {HomeState,
+const {
+  HomeState,
   ProductosState,
   ServiciosState,
   CatalogoState,
   NosotrosState,
   OficinasState,
   ContactoState,
-  GaleriaState,} = Astro.props;
+  GaleriaState,
+} = Astro.props;
 ---
 
 <header>
-
-  <nav class="fixed top-0 lg:top-12 w-full z-[100] py-2" id="landing-header" >
-    <div class="max-w-full flex flex-wrap lg:flex-nowrap justify-between mx-auto">
-      <a href="/" >
+  <nav class="fixed top-0 lg:top-12 w-full z-[100] py-2" id="landing-header">
+    <div
+      class="max-w-full flex flex-wrap lg:flex-nowrap justify-between mx-auto"
+    >
+      <a href="/">
         <img
           src="/assets/home/new-logo.png"
           alt="logo sap"
@@ -39,12 +42,7 @@ const {HomeState,
         aria-expanded="false"
       >
         <span class="sr-only">Open main menu</span>
-        <svg
-          class="w-8 h-8"
-          aria-hidden="true"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
+        <svg class="w-8 h-8" aria-hidden="true" fill="none" viewBox="0 0 17 14">
           <path
             stroke="currentColor"
             stroke-linecap="round"
@@ -54,14 +52,14 @@ const {HomeState,
         </svg>
       </button>
       <div
-        class="hidden w-full md:block justify-center items-center md:w-auto bg-black md:bg-transparent lg:mr-10 sm:mr-2 [&>ul]:border-t-[1px] [&>ul]:border-white/20 [&>ul>li>ul]:hidden  [&>ul>li:hover>ul]:block"
+        class="hidden w-full md:block  justify-center items-center md:w-auto bg-black md:bg-transparent lg:mr-10 sm:mr-2 [&>ul]:border-t-[1px] [&>ul]:border-white/20 [&>ul>li>ul]:hidden [&>ul>li:hover>ul]:block"
         id="navbar-default"
       >
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row 2xl:space-x-0 md:mt-0 lg:[&>li>a]:px-5 sm:[&>li>a]:px-3 md:[&>li>a]:py-4 [&>li>a]:block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase md:[&>li>a]:text-sm 2xl:[&>li>a]:text-base"
         >
           <li class={HomeState == "active" ? "active-tab" : "no-active-tab"}>
-            <a href="/">Inicio </a>
+            <a href="/">Inicio</a>
           </li>
           <li>
             <a
@@ -70,22 +68,35 @@ const {HomeState,
                 : "no-active-tab"}
               href="/productos">Productos</a
             >
-            <ul class="bg-black/70 p-4 [&>li>a]:text-white [&>li>a]:uppercase [&>li]:py-1 hover:[&>li>a]:text-[#ffce00]">
-              <li><a href="/producto/puertas-giratorias">puertas giratorias</a></li>
-              <li><a href="/producto/puertas-corredizas">puertas corredizas</a></li>
-              <li><a href="/producto/puertas-batientes">puertas batientes</a></li>
-              <li><a href="/producto/puertas-">puertas telescópicas</a></li>
-              <li><a href="/producto/puertas-giratorias">puertas plegadizas</a></li>
-              <li><a href="/producto/puertas-giratorias">puertas icu</a></li>
-              <li><a href="/producto/puertas-giratorias">todos los productos</a></li>
+            <ul
+              class="bg-black/70 p-4 [&>li>a]:text-white [&>li>a]:uppercase [&>li]:py-1 hover:[&>li>a]:text-[#ffce00]"
+            >
+              <li>
+                <a href="/producto/puertas-giratorias">puertas giratorias</a>
+              </li>
+              <li>
+                <a href="/producto/puertas-corredizas">puertas corredizas</a>
+              </li>
+              <li>
+                <a href="/producto/puertas-batientes">puertas batientes</a>
+              </li>
+              <li>
+                <a href="/producto/puertas-telescopicas"
+                  >puertas telescópicas</a>
+              </li>
+              <li>
+                <a href="/producto/puertas-plegadizas">puertas plegadizas</a>
+              </li>
+              <li><a href="/producto/puertas-icu">puertas icu</a></li>
+              <li><a href="/productos">todos los productos</a></li>
             </ul>
           </li>
-          <li>
+          <!-- <li>
             <a
               class={GaleriaState == "active" ? "active-tab" : "no-active-tab"}
               href="/galeria">galería</a
             >
-          </li>
+          </li> -->
           <li>
             <a
               class={ServiciosState == "active"
@@ -120,12 +131,18 @@ const {HomeState,
           </li>
         </ul>
       </div>
-      <img src="/assets/home/stanley.png" alt="" class="h-10 mr-20 hidden lg:block mt-5">
+      <div class="w-48 h-20 flex items-center mr-20">
+        <img
+          src="/assets/home/stanley-2.png"
+          alt=""
+          class="hidden lg:block"
+        />
+      </div>
     </div>
   </nav>
 </header>
 <style>
-      .scrolled {
+  .scrolled {
     background-color: #00000080;
     backdrop-filter: saturate(180%) blur(12px);
     transition: background-color 0.4s ease-in-out;
@@ -133,23 +150,23 @@ const {HomeState,
 </style>
 
 <script is:inline>
-    addEventListener("scroll", () => {
-      const header = document.getElementById("landing-header");
-      const scroll = window.scrollY;
-      if (scroll > 0) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
-    });
-    // Internet Explorer
-    // window.onload = function () {
-    //   document.onselectstart = function () {
-    //     return false;
-    //   };
-    //   // Firefox
-    //   document.onmousedown = function () {
-    //     return false;
-    //   };
-    // };
-  </script>
+  addEventListener("scroll", () => {
+    const header = document.getElementById("landing-header");
+    const scroll = window.scrollY;
+    if (scroll > 0) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+  // Internet Explorer
+  // window.onload = function () {
+  //   document.onselectstart = function () {
+  //     return false;
+  //   };
+  //   // Firefox
+  //   document.onmousedown = function () {
+  //     return false;
+  //   };
+  // };
+</script>

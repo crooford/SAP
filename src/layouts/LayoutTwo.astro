@@ -4,27 +4,13 @@ import "@fontsource-variable/oswald";
 
 interface Props {
   title: string;
-  HomeState: string;
-  ProductosState: string;
-  GaleriaState: string;
-  ServiciosState: string;
-  CatalogoState: string;
-  NosotrosState: string;
-  OficinasState: string;
-  ContactoState: string;
+  
   BgBody: string;
 }
 
 const {
   title,
-  HomeState,
-  ProductosState,
-  ServiciosState,
-  CatalogoState,
-  NosotrosState,
-  OficinasState,
-  ContactoState,
-  GaleriaState,
+  
   BgBody,
 } = Astro.props;
 ---
@@ -47,108 +33,7 @@ const {
     
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
-    <header>
-      <nav class="fixed top-0 w-full z-[100] " id="landing-header">
-        <div
-          class="max-w-full flex flex-wrap items-center justify-between mx-auto "
-        >
-          <a href="/">
-            <img src="/assets/logo.svg" alt="logo sap" class="h-16 2xl:h-20" />
-          </a>
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#ffce00] mr-4"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-8 h-8"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"></path>
-            </svg>
-          </button>
-          <div class="hidden  w-full md:block md:w-auto bg-black md:bg-transparent lg:pr-4 sm:pr-2" id="navbar-default">
-            <ul
-              class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row 2xl:space-x-4 md:mt-0 lg:[&>li>a]:px-5 sm:[&>li>a]:px-3  md:[&>li>a]:py-4 [&>li>a]:block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:uppercase  md:[&>li>a]:text-sm 2xl:[&>li>a]:text-base"
-            >
-              <li>
-                <a
-                  class={HomeState == "active" ? "active-tab" : "no-active-tab"}
-                  href="/">Home</a
-                >
-              </li>
-              <li>
-                <a
-                  class={ProductosState == "active"
-                    ? "active-tab"
-                    : "no-active-tab"}
-                  href="/productos">Productos</a
-                >
-              </li>
-              <li>
-                <a
-                  class={GaleriaState == "active"
-                    ? "active-tab"
-                    : "no-active-tab"}
-                  href="/galeria">galería</a
-                >
-              </li>
-              <li>
-                <a
-                  class={ServiciosState == "active"
-                    ? "active-tab"
-                    : "no-active-tab"}
-                  href="/servicios">Servicios</a
-                >
-              </li>
-              <li>
-                <a
-                  class={CatalogoState == "active"
-                    ? "active-tab"
-                    : "no-active-tab"}
-                  href="/catalogo">CATÁLOGO</a
-                >
-              </li>
-              <li>
-                <a
-                  class={NosotrosState == "active"
-                    ? "active-tab"
-                    : "no-active-tab"}
-                  href="/nosotros">Nosotros</a
-                >
-              </li>
-              <li>
-                <a
-                  class={OficinasState == "active"
-                    ? "active-tab"
-                    : "no-active-tab"}
-                  href="/oficinas">Oficinas</a
-                >
-              </li>
-              <li>
-                <a
-                  class={ContactoState == "active"
-                    ? "active-tab"
-                    : "no-active-tab"}
-                  href="/contacto">Contacto</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    
     <slot />
     <script
       is:inline
@@ -165,14 +50,16 @@ const {
   }
   .active-tab {
     color: #ffce00;
-    background-color: #00000075;
-    border-radius: 5px;
+    border-top: #ffce00 solid 2px;
   }
   .no-active-tab {
     color: #fff;
+    border-top: transparent solid 2px;
+    transition: all 0.15s linear;
   }
   .no-active-tab:hover {
     color: #ffce00;
+    border-top: #ffce00 solid 2px;
   }
   .sap__text__slogan {
     backdrop-filter: blur(1px);
