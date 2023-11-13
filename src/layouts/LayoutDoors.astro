@@ -1,6 +1,7 @@
 ---
 import "@fontsource/roboto/";
 import "@fontsource-variable/oswald";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -59,6 +60,7 @@ const {
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions/>
   </head>
   <body>
     <header>
@@ -167,7 +169,7 @@ const {
       </nav>
     </header>
     <main
-      class="flex flex-row min-h-screen justify-center overflow-hidden bg-[url(/assets/home/background_products.png)] bg-center bg-fixed"
+      class="flex flex-row min-h-screen justify-center overflow-hidden bg-[url(/assets/home/background_products.png)] bg-center bg-fixed" 
     >
       <section
         class="flex flex-row items-start pb-12 pt-24 min-w-full w-screen"
@@ -383,7 +385,7 @@ const {
       background-size: cover;
       background-position: center;
     }
-    .non-bg-body {
+    body{
       background-color: #000000;
     }
   </style>

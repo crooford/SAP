@@ -84,9 +84,7 @@ import Layout from "../layouts/Layout.astro";
           <img src="/assets/logos/walmart.png" alt="logo walmart" />
         </div> -->
         <div class="swiper mySwiper">
-          <div
-            class="swiper-wrapper [&>div>img]:opacity-40"
-          >
+          <div class="swiper-wrapper [&>div>img]:opacity-40">
             <div class="swiper-slide">
               <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" />
             </div>
@@ -182,13 +180,12 @@ import Layout from "../layouts/Layout.astro";
 </style>
 <script>
   var swiper = new Swiper(".mySwiper", {
-      watchSlidesProgress: true,
-      slidesPerView: 7,
-      loop: true,
-      autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-         
-        }
-    });
+    watchSlidesProgress: true,
+    slidesPerView: 7,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
 </script>
