@@ -19,7 +19,9 @@ import Layout from "../layouts/Layout.astro";
   <main
     class="min-w-screen min-h-screen bg-[url(/assets/home/background.png)] bg-cover bg-no-repeat bg-center bg-fixed"
   >
-    <section class="pt-28 px-8  md:pt-52 lg:px-16 grid pb-6 min-h-screen w-screen bg-black/30">
+    <section
+      class="pt-28 px-8 md:pt-52 lg:px-16 grid pb-6 min-h-screen w-screen bg-black/30"
+    >
       <article>
         <h1
           class="text-white uppercase text-5xl lg:text-[6rem] font-bold font-[oswald] mb-10 tracking-wider"
@@ -83,23 +85,108 @@ import Layout from "../layouts/Layout.astro";
           
           <img src="/assets/logos/walmart.png" alt="logo walmart" />
         </div> -->
-        <div class="swiper mySwiper w-[300px] lg:w-[1200px] h-20 hidden lg:block">
-          <div class="swiper-wrapper [&>div>img]:opacity-50 [&>div>img]:object-contain [&>div]:h-20">
+        <div
+          class="swiper mySwiper w-[300px] lg:w-[1200px] h-20 hidden lg:block"
+        >
+          <div
+            class="swiper-wrapper [&>div>img]:opacity-60 [&>div>img]:object-contain [&>div]:h-20 [&>div>img]:px-2"
+          >
             <div class="swiper-slide">
-              <img src="/assets/logos/christus-muguerza.png" alt="logo hospital christus muguerza" title="CHRISTUS MUGUERZA" class="w-full h-full"/>
+              <img
+                src="/assets/logos/asur.png"
+                alt="logo aeropuertos del sureste"
+                title="ASUR"
+                class="w-full h-full"
+              />
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/aeropuerto-benito.png" alt="logo aeropuerto benito" title="AEROPUERTO BENITO" class="w-full h-full"/>
+              <img
+                src="/assets/logos/oma-color.png"
+                alt="logo de oma"
+                title="OMA"
+                class="w-full h-full"
+              />
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/felipe-angeles.png" alt="logo felipe angeles" title="HOPITAL FELIPE ANGELES" class="w-full h-full"/>
+              <img
+                src="/assets/logos/petco.png"
+                alt="logo de petco"
+                title="PETCO"
+                class="w-full h-full"
+              />
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/hospital-angeles.png" alt="logo hospital angeles" title="HOSPITAL ANGELES" class="w-full h-full"/>
+              <img
+                src="/assets/logos/gap.png"
+                alt="logo de gap"
+                title="GAP"
+                class="w-full h-full"
+              />
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/soriana.png" alt="logo soriana" class="w-full h-full"/>
+              <img
+                src="/assets/logos/ley.gif"
+                alt="logo de ley"
+                title="LEY"
+                class="w-full h-full"
+              />
             </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/pricemart.png"
+                alt="logo de pricemart"
+                title="PRICEMART"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/christus-muguerza.png"
+                alt="logo hospital christus muguerza"
+                title="CHRISTUS MUGUERZA"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/bmw.png"
+                alt="logo bmw"
+                title="BMW"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/aeropuerto-benito.png"
+                alt="logo aeropuerto benito"
+                title="AEROPUERTO BENITO"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/homedepot.png"
+                alt="logo home depot"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/walmart.png"
+                alt="logo walmart"
+                title="WALMART"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/logos/hospital-angeles.png"
+                alt="logo hospital angeles"
+                title="HOSPITAL ANGELES"
+                class="w-full h-full"
+              />
+            </div>
+
             <div class="swiper-slide">
               <img
                 src="/assets/logos/palacio-de-hierro.png"
@@ -108,49 +195,28 @@ import Layout from "../layouts/Layout.astro";
               />
             </div>
             <div class="swiper-slide">
-              <img src="/assets/logos/liverpool.png" alt="logo liverpool" class="w-full h-full"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/bmw.png" alt="logo bmw" title="BMW" class="w-full h-full"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/maserati.png" alt="logo maserati" class="w-full h-full"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/homedepot.png" alt="logo home depot" class="w-full h-full"/>
-            </div>
-            <div class="swiper-slide">
               <img
-                src="/assets/logos/palacio-de-hierro.png"
-                alt="logo palacio de hierro"
+                src="/assets/logos/liverpool.png"
+                alt="logo liverpool"
                 class="w-full h-full"
               />
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/seat.png" alt="logo seat" class="w-full h-full"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="/assets/logos/soriana.png" alt="logo soriana" class="w-full h-full"/>
-            </div>
-            
-            <div class="swiper-slide">
-              <img src="/assets/logos/liverpool.png" alt="logo liverpool" class="w-full h-full"/>
             </div>
           </div>
         </div>
       </article>
     </section>
   </main>
-
-  <script
-    is:inline
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
-    slot="ajax"></script>
-  <script
-    is:inline
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"
-    slot="tween"></script>
 </Layout>
+
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+  slot="ajax"></script>
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"
+  slot="tween"></script>
+
 <style>
   .counter-bg {
     position: relative;
@@ -169,7 +235,7 @@ import Layout from "../layouts/Layout.astro";
   }
 </style>
 <script is:inline>
-   var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".mySwiper", {
     watchSlidesProgress: true,
     slidesPerView: 7,
     loop: true,
