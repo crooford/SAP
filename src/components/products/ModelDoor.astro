@@ -7,19 +7,19 @@ interface Props {
 }
 const { type, model, description, url } = Astro.props;
 ---
-<article class="w-[1450px] h-[600px] flex flex-row mb-10">
-    <div class="w-[1050px]">
+<article class="flex flex-col">
+    <div class="h-[380px] lg:h-[400px] 2xl:h-[580px] md:w-[880px] 2xl:w-[1450px]">
       <img
         src={ url }
         alt="imagen"
-        class="object-cover object-[top 20%] w-full h-full"
+        class="object-cover w-full h-full"
       />
     </div>
-    <div class="h-[600px] w-[400px] bg-black ">
-      <div class="flex flex-row h-[215px]">
-        <div class="w-[250px] flex items-center border-r-2 border-b-2 px-5"><p class="text-white">{type}</p></div>
-        <div class="w-[200px] flex items-center border-b-2 px-5"><p class="text-white">{model}</p></div>
+    <div class=" bg-black min-w-full h-40 ">
+      <div class="flex flex-row h-16">
+        <div class=" flex items-center w-2/3  border-r-2 border-b-2 px-5  "><p class="text-white">{type}</p></div>
+        <div class="flex items-center w-1/3 border-b-2 px-5 h "><p class="text-white">{model}</p></div>
       </div>
-      <div class="flex items-center h-[385px] px-5"><p class="text-white">{description}</p></div>
+      <div class="flex items-center  min-w-full h-20 px-5"><p class="text-white">{description}</p></div>
     </div>
-  </article>
+</article>

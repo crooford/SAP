@@ -10,10 +10,10 @@ const { title, address, phone, urlMaps } = Astro.props;
 ---
 
 <div class="flex flex-col mr-[3rem] mb-2 w-[390px]">
-  <div class="mb-5 flex bg-black px-4 py-2">
-    <span class="text-[#ffce00] text-3xl mr-2">»</span>
+  <div class="mb-5 flex bg-[#ffcc00f1] px-4 py-2">
+    <span class="text-black font-black text-3xl mr-2">»</span>
     <h2
-      class="text-xl font-semibold text-[#ffce00] animate-fade-down animate-duration-[400ms] font-[oswald] self-center"
+      class="text-xl font-black text-black animate-fade-down animate-duration-[400ms] font-[oswald] self-center"
     >
       <a href={urlMaps} target="_blank" class="hover:underline">{title}</a>
     </h2>
