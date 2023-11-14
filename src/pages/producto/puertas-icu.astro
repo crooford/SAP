@@ -6,19 +6,20 @@ import LayoutDoors from "../../layouts/LayoutDoors.astro";
 
 const items = [
   {
-    imgUrl: "/assets/icu/i-1.jpeg",
+    imgUrl: "/assets/icu/i-1.png",
+    altData: "puerta icu",
+  },
+
+  {
+    imgUrl: "/assets/icu/i-3.png",
     altData: "puerta icu",
   },
   {
-    imgUrl: "/assets/icu/i-2.jpeg",
+    imgUrl: "/assets/icu/i-4.png",
     altData: "puerta icu",
   },
   {
-    imgUrl: "/assets/icu/i-3.jpeg",
-    altData: "puerta icu",
-  },
-  {
-    imgUrl: "/assets/icu/i-4.jpeg",
+    imgUrl: "/assets/icu/i-2.png",
     altData: "puerta icu",
   },
 ];
@@ -43,7 +44,7 @@ const items = [
 >
   <div class="flex flex-col">
     <div
-      class="mb-20 px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-xl [&>p]:mb-4"
+      class="mb-20 px-12 mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:texpng [&>p]:mb-4"
     >
       <Carousel>
         {
@@ -64,8 +65,8 @@ const items = [
       <ModelDoor
         type="Puerta Icu"
         model="Automática"
-        description="puerta corrediza automática con apertura “antipánico”"
-        url={items[3].imgUrl}
+        description="Puerta corrediza automática con apertura “antipánico”"
+        url={items[2].imgUrl}
       />
     </section>
 

@@ -17,14 +17,14 @@ import Layout from "../layouts/Layout.astro";
     slot="header"
   />
   <main
-    class="min-w-screen min-h-screen bg-[url(/assets/home/background.png)] bg-cover bg-no-repeat bg-center bg-fixed"
+    class=" min-h-screen bg-[url(/assets/home/background.png)] bg-cover bg-no-repeat bg-center bg-fixed"
   >
     <section
-      class="pt-28 px-8 md:pt-52 lg:px-16 grid pb-6 min-h-screen w-screen bg-black/30"
+      class="pt-28 px-8 md:pt-40 lg:pt-52 lg:px-16 grid pb-6 min-h-screen min-w-screen bg-black/30"
     >
       <article>
         <h1
-          class="text-white uppercase text-5xl lg:text-[6rem] font-bold font-[oswald] mb-10 tracking-wider"
+          class="text-white uppercase text-5xl lg:text-7xl 2xl:text-[6rem] font-bold font-[oswald] mb-10 tracking-wider"
         >
           sistemas automáticos peatonales
         </h1>
@@ -38,7 +38,7 @@ import Layout from "../layouts/Layout.astro";
            en puertas automáticas en todo México.
         </p>
 
-        <div class="flex flex-row gap-4 md:gap-8 items-center mt-7">
+        <div class="flex fle-col md:flex-row gap-4 md:gap-8 items-center mt-7">
           <Counter />
           <div>
             <p
@@ -76,7 +76,7 @@ import Layout from "../layouts/Layout.astro";
       <article
         class="flex flex-col lg:flex-row self-end lg:justify-between lg:items-center"
       >
-        <p class="text-white text-lg text-center uppercase opacity-70">
+        <p class="text-white text-base 2xl:text-lg text-center uppercase opacity-70">
           Marcas que han confiado en nosotros:
         </p>
         <!-- <div
@@ -86,7 +86,7 @@ import Layout from "../layouts/Layout.astro";
           <img src="/assets/logos/walmart.png" alt="logo walmart" />
         </div> -->
         <div
-          class="swiper mySwiper w-[300px] lg:w-[1200px] h-20 hidden lg:block"
+          class="swiper mySwiper w-[300px] md:w-[600px] lg:w-[800px]  2xl:w-[1200px] h-20 "
         >
           <div
             class="swiper-wrapper [&>div>img]:opacity-60 [&>div>img]:object-contain [&>div]:h-20 [&>div>img]:px-4"

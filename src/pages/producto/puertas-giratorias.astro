@@ -51,7 +51,7 @@ const items = [
 >
   <div class="flex flex-col">
     <section
-      class="mb-20 px-0 lg:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-xl"
+      class="mb-20 px-0 2xl:px-12 mr-0 lg:mr-6 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-xl"
     >
       <Carousel>
         {
@@ -62,7 +62,7 @@ const items = [
       </Carousel>
       <p class="text-white mb-5">
         Estas puertas son la solución perfecta para separar ambientes y ahorrar
-        energía, sin ser un obstáculo para el usuario. Las puertas giratorias se
+        energía, sin ser un obstáculo para el usuario. Las <span class="text-[#ffce00] font-black">puertas giratorias</span> se
         dividen en manuales y automáticas, pueden tener 3 o 4 hojas, y los
         diseños son en perímetro de aluminio y en solo cristal.
       </p>
@@ -74,11 +74,11 @@ const items = [
         original, y la puerta volverá a su lugar casi automáticamente.
       </p>
 
-      <p class="text-[#ffce00] mb-5">
+      <p class="text-[#ffce00] font-black mb-5">
         Las puertas manuales llevan un sistema de freno dinámico para evitar el
         giro a alta velocidad.
       </p>
-      <p class="text-[#ffce00] mb-5">
+      <p class="text-[#ffce00] font-black  mb-5">
         Las puertas automáticas girarán al acercarse al usuario y se detendrán
         al terminar el uso.
       </p>
@@ -89,12 +89,18 @@ const items = [
         ruedas.
       </p>
     </section>
-    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6 grid gap-y-20">
+    <section class="mb-32 px-0 2xl:px-12 mr-0 lg:mr-6 grid gap-y-20">
       <ModelDoor
         type="Puerta Giratoria"
         model="Manual"
         description="1,500 Crystal Puerta Giratoria Manual"
-        url="/assets/giratorias/gm-3.png"
+        url="/assets/giratorias/g-8.jpg"
+      />
+      <ModelDoor
+        type="Puerta Giratoria"
+        model="Automáticas"
+        description="1,500 AA Puerta Giratoria Automática"
+        url="/assets/giratorias/g-7.png"
       />
       <ModelDoor
         type="Puerta Giratoria"
@@ -102,12 +108,7 @@ const items = [
         description="1,500 M Puerta Giratoria Manual"
         url="/assets/giratorias/gm-1.png"
       />
-      <ModelDoor
-        type="Puerta Giratoria"
-        model="Automatica"
-        description="1,500 AA Puerta Giratoria Automática"
-        url="/assets/giratorias/gm-2.png"
-      />
+      
       
     </section>
   </div>
