@@ -1,10 +1,16 @@
 ---
 interface Props {
-    number: string;
-    message: string;
+  number: string;
+  message: string;
+  
 }
-const { number,message } = Astro.props
+const { number, message } = Astro.props;
 ---
-<a href=`https://web.whatsapp.com/send?phone=${number}&text=${message}` target="_blank">
-    <slot name="svg"/>
+
+<a
+  href=`https://web.whatsapp.com/send?phone=${number}&text=${message}`
+  target="_blank"
+>
+  <slot name="svg" />
+  
 </a>
