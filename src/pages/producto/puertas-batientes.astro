@@ -9,11 +9,11 @@ import ModelDoor from "../../components/products/ModelDoor.astro";
 
 const items = [
   {
-    imgUrl: "/assets/batientes/b-1.jpg",
+    imgUrl: "/assets/batientes/b-1.png",
     altData: "puerta batiente",
   },
   {
-    imgUrl: "/assets/batientes/b-2.jpg",
+    imgUrl: "/assets/batientes/b-2.png",
     altData: "puerta batiente",
   },
 ];
@@ -73,18 +73,12 @@ const items = [
         electrostáticas y recub.
       </p>
     </div>
-    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
+    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6 grid gap-y-20">
       <ModelDoor
       type="Puerta Batiente"
       model="Magic Force All Glass"
       description="Puerta Automatica en Vidrio"
         url={items[0].imgUrl}
-      />
-      <ModelDoor
-        type="Puerta Batiente"
-        model="Magic Force All Glass"
-        description="Puerta Automatica en Vidrio"
-        url={items[1].imgUrl}
       />
     </section>
   </div>

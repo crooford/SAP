@@ -1,25 +1,38 @@
 ---
 interface Props {
-    type: string;
-    model: string;
-    description: string;
-    url: string;
+  type: string;
+  model: string;
+  description: string;
+  url: string;
 }
 const { type, model, description, url } = Astro.props;
 ---
-<article class="flex flex-col">
-    <div class="h-[380px] lg:h-[400px] 2xl:h-[580px] md:w-[880px] 2xl:w-[1450px]">
-      <img
-        src={ url }
-        alt="imagen"
-        class="object-cover w-full h-full object-center"
-      />
-    </div>
-    <div class=" bg-black min-w-full ">
-      <div class="flex flex-row h-16">
-        <div class=" flex items-center w-2/3  border-r-2 border-l-2  px-5  "><p class="text-white text-2xl"><span class="text-[#ffce00] mr-2">Tipo:</span>{type}</p></div>
-        <div class="flex items-center w-1/3  border-r-2 px-5 h "><p class="text-white text-2xl"> <span class="text-[#ffce00] mr-2">Modelo:</span>{model}</p></div>
+
+<article class="flex flex-col md:w-[880px] 2xl:w-[1450px]">
+  <div class="flex items-center min-w-full px-5 mb-8">
+    <p class="text-white text-4xl">
+      {description}
+    </p>
+  </div>
+  <div class="h-[380px] lg:h-[400px] 2xl:h-[580px] md:w-[880px] 2xl:w-[1450px]">
+    <img
+      src={url}
+      alt="imagen"
+      class="object-cover w-full h-full object-center"
+    />
+  </div>
+  <div class="bg-black min-w-full">
+    <div class="flex flex-row border-2 h-16">
+      <div class="flex items-center w-2/3 border-r-2 px-5">
+        <p class="text-white text-2xl">
+          <span class="text-[#ffce00] mr-2">Tipo:</span>{type}
+        </p>
       </div>
-      <div class="flex items-center border-2  min-w-full h-20 px-5"><p class="text-white text-2xl"><span class="text-[#ffce00] mr-2">Detalles:</span>{description}</p></div>
+      <div class="flex items-center w-1/3 px-5 h">
+        <p class="text-white text-2xl">
+          <span class="text-[#ffce00] mr-2">Modelo:</span>{model}
+        </p>
+      </div>
     </div>
+  </div>
 </article>
