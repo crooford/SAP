@@ -1,16 +1,13 @@
 ---
 import Carousel from "../../components/Carousel.astro";
-import CarouselProducts from "../../components/CarouselProducts.astro";
+
 import Item from "../../components/Item.astro";
-import ItemCarousel from "../../components/ItemCarousel.astro";
+
 import ModelDoor from "../../components/products/ModelDoor.astro";
 import LayoutDoors from "../../layouts/LayoutDoors.astro";
 
 const items = [
-  {
-    imgUrl: "/assets/torniquetes/ctt-1.png",
-    altData: "torniquete",
-  },
+  
   {
     imgUrl: "/assets/torniquetes/cts-1.jpg",
     altData: "torniquete",
@@ -22,6 +19,10 @@ const items = [
 
   {
     imgUrl: "/assets/torniquetes/t-1.png",
+    altData: "torniquete",
+  },
+  {
+    imgUrl: "/assets/torniquetes/ctt-1.png",
     altData: "torniquete",
   },
 ];
@@ -72,24 +73,24 @@ const items = [
       </p>
     </div>
 
-    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
+    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6 grid gap-y-16">
       <ModelDoor
-        type="Puerta giratoria"
-        model="Manual"
-        description="1,500 M Puerta Giratoria Manual"
+        type="Torniquete"
+        model="Media Altura"
+        description="Éstos son fabricados con estructuras de acero con una altura no mayor a 1.03 m."
+        url={items[3].imgUrl}
+      />
+      <ModelDoor
+        type="Torniquete"
+        model="Altura completa"
+        description="Éstos son fabricados con estructuras de tubos de acero o paneles de lexan transparente con una altura de cuerpo completo de 2.32 m."
         url={items[0].imgUrl}
       />
       <ModelDoor
-        type="Puerta giratoria"
-        model="Automatica"
-        description="1,500 AA Puerta Giratoria Automatica"
+        type="Torniquete"
+        model="Óptico"
+        description="Dispositivos elegantes de control de acceso con barreras de cristal o sin ellas, diseñados para entornos lujosos, con alarmas audibles para detectar ingresos no autorizados."
         url={items[1].imgUrl}
-      />
-      <ModelDoor
-        type="Puerta giratoria"
-        model="Manual"
-        description="1,500 Crystal Puerta Giratoria Manual"
-        url={items[2].imgUrl}
       />
     </section>
     <!-- <div

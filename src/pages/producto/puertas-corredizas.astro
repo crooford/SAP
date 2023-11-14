@@ -1,8 +1,7 @@
 ---
 import LayoutDoors from "../../layouts/LayoutDoors.astro";
 import CarouselModel from "../../components/CarouselModel.astro";
-import CarouselProducts from "../../components/CarouselProducts.astro";
-import ItemCarousel from "../../components/ItemCarousel.astro";
+
 import ItemModel from "../../components/ItemModel.astro";
 import Carousel from "../../components/Carousel.astro";
 import Item from "../../components/Item.astro";
@@ -22,7 +21,7 @@ const items = [
     altData: "puerta corrediza",
   },
   {
-    imgUrl: "/assets/corredizas/allg-4.jpg",
+    imgUrl: "/assets/corredizas/allg-4.png",
     altData: "puerta corrediza",
   },
   {
@@ -69,7 +68,7 @@ const modeloAllglass = [
     alternative: "puerta corrediza modelo all glass",
   },
   {
-    imagen: "/assets/corredizas/allg-4.jpg",
+    imagen: "/assets/corredizas/allg-4.png",
     alternative: "puerta corrediza modelo all glass",
   },
 ];
@@ -97,7 +96,7 @@ const modeloAllglassEurope = [
 
 <LayoutDoors
   title="SAP | Puertas corredizas"
-  doorCategory="Puertas corredizas" 
+  doorCategory="Puertas corredizas"
   giratoriaState=""
   corredizaState="active"
   batienteState=""
@@ -119,15 +118,11 @@ const modeloAllglassEurope = [
       <Carousel>
         {
           items.map((item) => (
-            <Item
-              src={item.imgUrl}
-              alt={item.altData}
-              slot="item-swiper"
-            />
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
           ))
         }
       </Carousel>
-      
+
       <p>
         Son las puertas más usadas en el mundo, prácticas y reconocidas, con un
         alto ahorro de energía, máximo flujo y seguridad. Pueden ser modelos All
@@ -137,34 +132,31 @@ const modeloAllglassEurope = [
         eléctrico para abrir en emergencia. Son flexibles y adecuadas para una
         variedad de usos, desde aeropuertos hasta residencias.
       </p>
-
     </div>
 
-  
-  
-  <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
-    <ModelDoor 
-      type="Puerta Corrediza"
-      model="Dura Glide"
-      description="Puerta en marcada con aluminio ideal para tiendas de autoservicio."
-      url={items[7].imgUrl}
-    />
-    <ModelDoor 
-      type="Puerta Corrediza"
-      model="All Glass"
-      description="Puerta automática de vidrio que minimiza los perfiles incluir foto de All glass."
-      url={items[1].imgUrl}
-    />
-    <ModelDoor 
-      type="Puerta giratoria"
-      model="All Glass Europe"
-      description="Puerta automática sin perfiles inferiores. Esta es la puerta más limpia y elegante. Ideal para instalaciones corporativas y de alto nivel."
-      url= {items[4].imgUrl}
-    />
-  </section>
-  
-  <!-- aqui inicia modelos -->
-  <!-- <div class="pt-8 lg:max-w-6xl flex flex-col justify-center mx-auto">
+    <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6 grid gap-y-16">
+      <ModelDoor
+        type="Puerta Corrediza"
+        model="Dura Glide"
+        description="Puerta en marcada con aluminio ideal para tiendas de autoservicio."
+        url={items[7].imgUrl}
+      />
+      <ModelDoor
+        type="Puerta Corrediza"
+        model="All Glass"
+        description="Puerta automática de vidrio que minimiza los perfiles incluir foto de All glass."
+        url={items[1].imgUrl}
+      />
+      <ModelDoor
+        type="Puerta Corrediza"
+        model="All Glass Europe"
+        description="Puerta automática sin perfiles inferiores. Esta es la puerta más limpia y elegante. Ideal para instalaciones corporativas y de alto nivel."
+        url={items[4].imgUrl}
+      />
+    </section>
+
+    <!-- aqui inicia modelos -->
+    <!-- <div class="pt-8 lg:max-w-6xl flex flex-col justify-center mx-auto">
     <div
       class="[&>h1]:text-[#ffce00] py-5 lg:py-20 flex flex-col items-center justify-center"
     >
@@ -236,36 +228,35 @@ const modeloAllglassEurope = [
       </section>
     </div>
   </div> -->
-  <script
-  is:inline
-    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
-    slot="script"></script>
-</LayoutDoors>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+      slot="script"></script>
+  </div>
 
-
-<style>
-
-  /* .swiper-slide-img {
+  <style>
+    /* .swiper-slide-img {
     display: block;
     width: 100%;
   } */
-  .text_border_convert-models {
-    -webkit-text-stroke: 0.7px #ffce00;
-    color: transparent;
-  }
-  .border-left-bottom {
-    -webkit-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-left-top {
-    -webkit-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-  .border-top-right {
-    -webkit-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-    box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
-  }
-</style>
+    .text_border_convert-models {
+      -webkit-text-stroke: 0.7px #ffce00;
+      color: transparent;
+    }
+    .border-left-bottom {
+      -webkit-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
+      -moz-box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
+      box-shadow: 100px 100px 10px -100px rgba(255, 255, 255, 1);
+    }
+    .border-left-top {
+      -webkit-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
+      -moz-box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
+      box-shadow: -100px -100px 10px -100px rgba(255, 255, 255, 1);
+    }
+    .border-top-right {
+      -webkit-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
+      -moz-box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
+      box-shadow: 100px -100px 10px -100px rgba(255, 255, 255, 1);
+    }
+  </style>
+</LayoutDoors>

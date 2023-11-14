@@ -2,6 +2,7 @@
 import "@fontsource/roboto/";
 import "@fontsource-variable/oswald";
 import { ViewTransitions } from "astro:transitions";
+import IconButtom from "../components/IconButtom.astro";
 
 interface Props {
   title: string;
@@ -13,7 +14,7 @@ const { title, BgBody, url } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" transition:animate="none">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -35,7 +36,7 @@ const { title, BgBody, url } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <!-- <ViewTransitions/> -->
   </head>
   <body
     class={BgBody === "yes"
@@ -44,6 +45,31 @@ const { title, BgBody, url } = Astro.props;
   >
     <slot name="header" />
     <slot />
+    <div class="fixed bottom-[30px] right-[30px] z-[100] [&>a:hover>svg]:scale-110">
+      <IconButtom
+        number="528331409986"
+        message="Hola, estoy interesado en conocer mas sobre los productos de stanley.mx"
+      >
+        <svg
+        slot="svg"
+          class="icon icon-tabler icon-tabler-brand-whatsapp z-50 text-white animate-wiggle animate-duration-1000 animate-infinite animate-ease-linear hover:animate-none"
+          width="70"
+          height="70"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="#26D366"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+          <path
+            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+          ></path>
+        </svg>
+      </IconButtom>
+    </div>
     <footer
       class="flex flex-col p-16 bg-[url(/assets/home/footer.png)] bg-cover"
     >
@@ -121,74 +147,75 @@ const { title, BgBody, url } = Astro.props;
     ></script>
     <slot name="tween" />
     <slot name="ajax" />
-  </body><style is:global>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "roboto", "oswald", "Helvetica";
-    }
-    .active-tab {
-      color: #ffce00;
-      border-bottom: #ffce00 solid 2px;
-    }
-    .no-active-tab {
-      color: #fff;
-      border-bottom: transparent solid 2px;
-      transition: all 0.15s linear;
-    }
-    .no-active-tab:hover {
-      color: #ffce00;
-      border-bottom: #ffce00 solid 2px;
-    }
-    .sap__text__slogan {
-      backdrop-filter: blur(1px);
-    }
-    .text_border_convert {
-      -webkit-text-stroke: 1px #fff;
-      color: transparent;
-    }
-    .sap__text__slogan span {
-      font-size: 4rem;
-      font-weight: 900;
-      -webkit-text-stroke: 2px #fff;
-      color: transparent;
-      letter-spacing: 2px;
-    }
-    .img-transform {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-    }
-    .img-transform:hover {
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%);
-    }
+    <style is:global>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "roboto", "oswald", "Helvetica";
+      }
+      .active-tab {
+        color: #ffce00;
+        border-bottom: #ffce00 solid 2px;
+      }
+      .no-active-tab {
+        color: #fff;
+        border-bottom: transparent solid 2px;
+        transition: all 0.15s linear;
+      }
+      .no-active-tab:hover {
+        color: #ffce00;
+        border-bottom: #ffce00 solid 2px;
+      }
+      .sap__text__slogan {
+        backdrop-filter: blur(1px);
+      }
+      .text_border_convert {
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+      }
+      .sap__text__slogan span {
+        font-size: 4rem;
+        font-weight: 900;
+        -webkit-text-stroke: 2px #fff;
+        color: transparent;
+        letter-spacing: 2px;
+      }
+      .img-transform {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+      .img-transform:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+      }
 
-    .non-bg-body {
-      background-color: #000000;
-      overflow-x: hidden;
-    }
-  </style>
-  <script >
-    // addEventListener("scroll", () => {
-    //   const header = document.getElementById("landing-header");
-    //   const scroll = window.scrollY;
-    //   if (scroll > 10) {
-    //     header.classList.add("scrolled");
-    //   } else {
-    //     header.classList.remove("scrolled");
-    //   }
-    // });
-    // Internet Explorer
-    // window.onload = function () {
-    //   document.onselectstart = function () {
-    //     return false;
-    //   };
-    //   // Firefox
-    //   document.onmousedown = function () {
-    //     return false;
-    //   };
-    // };
- 
-  </script>
+      .non-bg-body {
+        background-color: #000000;
+        overflow-x: hidden;
+      }
+    
+    </style>
+    <script>
+      // addEventListener("scroll", () => {
+      //   const header = document.getElementById("landing-header");
+      //   const scroll = window.scrollY;
+      //   if (scroll > 10) {
+      //     header.classList.add("scrolled");
+      //   } else {
+      //     header.classList.remove("scrolled");
+      //   }
+      // });
+      // Internet Explorer
+      // window.onload = function () {
+      //   document.onselectstart = function () {
+      //     return false;
+      //   };
+      //   // Firefox
+      //   document.onmousedown = function () {
+      //     return false;
+      //   };
+      // };
+    </script>
+  </body>
 </html>

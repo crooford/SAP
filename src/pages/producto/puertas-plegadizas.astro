@@ -1,8 +1,8 @@
 ---
 import Carousel from "../../components/Carousel.astro";
-import CarouselProducts from "../../components/CarouselProducts.astro";
+
 import Item from "../../components/Item.astro";
-import ItemCarousel from "../../components/ItemCarousel.astro";
+
 import ModelDoor from "../../components/products/ModelDoor.astro";
 import LayoutDoors from "../../layouts/LayoutDoors.astro";
 
@@ -74,23 +74,12 @@ const items = [
 
     <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
       <ModelDoor
-        type="Puerta giratoria"
-        model="Manual"
-        description="1,500 M Puerta Giratoria Manual"
+        type="Puerta Plegadiza"
+        model="Automática"
+        description="Puede ser de 1.20 mts hasta 3.00 mts."
         url={items[0].imgUrl}
       />
-      <ModelDoor
-        type="Puerta giratoria"
-        model="Automatica"
-        description="1,500 AA Puerta Giratoria Automatica"
-        url={items[1].imgUrl}
-      />
-      <ModelDoor
-        type="Puerta giratoria"
-        model="Manual"
-        description="1,500 Crystal Puerta Giratoria Manual"
-        url={items[2].imgUrl}
-      />
+      
     </section>
     <!-- <div
       class="grid md:grid-rows-3 gap-4 mx-auto animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out"
