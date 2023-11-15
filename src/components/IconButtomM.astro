@@ -8,9 +8,9 @@ const { number, message } = Astro.props;
 ---
 
 <a
-  href=`https://web.whatsapp.com/send?phone=${number}&text=${message}`
+  href=`https://api.whatsapp.com/send?phone=${number}&text=${message}`
   target="_blank"
-  class="hidden lg:block"
+  class="lg:hidden"
 >
   <slot name="svg" />
   

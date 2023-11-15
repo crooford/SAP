@@ -72,23 +72,23 @@ const sedes = [
     class="w-full min-h-screen h-full bg-[url(/assets/home/service-background.png)] bg-right-bottom bg-cover bg-fixed"
   >
     <section
-      class="w-screen min-h-screen  pt-28 px-10 md:pt-48 md:pl-20 pb-32"
+      class="w-screen min-h-screen  pt-28 px-6 md:pt-48 lg:pl-20 pb-32"
     >
       <header
-        class=" mb-6"
+        class=" mb-6 md:mb-16"
       >
         <h1
           class="2xl:text-6xl text-5xl text-[#ffce00] uppercase font-extrabold mb-10 font-[oswald]"
         >
           {meta.title}
         </h1>
-        <div class="w-[860px]">
+        <div class="lg:w-[860px]">
           <p class="text-white font-medium text-xl">
             {meta.description}
           </p>
         </div>
       </header>
-      <div class="grid md:grid-cols-2 2xl:grid-cols-3 gap-6  mb-10 w-[1360px]">
+      <div class="grid place-content-center  lg:grid-cols-2 2xl:grid-cols-3 gap-6  mb-10 lg:w-[1360px]">
         {
           sedes.map((sede) => (
             <Place
@@ -100,7 +100,7 @@ const sedes = [
           ))
         }
       </div>
-      <p class="text-white text-lg font-medium w-[900px]">Cada ubicación está comprometida con la excelencia en el servicio, la seguridad y la accesibilidad que caracterizan a <span class="text-[#ffce00] font-black">Sistemas Automáticos Peatonales</span>. Siempre estamos listos para brindarte la mejor atención y asesorarte en la instalación de nuestros productos. Encuentra la oficina más cercana y descubre cómo podemos mejorar tus accesos.</p>
+      <p class="text-white text-lg font-medium lg:w-[900px]">Cada ubicación está comprometida con la excelencia en el servicio, la seguridad y la accesibilidad que caracterizan a <span class="text-[#ffce00] font-black">Sistemas Automáticos Peatonales</span>. Siempre estamos listos para brindarte la mejor atención y asesorarte en la instalación de nuestros productos. Encuentra la oficina más cercana y descubre cómo podemos mejorar tus accesos.</p>
     </section>
   </main>
 </Layout>

@@ -25,12 +25,16 @@ import Layout from "../layouts/Layout.astro";
       >
         servicios
       </h2>
-      <h2 class="text-white lg:text-6xl text-4xl font-semibold font-[oswald] uppercase">
+      <h2
+        class="text-white lg:text-6xl text-4xl font-semibold font-[oswald] uppercase"
+      >
         y garantía
       </h2>
     </article>
-    <section class="md:w-3/4">
-      <section class="flex flex-col lg:flex-row gap-20">
+    <section class="flex flex-col extra-large xl:w-[calc(100vw-10rem)]">
+      <section
+        class="grid gap-10 lg:grid-cols-2 xl:flex xl:flex-wrap xl:justify-between xl:gap-y-10"
+      >
         <Card
           title="GARANTÍA"
           src="/assets/icono-garantia.png"
@@ -83,29 +87,14 @@ import Layout from "../layouts/Layout.astro";
               Reparaciones de los principales sistemas inteligentes de acceso.
               tales como Stanley, Dynalock, BEA, SUKEREID, IRIS ID entre otros.
             </p>
-            
           </div>
         </Card>
       </section>
-      <div class="flex lg:justify-end lg:pr-[9rem] pt-6">
+      <div class="xl:self-end flex pt-6">
         <a
           href="#"
-          class="self-end py-2 px-6 bg-[#ffce00] rounded-full text-black text-2xl font-black flex items-center gap-2 w-fit hover:scale-110 hover:underline transition-all  [&:hover>img]:animate-spin [&:hover>img]:animate-once [&:hover>img]:animate-duration-300 [&:hover>img]:ease-in-out"
+          class="self-end py-2 px-6 bg-[#ffce00] rounded-full text-black text-2xl font-black flex items-center gap-2 w-fit hover:scale-110 hover:underline transition-all [&:hover>img]:animate-spin [&:hover>img]:animate-once [&:hover>img]:animate-duration-300 [&:hover>img]:ease-in-out"
         >
-          <!-- <svg
-            class="icon icon-tabler icon-tabler-chevron-right"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M9 6l6 6l-6 6"></path>
-          </svg> -->
           <img src="/assets/home/arrow-black.png" class="w-4" alt="" />
            Descubre más aquí</a
         >
@@ -113,3 +102,10 @@ import Layout from "../layouts/Layout.astro";
     </section>
   </main>
 </Layout>
+<style>
+  @media (min-width: 1750px) {
+    .extra-large {
+      width: calc(100vw - 25rem);
+    }
+  }
+</style>
