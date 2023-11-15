@@ -8,7 +8,7 @@ interface Props {
 const { type, model, description, url } = Astro.props;
 ---
 
-<article class="flex flex-col w-[calc(100vw-4rem)] lg:w-[calc(100vw-400px)] ">
+<article class="flex flex-col w-[calc(100vw-4rem)] lg:w-[calc(100vw-480px)] ">
   <div class="flex items-center min-w-full px-5 mb-8">
     <img src="/assets/icono-flecha.png" class="w-7   mr-3" alt="">
     <p class="text-white text-3xl lg:text-4xl 2xl:text-[55px] font-black">
@@ -16,7 +16,7 @@ const { type, model, description, url } = Astro.props;
       {description}
     </p>
   </div>
-  <div class="h-[400px] md:h-[450px] lg:h-[480px] xl:h-[550px]  2xl:h-[580px] w-[calc(100vw-4rem)] lg:w-[calc(100vw-400px)]">
+  <div class="h-[400px] md:h-[450px] lg:h-[480px] xl:h-[550px]  2xl:h-[580px] w-[calc(100vw-4rem)] lg:w-[calc(100vw-480px)]">
     <img
       src={url}
       alt="imagen"
