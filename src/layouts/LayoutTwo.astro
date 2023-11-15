@@ -16,11 +16,15 @@ const {
 } = Astro.props;
 ---
 
-<!doctype html >
-<html lang="es" transition:animate="none">
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Sistemas automaticos peatonales | Número uno en puertas
+    automáticas en todo México y el Caribe."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +35,7 @@ const {
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <!-- <ViewTransitions /> -->
   </head>
   <body class={BgBody == "yes" ? "bg-body" : "non-bg-body"}>
     <slot />
