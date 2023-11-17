@@ -17,5 +17,6 @@ export default defineConfig({
     "/services/chapas-magneticas/": "/producto/chapas-magneticas/",
     "/services/teclado-digital-y-lector-de-tarjetas/":
       "/producto/teclado-digital-y-lector-de-tarjetas",
+    "/services/iris/": "/producto/iris/",
   },
 });
