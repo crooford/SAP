@@ -2,39 +2,66 @@
 interface Props {
   type: string;
   model: string;
-  description: string;
+  title: string;
+  text?: string;
   url: string;
 }
-const { type, model, description, url } = Astro.props;
+const { type, model, title, text, url } = Astro.props;
 ---
 
-<article class="flex flex-col w-[calc(100vw-4rem)] lg:w-[calc(100vw-480px)] ">
-  <div class="flex items-center min-w-full px-5 mb-8">
-    <img src="/assets/icono-flecha.png" class="w-7   mr-3" alt="">
-    <p class="text-white text-3xl lg:text-4xl 2xl:text-[55px] font-black">
-      
-      {description}
+<article class="flex flex-col w-[calc(100vw-4rem)] lg:w-[calc(100vw-480px)]">
+  <div class="flex items-center min-w-full px-1 md:px-5 mb-8">
+    <img src="/assets/icono-flecha.png" class="w-6 md:w-7 mr-3" alt="" />
+    <p
+      class="text-white text-3xl lg:text-4xl 2xl:text-[55px] font-black"
+    >
+      {title}
     </p>
   </div>
-  <div class="h-[400px] md:h-[450px] lg:h-[480px] xl:h-[550px]  2xl:h-[580px] w-[calc(100vw-4rem)] lg:w-[calc(100vw-480px)]">
+  <div
+    class="h-[400px] md:h-[450px] lg:h-[480px] xl:h-[550px] 2xl:h-[580px] w-[calc(100vw-4rem)] lg:w-[calc(100vw-480px)]"
+  >
     <img
       src={url}
       alt="imagen"
       class="object-cover w-full h-full object-center"
     />
   </div>
-  <div class="bg-black ">
+  <div class="bg-black">
     <div class="grid md:grid-cols-2 border-2">
-      <div class="flex items-center border-b-2 md:border-b-0 md:border-r-2 px-5 py-2">
+      <div
+        class="flex items-center border-b-2 md:border-b-0 md:border-r-2 px-2 md:px-5 py-2"
+      >
         <p class="text-white text-2xl">
           <span class="text-[#ffce00] mr-2">Tipo:</span>{type}
         </p>
       </div>
-      <div class="flex items-center  px-5 py-2 ">
+      <div class="flex items-center px-2 md:px-5 py-2">
         <p class="text-white text-2xl">
           <span class="text-[#ffce00] mr-2">Modelo:</span>{model}
         </p>
       </div>
+
+      {
+        text !== undefined ? (
+          <div class="desc border-t-2 px-2 md:px-5 py-2">
+            {" "}
+            <p class="text-white text-2xl">
+              <span class="text-[#ffce00] mr-2">Detalles:</span>
+              {text}
+            </p>
+          </div>
+        ) : (
+          ""
+        )
+      }
     </div>
   </div>
 </article>
+<style>
+  @media (min-width: 768px) {
+    .desc {
+      grid-column-end: span 2;
+    }
+  }
+</style>

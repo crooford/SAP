@@ -7,7 +7,6 @@ import ModelDoor from "../../components/products/ModelDoor.astro";
 import LayoutDoors from "../../layouts/LayoutDoors.astro";
 
 const items = [
-  
   {
     imgUrl: "/assets/torniquetes/cts-1.jpg",
     altData: "torniquete",
@@ -63,9 +62,14 @@ const items = [
         registrados. Los modelos tienen un rango muy amplio, desde altura total
         para exteriores en construcción de acero inoxidable, en acero
         galvanizado, o para interiores en aluminio, en policarbonato y hasta en
-        cristal. Hay modelos específicos para cada aplicación. En torniquetes de
-        media altura, existen manuales y eléctricos, con barreras de acero
-        inoxidable, con barreras de cristal templado y hasta únicamente ópticos.
+        cristal. Hay modelos específicos para cada aplicación.
+      </p>
+      <p>
+        En torniquetes de media altura, existen manuales y eléctricos, con
+        barreras de acero inoxidable, con barreras de cristal templado y hasta
+        únicamente ópticos.
+      </p>
+      <p>
         Los torniquetes de media altura son ideales para edificios corporativos,
         ya que van desde uso rudo hasta modelos perfectamente arquitectónicos,
         dando un aspecto muy moderno, con funcionalidad y conexiones muy
@@ -77,20 +81,25 @@ const items = [
       <ModelDoor
         type="Torniquete"
         model="Media Altura"
-        description="Éstos son fabricados con estructuras de acero con una altura no mayor a 1.03 m."
+        title="Torniquete de media altura"
         url={items[3].imgUrl}
+        text="Éstos son fabricados con estructuras de acero con una altura no mayor a 1.03 m."
       />
+
       <ModelDoor
         type="Torniquete"
         model="Altura completa"
-        description="Éstos son fabricados con estructuras de tubos de acero o paneles de lexan transparente con una altura de cuerpo completo de 2.32 m."
+        title="Torniquete de altura completa"
         url={items[0].imgUrl}
+        text="Éstos son fabricados con estructuras de tubos de acero o paneles de lexan transparente con una altura de cuerpo completo de 2.32 m."
       />
+
       <ModelDoor
         type="Torniquete"
         model="Óptico"
-        description="Dispositivos elegantes de control de acceso con barreras de cristal o sin ellas, diseñados para entornos lujosos, con alarmas audibles para detectar ingresos no autorizados."
+        title="Torniquete Óptico "
         url={items[1].imgUrl}
+        text="Dispositivos elegantes de control de acceso con barreras de cristal o sin ellas, diseñados para entornos lujosos, con alarmas audibles para detectar ingresos no autorizados."
       />
     </section>
     <!-- <div
