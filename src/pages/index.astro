@@ -17,12 +17,12 @@ import Layout from "../layouts/Layout.astro";
     slot="header"
   />
   <main
-    class=" min-h-screen bg-[url(/assets/home/background.webp)] bg-cover bg-no-repeat bg-center lg:bg-top bg-fixed"
+    class="min-h-screen bg-[url(/assets/home/background.webp)] bg-cover bg-no-repeat bg-center lg:bg-top bg-fixed"
   >
     <section
-      class="pt-36 px-2 sm:pt-40 lg:pt-48 2xl:pt-56 lg:px-16 grid pb-6 min-h-screen  bg-black/40"
+      class="pt-36 px-2 sm:pt-40 lg:pt-48 2xl:pt-56 lg:px-16 grid pb-6 min-h-screen bg-black/40"
     >
-      <article class="[&>p]:w-72 md:[&>p]:w-auto ">
+      <article class="[&>p]:w-72 md:[&>p]:w-auto">
         <h1
           class="text-white uppercase text-5xl lg:text-6xl xl:text-7xl 2xl:text-[6rem] font-bold font-[oswald] mb-10 tracking-wider"
         >
@@ -35,19 +35,18 @@ import Layout from "../layouts/Layout.astro";
         </p>
         <p class="text-white text-lg lg:text-xl font-medium">
           Somos <span class="text-[#ffce00] italic font-bold">número uno</span>
-           en puertas automáticas en todo México.
+          en puertas automáticas en todo México.
         </p>
 
-        <div class="flex flex-col md:flex-row gap-0 md:gap-8 md:items-center mt-7 [&>p]:w-72">
+        <div
+          class="flex flex-col md:flex-row gap-0 md:gap-8 md:items-center mt-7 [&>p]:w-72"
+        >
           <Counter />
-          
-            <p
-              class="text-white text-lg lg:text-2xl font-medium uppercase pt-2"
-            >
-              Puertas instaladas <br class="hidden md:block" />
-               en LatinoAmérica
-            </p>
-          
+
+          <p class="text-white text-lg lg:text-2xl font-medium uppercase pt-2">
+            Puertas instaladas <br class="hidden md:block" />
+            en LatinoAmérica
+          </p>
         </div>
         <div class="pt-8">
           <a
@@ -69,12 +68,12 @@ import Layout from "../layouts/Layout.astro";
               <path d="M9 6l6 6l-6 6"></path>
             </svg> -->
             <img src="/assets/icono-flecha.png" class="w-3" alt="" />
-             conoce nuestros productos aquí</a
+            conoce nuestros productos aquí</a
           >
         </div>
       </article>
       <article
-        class="md:flex flex-col lg:flex-row self-end lg:justify-between lg:items-center  hidden"
+        class="md:flex flex-col lg:flex-row self-end lg:justify-between lg:items-center hidden"
       >
         <p
           class="text-white text-base 2xl:text-lg text-center uppercase opacity-70"
@@ -225,7 +224,7 @@ import Layout from "../layouts/Layout.astro";
   }
   .counter-bg::before {
     content: "";
-    background-image: url("/assets/background_home.png");
+    background-image: url("/assets/background_home.webp");
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;

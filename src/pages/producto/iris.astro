@@ -7,32 +7,30 @@ import ModelDoor from "../../components/products/ModelDoor.astro";
 import Item from "../../components/Item.astro";
 
 const items = [
-
   {
-    imgUrl: "/assets/iris/i-1.png",
+    imgUrl: "/assets/iris/i-1.webp",
     altData: "lector iris",
   },
   {
-    imgUrl: "/assets/iris/i-1.png",
+    imgUrl: "/assets/iris/i-1.webp",
     altData: "lector iris",
   },
   {
-    imgUrl: "/assets/iris/i-1.png",
+    imgUrl: "/assets/iris/i-1.webp",
     altData: "lector iris",
   },
   {
-    imgUrl: "/assets/iris/i-1.png",
+    imgUrl: "/assets/iris/i-1.webp",
     altData: "lector iris",
   },
   {
-    imgUrl: "/assets/iris/i-1.png",
+    imgUrl: "/assets/iris/i-1.webp",
     altData: "lector iris",
   },
   {
-    imgUrl: "/assets/iris/i-1.png",
+    imgUrl: "/assets/iris/i-1.webp",
     altData: "lector iris",
   },
-
 ];
 ---
 
@@ -57,26 +55,20 @@ const items = [
     <div
       class="mb-20 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-xl [&>p]:mb-4"
     >
-      
       <Carousel>
         {
           items.map((item) => (
-              <Item 
-                src={item.imgUrl}
-                alt={item.altData}
-                slot="item-swiper"/>
-              
-            ))
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
+          ))
         }
       </Carousel>
-   
+
       <p>
         Los lectores biométricos de Iris son los más seguros y rápidos, sin ser
         intrusivos para el usuario. Se utilizan para verificar al 100% el acceso
         de la persona correcta, sin posibilidad de engañar al sistema. Son
         ideales en lugares importantes o de seguridad crítica.
       </p>
-
     </div>
 
     <!-- <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
@@ -117,11 +109,10 @@ const items = [
         <p class="text-white mt-2 text-center">Sistema biometrio de iris</p>
       </div>
       </div>-->
-    
   </div>
-  
+
   <script
-  is:inline
+    is:inline
     src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
     slot="script"></script>
 </LayoutDoors>

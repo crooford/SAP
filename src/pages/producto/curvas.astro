@@ -8,26 +8,23 @@ import Item from "../../components/Item.astro";
 import ModelDoor from "../../components/products/ModelDoor.astro";
 
 const items = [
-
   {
     imgUrl: "/assets/curvas/c-5.webp",
     altData: "puerta curva",
   },
   {
-    imgUrl: "/assets/curvas/c-2.png",
+    imgUrl: "/assets/curvas/c-2.webp",
     altData: "puerta curva",
   },
   {
-    imgUrl: "/assets/curvas/c-3.png",
+    imgUrl: "/assets/curvas/c-3.webp",
     altData: "puerta curva",
   },
   {
-    imgUrl: "/assets/curvas/c-4.png",
+    imgUrl: "/assets/curvas/c-4.webp",
     altData: "puerta curva",
   },
-
 ];
-
 ---
 
 <LayoutDoors
@@ -51,16 +48,11 @@ const items = [
     <div
       class="mb-20 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:text-xl [&>p]:mb-4"
     >
-      
       <Carousel>
         {
           items.map((item) => (
-              <Item 
-                src={item.imgUrl}
-                alt={item.altData}
-                slot="item-swiper"/>
-              
-            ))
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
+          ))
         }
       </Carousel>
 
@@ -71,7 +63,6 @@ const items = [
         puertas corredizas normales, pero con una apertura más amplia debido al
         diámetro.
       </p>
-      
     </div>
 
     <!-- <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
@@ -123,7 +114,7 @@ const items = [
       </div>
     </div>
   </div> -->
-  <!-- <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
+    <!-- <div class="pt-20 max-w-6xl flex flex-col justify-center mx-auto">
     <div
       class="[&>h1]:text-[#ffce00] py-20 flex flex-col items-center justify-center"
     >
@@ -157,8 +148,9 @@ const items = [
       </section>
     </div>
   </div> -->
-  <script
-  is:inline
-  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
-  slot="script"></script>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+      slot="script"></script>
+  </div>
 </LayoutDoors>

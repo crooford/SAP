@@ -8,29 +8,26 @@ import Item from "../../components/Item.astro";
 import ModelDoor from "../../components/products/ModelDoor.astro";
 
 const items = [
-
   {
-    imgUrl: "/assets/huella-digital/h-1.png",
+    imgUrl: "/assets/huella-digital/h-1.webp",
     altData: "huella digital",
   },
   {
-    imgUrl: "/assets/huella-digital/h-1.png",
+    imgUrl: "/assets/huella-digital/h-1.webp",
     altData: "huella digital",
   },
   {
-    imgUrl: "/assets/huella-digital/h-1.png",
+    imgUrl: "/assets/huella-digital/h-1.webp",
     altData: "huella digital",
   },
   {
-    imgUrl: "/assets/huella-digital/h-1.png",
+    imgUrl: "/assets/huella-digital/h-1.webp",
     altData: "huella digital",
   },
   {
-    imgUrl: "/assets/huella-digital/h-1.png",
+    imgUrl: "/assets/huella-digital/h-1.webp",
     altData: "huella digital",
   },
-  
-
 ];
 ---
 
@@ -55,26 +52,20 @@ const items = [
     <div
       class="mb-20 animate-fade animate-once animate-duration-500 animate-delay-300 animate-ease-out animate-normal [&>p]:text-white [&>p]:mb-4"
     >
-      
       <Carousel>
         {
           items.map((item) => (
-              <Item 
-                src={item.imgUrl}
-                alt={item.altData}
-                slot="item-swiper"/>
-              
-            ))
+            <Item src={item.imgUrl} alt={item.altData} slot="item-swiper" />
+          ))
         }
       </Carousel>
-    
+
       <p class="text-xl">
         Las lectoras de huella digital se han vuelto el sistema más común para
         identificar al usuario de forma económica y segura. Son rápidas y poco
         invasivas, y se pueden interconectar con muchos sistemas de acceso o
         como sistema stand alone.
       </p>
-
     </div>
 
     <!-- <section class="mb-32 px-0 lg:px-12 mr-0 lg:mr-6">
@@ -118,7 +109,7 @@ const items = [
     </div> -->
   </div>
   <script
-  is:inline
-  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
-  slot="script"></script>
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+    slot="script"></script>
 </LayoutDoors>

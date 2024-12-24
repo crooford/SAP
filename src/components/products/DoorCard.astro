@@ -9,12 +9,14 @@ const { title, imageUrl, imageAlt, url } = Astro.props;
 ---
 
 <div
-  class=" 2xl:w-[570px] 2xl:h-[412px] lg:w-[370px] lg:h-[268px] w-[320px] h-[231px] sm:w-[300px] sm:h-[217px] group relative cursor-pointer items-center justify-center transition-all ease-out animate-fade"
+  class="2xl:w-[570px] 2xl:h-[412px] lg:w-[370px] lg:h-[268px] w-[320px] h-[231px] sm:w-[300px] sm:h-[217px] group relative cursor-pointer items-center justify-center transition-all ease-out animate-fade"
 >
   <a href={url}>
-    <div class=" 2xl:w-[570px] 2xl:h-[412px] xl:w-[370px] xl:h-[268px] w-[320px] h-[231px] sm:w-[300px] sm:h-[217px]">
+    <div
+      class="2xl:w-[550px] 2xl:h-[412px] xl:w-[370px] xl:h-[268px] w-[320px] h-[231px] sm:w-[300px] sm:h-[217px]"
+    >
       <img
-        class="h-full w-full object-cover  duration-[20ms] ease-in transition-all group-hover:scale-[1.01] rounded-sm aspect-video"
+        class="h-full w-full object-cover group-hover:scale-[1.01] rounded-sm aspect-video transition-all duration-300 ease-in-out"
         src={imageUrl}
         alt={imageAlt}
       />
@@ -24,9 +26,11 @@ const { title, imageUrl, imageAlt, url } = Astro.props;
     >
     </div>
     <div
-      class="absolute inset-0 top-[95%] md:top-[95%] z-[100] text-center transition-all duration-300 ease-in-out group-hover:tracking-[0.4rem]  2xl:group-hover:tracking-[1rem] "
+      class="absolute inset-0 top-[95%] md:top-[95%] z-[100] text-center transition-all duration-300 ease-in-out group-hover:tracking-[0.4rem] 2xl:group-hover:tracking-[1rem]"
     >
-      <h1 class="text-3xl lg:text-4xl 2xl:text-5xl font-normal uppercase text-white font-[oswald] ">
+      <h1
+        class="text-3xl lg:text-4xl 2xl:text-5xl font-normal uppercase text-white font-[oswald]"
+      >
         {title}
       </h1>
     </div>
